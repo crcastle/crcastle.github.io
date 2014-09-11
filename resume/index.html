@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+     <title>Chris Castle Résumé</title>
+
+     <style type="text/css">
+        * { margin: 0; padding: 0; }
+        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
+        .clear { clear: both; }
+        #page-wrap { width: 1100px; margin: 20px auto 0px; }
+        #pic { float: right; margin: -20px 0 0 0; }
+        h1 { margin: 0 0 16px -2px; padding: 0 0 5px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; }
+        h2 { font-size: 20px; margin: 0 0 3px 0; position: relative; }
+        h2 span { font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        h2 span.job-properties { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        p { margin: 0 0 16px 0; }
+        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
+        a:hover { border-bottom-style: solid; color: black; }
+        ul { margin: 0 0 32px 17px; }
+        #other-profiles { display: inline; }
+        #other-profiles li { display: inline; }
+        #other-profiles a { text-decoration: none; border-bottom: 0;}
+        #facebook-icon { margin: 0 0 -2px; } /* fix icon alignment issue */
+        #twitter-icon { margin: 0 0 -2px; } /* fix icon alignment issue */
+        #contact-info { margin: 0 0 20px 0; }
+        #contact-info li { display: inline; padding: 0 16px 0 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        #contact-info li + li:before { content: '—'; position: relative; left: -8px; }
+        #summary { width: 950px; position: relative; left: 0; top: 0; max-height: 65px; overflow: hidden; }
+        #summary p { font-family: Georgia, Serif; font-style: italic; color: #666; }
+        #summary .read-more {
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%;
+            text-align: center;
+            margin: 0; padding: 0;
+            font-size: 14px;
+            font-style: normal;
+        }
+        /*dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 10px 0 0; width: 100px; float: left; height: 100px; border-right: 1px solid #999;  }*/
+        dt { font-style: italic; font-weight: bold; font-size: 18px; margin-bottom: 10px; border-bottom: 1px solid #999; }
+        dd { width: 1100px; float: right; }
+        dd.clear { float: none; margin: 0; height: 15px; }
+        @media print {
+            .no-print, .no-print * { display: none !important; }
+            #summary { height: 64px !important; }
+        }
+     </style>
+</head>
+
+<body>
+
+    <div id="page-wrap">
+
+        <section class="vcard">
+            <div itemscope itemtype="http://schema.org/Person">
+
+                <!-- Microdata! -->
+
+                <img itemprop="image" src="images/crcastle.png" alt="Chris Castle" id="pic" style="height: 125px;"/>
+
+                <h1 itemprop="name">Chris Castle
+
+                <ul id="other-profiles">
+                    <li><a rel="me" itemprop="url" href="Chris Castle Resume.pdf" title="PDF"><img src="images/pdficon.png" width="16" height="16" alt="PDF" /></a></li>
+                    <li><a rel="me" itemprop="url" href="https://www.linkedin.com/in/crcastle" title="LinkedIn"><img src="images/linkedin-6-32.png" width="16" height="16" alt="LinkedIn" /></a></li>
+                    <li><a rel="me" itemprop="url" href="https://github.com/crcastle" title="GitHub"><img src="images/github-11-32.png" width="16" height="16" alt="GitHub" /></a></li>
+                    <li><a rel="me" itemprop="url" href="https://twitter.com/crc" title="Twitter"><img id="twitter-icon" src="images/twitter-3-64.png" width="19" height="19" alt="Twitter" /></a></li>
+                    <li><a rel="me" itemprop="url" href="https://www.facebook.com/crcastle" title="Facebook"><img id="facebook-icon" src="images/facebook-3-64.png" width="19" height="19" alt="Facebook" /></a></li>
+                </ul>
+                </h1>
+
+                <ul id="contact-info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <li><span itemprop="streetAddress">109b 19th Avenue</span>, <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span> <span itemprop="postalCode">98122</span></li>
+                    <li><span itemprop="telephone">+1 617.823.5295</span></li>
+                    <li><a itemprop="email" href="mailto:chris@crc.io">chris@crc.io</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="summary">
+            <p>
+                I manage big data processing, analytics, dashboarding, and data visualization products. Additionally, I guide architecture, write code (Ruby and Node.js currently), and aim to keep people happy, motivated, and productive.
+            </p>
+
+            <p class="read-more no-print"><a href="javascript:void(0);" class="button">↓More</a></p>
+
+            <p class="no-print">
+                Outside of work I take on coding projects (<a href="http://keg.io">http://keg.io</a>), ride my bike, and ski as much as I can. I also dabble in electronic music production.
+            </p>
+
+            <p class="no-print">
+                I live in Seattle and love it.
+            </p>
+
+            <p class="no-print">
+                Also I've been told I'm like this guy - <a href="http://youtu.be/nrLxySqQn6E">http://youtu.be/nrLxySqQn6E</a>
+            </p>
+        </section>
+
+        <div class="clear"></div>
+
+        <dl>
+            <dd class="clear"></dd>
+
+            <dt>Experience</dt>
+            <dd>
+                <h2>Technical Product Manager <span class="job-properties"><a class="url fn org" href="http://simplymeasured.com/">Simply Measured</a> - <span class="adr"><span class="locality">Seattle</span>, <abbr class="region" title="Washington">WA</abbr></span> - <abbr class="dtstart" title="2012-07-10">July 2012</abbr> to <abbr class="dtend" title="2014-08-25">August 2014</abbr></span></h2>
+                <ul>
+                    <li>Conceptualized, planned, directed implementation, and launched report management product for Simply Measured Analysts, increasing report author efficiency and reducing report defect rate</li>
+                    <li>Grew Report Builder product and engineering team from one (myself) to six</li>
+                    <li>Managed team of four Analysts responsible for all of Simply Measured's customer-facing reports</li>
+                    <li>Managed Junior Product Manager enabling his growth from Customer Success Associate to highly effective contributor owning core product management tasks</li>
+                    <li>Adapted role throughout substantial company growth (20 to 150 employees) from Product Management generalist to Report Builder Product Owner</li>
+                </ul>
+
+                <h2>Product Manager, Cloud Technologies <span class="job-properties"><a href="http://www.vivaki.com/">VivaKi Nerve Center</a> - Seattle, WA - February 2008 to July 2012</span></h2>
+                <ul>
+                    <li>Collected business requirements from over 1,000 users and defined product spec for centralized marketing data storage and provisioning system</li>
+                    <li>Created product vision, prototyped (NodeJS, Ruby) and directed development of multi-agency API to to allow various development groups to access and use our managed AWS infrastructure</li>
+                    <li>Defined functionality and led development of data processing engine, processing ~1PB/week (Hadoop / AWS Elastic MapReduce)</li>
+                </ul>
+
+                <h2>Media Technology Specialist <span class="job-properties"><a href="http://www.razorfish.com/">Avenue A | Razorfish</a> - Seattle, WA - October 2005 to February 2008</span></h2>
+                <ul>
+                    <li>Managed feature development of online messaging, tracking, and reporting products</li>
+                    <li>Guided development of innovative solutions using the Atlas ad-serving system and other web technologies including Google Analytics and Omniture</li>
+                    <li>Served as Atlas ad serving technical subject matter expert</li>
+                </ul>
+
+                <h2>Client Service Engineer <span class="job-properties"><a href="http://www.razorfish.com/">Avenue A | Razorfish</a> - Seattle, WA - October 2005 to October 2006</span></h2>
+                <ul>
+                    <li>Planned and managed ad operations for online advertising campaigns</li>
+                    <li>Implemented pixel tracking tags on client websites</li>
+                </ul>
+
+                <h2>Strategy Analyst <span class="job-properties"><a href="http://www.microsoft.com/">Microsoft</a> - Redmond, WA - March 2004 to March 2005</span></h2>
+                <ul>
+                    <li>Assessed advertising and technology markets in 30 countries to determine the potential viability of MSN’s business in those markets</li>
+                    <li>Supported strategy creation for MSN's worldwide sales and marketing organization</li>
+                    <li>Decomposed strategic problems/themes into discrete analytical tasks</li>
+                </ul>
+
+                <h2>Research Analyst <span class="job-properties"><a href="http://www.brattle.com/">The Brattle Group</a> - Cambridge, MA - August 2002 to April 2004</span></h2>
+                <ul>
+                    <li>Created econometric models to support expert testimony for electric, telecommunications, financial, and natural gas companies</li>
+                    <!-- <li>Presented model results to both managers and clients</li> -->
+                    <li>Instructed multiple in-house SAS (statistical analysis package) classes</li>
+                </ul>
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>Education</dt>
+            <dd>
+                <h2>Colby College <span class="job-properties">Watervilly, ME - August 1998 to May 2002</span></h2>
+                <p>B.A., Economics and Mathematical Sciences with Computer Science concentration<br />
+                Senior Paper: Economic Consequences of Increased Internet Usage on Music Industry Sales</p>
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>Skills</dt>
+            <dd>
+                <p>Product Management, Product Development, Product Strategy, UX Design, Analytics, ETL, Data Visualization, Digital Marketing, Online Ad Serving Technologies, Web Analytics, Site Personalization and Measurement, Ruby, Python, Bash, HTML/CSS/JavaScript, Node.js, Linux/Unix system administration, SQL, Amazon Web Services, Cloud Computing, Hadoop, MapReduce, Git, anything involving technology I'll figure it out</p>
+            </dd>
+
+            <dd class="clear"></dd>
+
+            <dt>Personal Interests</dt>
+            <dd>Technology, Mountain Biking, Road Cycling, Skiing, Running, Motorcycles</dd>
+
+            <dd class="clear"></dd>
+
+        </dl>
+
+        <div class="clear"></div>
+
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+       var $el, $ps, $section, totalHeight;
+
+       $("#summary .button").click(function() {
+
+           totalHeight = 0
+
+           $el = $(this);
+           $p  = $el.parent();
+           $section = $p.parent();
+           $ps = $section.find("p:not('.read-more')");
+
+           // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+           $ps.each(function() {
+               totalHeight += $(this).outerHeight(true);
+           });
+           console.log(totalHeight);
+
+           $section
+               .css({
+                   // Set height to prevent instant jumpdown when max height is removed
+                   "height": $section.height(),
+                   "max-height": 9999
+               })
+               .animate({
+                   "height": totalHeight
+               });
+
+           // fade out read-more
+           $p.fadeOut();
+
+           // prevent jump-down
+           return false;
+
+       });
+    </script>
+
+</body>
+
+</html>
