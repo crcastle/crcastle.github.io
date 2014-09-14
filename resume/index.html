@@ -66,14 +66,13 @@
 
     <div id="page-wrap">
 
-        <section class="vcard">
-            <div itemscope itemtype="http://schema.org/Person">
+        <section id="person" itemscope itemtype="http://schema.org/Person">
 
-                <!-- Microdata! -->
+          <!-- Microdata! -->
 
-                <img itemprop="image" src="images/crcastle.png" alt="Chris Castle" id="pic" style="height: 125px;"/>
+          <img itemprop="image" src="images/crcastle.png" alt="Chris Castle" id="pic" style="height: 125px;"/>
 
-                <h1 itemprop="name">Chris Castle
+          <h1 itemprop="name">Chris Castle</h1>
 
             <ul id="other-profiles">
                 <li><a rel="me" itemprop="url" href="Chris%20Castle%20Resume.pdf" title="PDF"><img src="images/pdficon.png" width="16" height="16" alt="PDF" /></a></li>
@@ -85,15 +84,14 @@
                 <li><a rel="me" itemprop="url" href="https://www.facebook.com/crcastle" title="Facebook"><img id="facebook-icon" src="images/facebook-3-64.png" width="19" height="19" alt="Facebook" /></a></li>
             </ul>
 
-                <ul id="contact-info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <li><span itemprop="streetAddress">109b 19th Avenue</span>, <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span> <span itemprop="postalCode">98122</span></li>
-                    <li><span itemprop="telephone">+1 617.823.5295</span></li>
-                    <li><a itemprop="email" href="mailto:chris@crc.io">chris@crc.io</a></li>
-                </ul>
-            </div>
+          <ul id="contact-info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <li><span itemprop="streetAddress">109b 19th Avenue</span>, <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span> <span itemprop="postalCode">98122</span></li>
+              <li><span itemprop="telephone">+1 617.823.5295</span></li>
+              <li><a itemprop="email" href="mailto:chris@crc.io">chris@crc.io</a></li>
+          </ul>
         </section>
 
-        <section id="summary">
+        <div id="summary">
             <p>
                 I manage big data processing, analytics, dashboarding, and data visualization products. Additionally, I guide architecture, write code (Ruby and Node.js currently), and aim to keep people happy, motivated, and productive.
             </p>
@@ -115,85 +113,125 @@
             <p class="no-print">
                 Also I've been told I'm like this guy - <a href="http://youtu.be/nrLxySqQn6E">http://youtu.be/nrLxySqQn6E</a>
             </p>
+        </div>
+
+        <section class="first">
+            <h2>Experience</h2>
+                <div itemscope itemtype="http://schema.org/OrganizationRole">
+                    <h3><span itemprop="namedPosition">Technical Product Manager</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://simplymeasured.com/" itemprop="name">Simply Measured</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">July 2012</span> to <span itemprop="endDate">August 2014</span></span></h3>
+                    <ul>
+                        <li itemprop="description">Conceptualized, planned, directed implementation, and launched report management product for Simply Measured Analysts, increasing report author efficiency and reducing report defect rate</li>
+                        <li itemprop="description">Grew <span itemscope itemtype="http://schema.org/Product"><span itemprop="name">Report Builder</span></span> product and engineering team from one (myself) to six</li>
+                        <li itemprop="description">Managed team of four Analysts responsible for all of Simply Measured's customer-facing reports</li>
+                        <li itemprop="description">Managed <span itemscope itemtype="http://schema.org/OrganizationRole"><span itemprop="namedPosition">Junior Product Manager</span></span> enabling his growth from Customer Success Associate to highly effective contributor owning core product management tasks</li>
+                        <li itemprop="description">Adapted role throughout substantial company growth (20 to 150 employees) from Product Management generalist to Report Builder Product Owner</li>
+                    </ul>
+                </div>
+
+                <div itemscope itemtype="http://schema.org/OrganizationRole">
+                    <h3><span itemprop="namedPosition">Product Manager, Cloud Technologies</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.vivaki.com/" itemprop="name">VivaKi Nerve Center</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">February 2008</span> to <span itemprop="endDate">July 2012</span></span></h3>
+                    <ul>
+                        <li itemprop="description">Collected business requirements from over 1,000 users and defined product spec for centralized marketing data storage and provisioning system</li>
+                        <li itemprop="description">Created product vision, prototyped (NodeJS, Ruby) and directed development of multi-agency API to to allow various development groups to access and use our managed AWS infrastructure</li>
+                        <li itemprop="description">Defined functionality and led development of data processing engine, processing ~1PB/week (Hadoop / AWS Elastic MapReduce)</li>
+                    </ul>
+                </div>
+
+                <div itemscope itemtype="http://schema.org/OrganizationRole">
+                    <h3><span itemprop="namedPosition">Media Technology Specialist</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">October 2005</span> to <span itemprop="endDate">February 2008</span></span></h3>
+                    <ul>
+                        <li itemprop="description">Managed feature development of online messaging, tracking, and reporting products</li>
+                        <li itemprop="description">Guided development of innovative solutions using the Atlas ad-serving system and other web technologies including Google Analytics and Omniture</li>
+                        <li itemprop="description">Served as Atlas ad serving technical subject matter expert</li>
+                    </ul>
+                </div>
+
+                <div itemscope itemtype="http://schema.org/OrganizationRole">
+                    <h3><span itemprop="namedPosition">Client Service Engineer</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">October 2005</span> to <span itemprop="endDate">October 2006</span></span></h3>
+                    <ul>
+                        <li>Planned and managed ad operations for online advertising campaigns</li>
+                        <li>Implemented pixel tracking tags on client websites</li>
+                    </ul>
+                </div>
+
+                <div itemscope itemtype="http://schema.org/OrganizationRole">
+                    <h3><span itemprop="namedPosition">Strategy Analyst</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.microsoft.com/" itemprop="name">Microsoft</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Redmond</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">March 2004</span> to <span itemprop="endDate">March 2005</span></span></h3>
+                    <ul>
+                        <li>Assessed advertising and technology markets in 30 countries to determine the potential viability of MSN’s business in those markets</li>
+                        <li>Supported strategy creation for MSN's worldwide sales and marketing organization</li>
+                        <li>Decomposed strategic problems/themes into discrete analytical tasks</li>
+                    </ul>
+                </div>
+
+                <div itemscope itemtype="http://schema.org/OrganizationRole">
+                    <h3><span itemprop="namedPosition">Research Analyst</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.brattle.com/" itemprop="name">The Brattle Group</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Cambridge</span>, <span itemprop="addressRegion">MA</span></span></span> - <span itemprop="startDate">August 2002</span> to <span itemprop="endDate">April 2004</span></span></h3>
+                    <ul>
+                        <li>Created econometric models to support expert testimony for electric, telecommunications, financial, and natural gas companies</li>
+                        <!-- <li>Presented model results to both managers and clients</li> -->
+                        <li>Instructed multiple in-house SAS (statistical analysis package) classes</li>
+                    </ul>
+                </div>
         </section>
 
-        <div class="clear"></div>
+        <section>
+            <h2>Education</h2>
+                <div itemscope itemtype="http://schema.org/EducationalOrganization">
+                    <h3><span itemprop="name">Colby College</span> <span class="job-properties" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Waterville</span>, <span itemprop="addressRegion">ME</span> - August 1998 to May 2002</span></h3>
+                    <p>B.A., Economics and Mathematical Sciences with Computer Science concentration<br />
+                    Senior Paper: Economic Consequences of Increased Internet Usage on Music Industry Sales</p>
+                </div>
+        </section>
 
-        <dl>
-            <dd class="clear"></dd>
+        <section itemscope itemtype="http://schema.org/ItemList">
+            <h2 itemprop="name">Skills and Expertise</h2>
+              <ul class="comma-list">
+                  <li itemprop="itemListElement">Product Management</li>
+                  <li itemprop="itemListElement">Product Strategy</li>
+                  <li itemprop="itemListElement">Product Development</li>
+                  <li itemprop="itemListElement">UX Design</li>
+                  <li itemprop="itemListElement">Analytics</li>
+                  <li itemprop="itemListElement">ETL</li>
+                  <li itemprop="itemListElement">Web Analytics</li>
+                  <li itemprop="itemListElement">Data Visualization</li>
+                  <li itemprop="itemListElement">Ruby</li>
+                  <li itemprop="itemListElement">Python</li>
+                  <li itemprop="itemListElement">Bash</li>
+                  <li itemprop="itemListElement">HTML/CSS/JavaScript</li>
+                  <li itemprop="itemListElement">Node.js</li>
+                  <li itemprop="itemListElement">Linux/Unix system administration</li>
+                  <li itemprop="itemListElement">SQL</li>
+                  <li itemprop="itemListElement">Amazon Web Services</li>
+                  <li itemprop="itemListElement">Cloud Computing</li>
+                  <li itemprop="itemListElement">Hadoop</li>
+                  <li itemprop="itemListElement">MapReduce</li>
+                  <li itemprop="itemListElement">Git</li>
+                  <li itemprop="itemListElement">Digital Marketing</li>
+                  <li itemprop="itemListElement">Online Ad Serving Technologies</li>
+                  <li itemprop="itemListElement">Site Personalization and Measurement</li>
+                  <li itemprop="itemListElement">anything involving technology I'll figure it out</li>
+              </ul>
+        </section>
 
-            <dt>Experience</dt>
-            <dd>
-                <h2>Technical Product Manager <span class="job-properties"><a class="url fn org" href="http://simplymeasured.com/">Simply Measured</a> - <span class="adr"><span class="locality">Seattle</span>, <abbr class="region" title="Washington">WA</abbr></span> - <abbr class="dtstart" title="2012-07-10">July 2012</abbr> to <abbr class="dtend" title="2014-08-25">August 2014</abbr></span></h2>
-                <ul>
-                    <li>Conceptualized, planned, directed implementation, and launched report management product for Simply Measured Analysts, increasing report author efficiency and reducing report defect rate</li>
-                    <li>Grew Report Builder product and engineering team from one (myself) to six</li>
-                    <li>Managed team of four Analysts responsible for all of Simply Measured's customer-facing reports</li>
-                    <li>Managed Junior Product Manager enabling his growth from Customer Success Associate to highly effective contributor owning core product management tasks</li>
-                    <li>Adapted role throughout substantial company growth (20 to 150 employees) from Product Management generalist to Report Builder Product Owner</li>
-                </ul>
+        <section itemscope itemtype="http://schema.org/ItemList">
+            <h2 itemprop="name">Personal Interests</h2>
+            <ul class="comma-list">
+              <li itemprop="itemListElement">Technology</li>
+              <li itemprop="itemListElement">Mountain Biking</li>
+              <li itemprop="itemListElement">Road Cycling</li>
+              <li itemprop="itemListElement">Skiing</li>
+              <li itemprop="itemListElement">Running</li>
+              <li itemprop="itemListElement">Motorcycles</li>
+            </ul>
+        </section>
 
-                <h2>Product Manager, Cloud Technologies <span class="job-properties"><a href="http://www.vivaki.com/">VivaKi Nerve Center</a> - Seattle, WA - February 2008 to July 2012</span></h2>
-                <ul>
-                    <li>Collected business requirements from over 1,000 users and defined product spec for centralized marketing data storage and provisioning system</li>
-                    <li>Created product vision, prototyped (NodeJS, Ruby) and directed development of multi-agency API to to allow various development groups to access and use our managed AWS infrastructure</li>
-                    <li>Defined functionality and led development of data processing engine, processing ~1PB/week (Hadoop / AWS Elastic MapReduce)</li>
-                </ul>
-
-                <h2>Media Technology Specialist <span class="job-properties"><a href="http://www.razorfish.com/">Avenue A | Razorfish</a> - Seattle, WA - October 2005 to February 2008</span></h2>
-                <ul>
-                    <li>Managed feature development of online messaging, tracking, and reporting products</li>
-                    <li>Guided development of innovative solutions using the Atlas ad-serving system and other web technologies including Google Analytics and Omniture</li>
-                    <li>Served as Atlas ad serving technical subject matter expert</li>
-                </ul>
-
-                <h2>Client Service Engineer <span class="job-properties"><a href="http://www.razorfish.com/">Avenue A | Razorfish</a> - Seattle, WA - October 2005 to October 2006</span></h2>
-                <ul>
-                    <li>Planned and managed ad operations for online advertising campaigns</li>
-                    <li>Implemented pixel tracking tags on client websites</li>
-                </ul>
-
-                <h2>Strategy Analyst <span class="job-properties"><a href="http://www.microsoft.com/">Microsoft</a> - Redmond, WA - March 2004 to March 2005</span></h2>
-                <ul>
-                    <li>Assessed advertising and technology markets in 30 countries to determine the potential viability of MSN’s business in those markets</li>
-                    <li>Supported strategy creation for MSN's worldwide sales and marketing organization</li>
-                    <li>Decomposed strategic problems/themes into discrete analytical tasks</li>
-                </ul>
-
-                <h2>Research Analyst <span class="job-properties"><a href="http://www.brattle.com/">The Brattle Group</a> - Cambridge, MA - August 2002 to April 2004</span></h2>
-                <ul>
-                    <li>Created econometric models to support expert testimony for electric, telecommunications, financial, and natural gas companies</li>
-                    <!-- <li>Presented model results to both managers and clients</li> -->
-                    <li>Instructed multiple in-house SAS (statistical analysis package) classes</li>
-                </ul>
-            </dd>
-
-            <dd class="clear"></dd>
-
-            <dt>Education</dt>
-            <dd>
-                <h2>Colby College <span class="job-properties">Watervilly, ME - August 1998 to May 2002</span></h2>
-                <p>B.A., Economics and Mathematical Sciences with Computer Science concentration<br />
-                Senior Paper: Economic Consequences of Increased Internet Usage on Music Industry Sales</p>
-            </dd>
-
-            <dd class="clear"></dd>
-
-            <dt>Skills and Expertise</dt>
-            <dd>
-                <p>Product Management, Product Development, Product Strategy, UX Design, Analytics, ETL, Data Visualization, Digital Marketing, Online Ad Serving Technologies, Web Analytics, Site Personalization and Measurement, Ruby, Python, Bash, HTML/CSS/JavaScript, Node.js, Linux/Unix system administration, SQL, Amazon Web Services, Cloud Computing, Hadoop, MapReduce, Git, anything involving technology I'll figure it out</p>
-            </dd>
-
-            <dd class="clear"></dd>
-
-            <dt>Personal Interests</dt>
-            <dd>Technology, Mountain Biking, Road Cycling, Skiing, Running, Motorcycles</dd>
-
-            <dd class="clear"></dd>
-
-        </dl>
-
-        <div class="clear"></div>
+        <footer class="no-print">
+          <span id="doc-info">
+            <a href="http://www.google.com/webmasters/tools/richsnippets?q=crc.io%2Fresume">Google Structured Data Testing Tool</a>&nbsp;|&nbsp;
+            <a href="http://tools.seomoves.org/microdata/?url=crc.io/resume">Microdata Structure</a>&nbsp;|&nbsp;
+            <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fcrc.io%2Fresume&charset=%28detect+automatically%29&fbc=1&doctype=Inline&fbd=1&group=0">Valid HTML5</a>
+          </span>
+          <span id="last-updated"><a href="https://github.com/crcastle/crcastle.github.io/commits/master">Last updated 13 Sept 2014</a></span>
+        </footer>
 
     </div>
 
