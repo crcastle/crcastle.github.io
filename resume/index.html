@@ -10,31 +10,32 @@
 
      <style type="text/css">
         * { margin: 0; padding: 0; }
-        body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: url(images/noise.jpg); }
-        .clear { clear: both; }
+        body { font-size: 17px; font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif; line-height: 24px; background: url(images/noise.jpg); }
+        .clear { clear: both; height: 0px; background-color: #7EA9DE; margin: 15px 0 0 0; border: 5px solid #7EA9DE; }
         #page-wrap { width: 1100px; margin: 20px auto 0px; }
         #pic { float: right; margin: -20px 0 0 0; }
-        h1 { margin: 0 0 2px -2px; padding: 0 0 5px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; display: inline;}
-        h2 { font-style: italic; font-weight: bold; font-size: 18px; margin-bottom: 6px; border-bottom: 1px solid #999; }
+        h1 { margin: 0 0 2px -2px; padding: 0 0 5px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; display: inline; } /* Franklin Gotic Book 22pt */
+        h2 { font-weight: bold; font-size: 32px; margin-bottom: 25px; text-align: center; text-transform: uppercase; } /* Franklin Gotic Medium 14pt */
         h3 { font-size: 20px; margin: 0 0 3px 0; position: relative; }
-        /*h3 span { font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }*/
-        h3 span.job-properties { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
-        a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
+        h3 span.job-properties { position: absolute; bottom: 0; right: 0; } /* Franklin Gotic Medium 11pt */
+        a { color: #000; text-decoration: none; border-bottom: 1px dotted #999; }
         a:hover { border-bottom-style: solid; color: black; }
-        ul { margin: 0 0 24px 17px; }
+        ul { margin: 0 0 24px 25px; }
         section { margin: 20px 0 0 0; }
-        section.first { margin: 10px 0 0 0; }
+        /*section.first { margin: 10px 0 0 0; }*/
         #person { margin-top: 0;}
         #other-profiles { display: inline; }
         #other-profiles li { display: inline; }
-        #other-profiles a { text-decoration: none; border-bottom: 0;}
+        #other-profiles a { text-decoration: none; border-bottom: 0; }
         #facebook-icon { margin: 0 0 -2px; } /* fix icon alignment issue */
         #twitter-icon { margin: 0 0 -2px; } /* fix icon alignment issue */
         #contact-info { margin: 0 0 10px 0; }
-        #contact-info li { display: inline; padding: 0 16px 0 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        #contact-info li { display: inline; padding: 0 16px 0 0; font-style: italic; font-size: 16px; color: #999; font-weight: normal; } /* Franklin Gotic Book 8.5pt */
         #contact-info li + li:before { content: '—'; position: relative; left: -8px; }
+        #contact-info a { color: #999; }
+        #contact-info a:hover { color: #000; }
         #summary { width: 950px; position: relative; left: 0; top: 0; max-height: 65px; overflow: hidden; margin-top: 0; }
-        #summary p { font-family: Georgia, Serif; font-style: italic; color: #666; margin: 0 0 16px 0; }
+        #summary p { font-size: 16px; font-style: italic; color: #666; margin: 0 0 16px 0; }
         #summary .read-more {
             position: absolute;
             bottom: 0; left: 0;
@@ -44,6 +45,7 @@
             font-size: 14px;
             font-style: normal;
         }
+        #summary a { color: #999; }
         .comma-list { margin: 0; padding: 0; }
         .comma-list li { display: inline; }
         .comma-list li:after { content: ', '; }
@@ -115,40 +117,35 @@
             </p>
         </div>
 
+        <div class="clear"></div>
+
         <section class="first">
             <h2>Experience</h2>
                 <div itemscope itemtype="http://schema.org/OrganizationRole">
                     <h3><span itemprop="namedPosition">Technical Product Manager</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://simplymeasured.com/" itemprop="name">Simply Measured</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">July 2012</span> to <span itemprop="endDate">August 2014</span></span></h3>
                     <ul>
-                        <li itemprop="description">Conceptualized, planned, directed implementation, and launched report management product for Simply Measured Analysts, increasing report author efficiency and reducing report defect rate</li>
-                        <li itemprop="description">Grew <span itemscope itemtype="http://schema.org/Product"><span itemprop="name">Report Builder</span></span> product and engineering team from one (myself) to six</li>
-                        <li itemprop="description">Managed team of four Analysts responsible for all of Simply Measured's customer-facing reports</li>
-                        <li itemprop="description">Managed <span itemscope itemtype="http://schema.org/OrganizationRole"><span itemprop="namedPosition">Junior Product Manager</span></span> enabling his growth from Customer Success Associate to highly effective contributor owning core product management tasks</li>
-                        <li itemprop="description">Adapted role throughout substantial company growth (20 to 150 employees) from Product Management generalist to Report Builder Product Owner</li>
+                        <li itemprop="description">Developed, planned, and directed launch of report management product for Simply Measured's Analysts, making report creation process faster and more powerful while reducing defect rate; grew and managed six-person team including engineers and a Junior Product Manager</li>
+                        <li itemprop="description">Managed four-person analyst team responsible for design and implementation of Simply Measured's product, 50+ customer-facing reports</li>
+                        <li itemprop="description">Adapted my role from product management generalist to product owner of Report Builder during substantial company growth (20 to 150 employees)</li>
                     </ul>
                 </div>
 
                 <div itemscope itemtype="http://schema.org/OrganizationRole">
                     <h3><span itemprop="namedPosition">Product Manager, Cloud Technologies</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.vivaki.com/" itemprop="name">VivaKi Nerve Center</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">February 2008</span> to <span itemprop="endDate">July 2012</span></span></h3>
                     <ul>
-                        <li itemprop="description">Collected business requirements from over 1,000 users and defined product spec for centralized marketing data storage and provisioning system</li>
                         <li itemprop="description">Created product vision, prototyped (NodeJS, Ruby) and directed development of multi-agency API to to allow various development groups to access and use our managed AWS infrastructure</li>
                         <li itemprop="description">Defined functionality and led development of data processing engine, processing ~1PB/week (Hadoop / AWS Elastic MapReduce)</li>
+                        <li itemprop="description">Collected business requirements from 1,000+ users and defined product spec for centralized marketing data storage and provisioning system</li>
                     </ul>
                 </div>
 
                 <div itemscope itemtype="http://schema.org/OrganizationRole">
-                    <h3><span itemprop="namedPosition">Media Technology Specialist</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">October 2005</span> to <span itemprop="endDate">February 2008</span></span></h3>
+                    <h3><span itemprop="namedPosition">Media Technology Specialist</span></h3>
+                    <h3><span itemprop="namedPosition">Client Service Engineer</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">October 2005</span> to <span itemprop="endDate">February 2008</span></span></h3>
                     <ul>
                         <li itemprop="description">Managed feature development of online messaging, tracking, and reporting products</li>
-                        <li itemprop="description">Guided development of innovative solutions using the Atlas ad-serving system and other web technologies including Google Analytics and Omniture</li>
+                        <li itemprop="description">Guided development of in-house web analytics tool using the Atlas ad-serving system and other web technologies including Google Analytics and Omniture SiteCatalyst</li>
                         <li itemprop="description">Served as Atlas ad serving technical subject matter expert</li>
-                    </ul>
-                </div>
-
-                <div itemscope itemtype="http://schema.org/OrganizationRole">
-                    <h3><span itemprop="namedPosition">Client Service Engineer</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">October 2005</span> to <span itemprop="endDate">October 2006</span></span></h3>
-                    <ul>
                         <li>Planned and managed ad operations for online advertising campaigns</li>
                         <li>Implemented pixel tracking tags on client websites</li>
                     </ul>
@@ -157,24 +154,25 @@
                 <div itemscope itemtype="http://schema.org/OrganizationRole">
                     <h3><span itemprop="namedPosition">Strategy Analyst</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.microsoft.com/" itemprop="name">Microsoft</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Redmond</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">March 2004</span> to <span itemprop="endDate">March 2005</span></span></h3>
                     <ul>
-                        <li>Assessed advertising and technology markets in 30 countries to determine the potential viability of MSN’s business in those markets</li>
-                        <li>Supported strategy creation for MSN's worldwide sales and marketing organization</li>
-                        <li>Decomposed strategic problems/themes into discrete analytical tasks</li>
+                        <li itemprop="description">Assessed advertising and technology markets in 30 countries to determine the potential viability of MSN’s business in those markets</li>
+                        <li itemprop="description">Supported strategy creation for MSN's worldwide sales and marketing organization</li>
                     </ul>
                 </div>
 
                 <div itemscope itemtype="http://schema.org/OrganizationRole">
-                    <h3><span itemprop="namedPosition">Research Analyst</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.brattle.com/" itemprop="name">The Brattle Group</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Cambridge</span>, <span itemprop="addressRegion">MA</span></span></span> - <span itemprop="startDate">August 2002</span> to <span itemprop="endDate">April 2004</span></span></h3>
+                    <h3><span itemprop="namedPosition">Research Analyst</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.brattle.com/" itemprop="name">The Brattle Group</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Cambridge</span>, <span itemprop="addressRegion">MA</span></span></span> - <span itemprop="startDate">August 2002</span> to <span itemprop="endDate">March 2004</span></span></h3>
                     <ul>
-                        <li>Created econometric models to support expert testimony for electric, telecommunications, financial, and natural gas companies</li>
+                        <li itemprop="description">Created econometric models to support expert testimony for electric, telecommunications, financial, and natural gas companies</li>
                         <!-- <li>Presented model results to both managers and clients</li> -->
-                        <li>Instructed multiple in-house SAS (statistical analysis package) classes</li>
+                        <li itemprop="description">Taught in-house SAS (statistical analysis package) classes</li>
                     </ul>
                 </div>
         </section>
 
+        <div class="clear"></div>
+
         <section>
-            <h2>Education</h2>
+            <h2>Education, Skills, and Expertise</h2>
                 <div itemscope itemtype="http://schema.org/EducationalOrganization">
                     <h3><span itemprop="name">Colby College</span> <span class="job-properties" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Waterville</span>, <span itemprop="addressRegion">ME</span> - August 1998 to May 2002</span></h3>
                     <p>B.A., Economics and Mathematical Sciences with Computer Science concentration<br />
@@ -183,43 +181,36 @@
         </section>
 
         <section itemscope itemtype="http://schema.org/ItemList">
-            <h2 itemprop="name">Skills and Expertise</h2>
-              <ul class="comma-list">
-                  <li itemprop="itemListElement">Product Management</li>
-                  <li itemprop="itemListElement">Product Strategy</li>
-                  <li itemprop="itemListElement">Product Development</li>
-                  <li itemprop="itemListElement">UX Design</li>
-                  <li itemprop="itemListElement">Analytics</li>
-                  <li itemprop="itemListElement">ETL</li>
-                  <li itemprop="itemListElement">Web Analytics</li>
-                  <li itemprop="itemListElement">Data Visualization</li>
-                  <li itemprop="itemListElement">Ruby</li>
-                  <li itemprop="itemListElement">Python</li>
-                  <li itemprop="itemListElement">Bash</li>
-                  <li itemprop="itemListElement">HTML/CSS/JavaScript</li>
-                  <li itemprop="itemListElement">Node.js</li>
-                  <li itemprop="itemListElement">Linux/Unix system administration</li>
-                  <li itemprop="itemListElement">SQL</li>
-                  <li itemprop="itemListElement">Amazon Web Services</li>
-                  <li itemprop="itemListElement">Cloud Computing</li>
-                  <li itemprop="itemListElement">Hadoop</li>
-                  <li itemprop="itemListElement">MapReduce</li>
-                  <li itemprop="itemListElement">Git</li>
-                  <li itemprop="itemListElement">Digital Marketing</li>
-                  <li itemprop="itemListElement">Online Ad Serving Technologies</li>
-                  <li itemprop="itemListElement">Site Personalization and Measurement</li>
-                  <li itemprop="itemListElement">anything involving technology I'll figure it out</li>
-              </ul>
-        </section>
-
-        <section itemscope itemtype="http://schema.org/ItemList">
-            <h2 itemprop="name">Personal Interests</h2>
             <ul class="comma-list">
-              <li itemprop="itemListElement">Technology</li>
+                <li itemprop="itemListElement">UX Design</li>
+                <li itemprop="itemListElement">Analytics</li>
+                <li itemprop="itemListElement">ETL</li>
+                <li itemprop="itemListElement">Web Analytics</li>
+                <li itemprop="itemListElement">Data Visualization</li>
+                <li itemprop="itemListElement">Digital Marketing</li>
+                <li itemprop="itemListElement">Online Ad Serving Technologies</li>
+                <li itemprop="itemListElement">Site Personalization and Measurement</li>
+            </ul>
+            <br />
+            <ul class="comma-list">
+                <li itemprop="itemListElement">Ruby</li>
+                <li itemprop="itemListElement">Node.js</li>
+                <li itemprop="itemListElement">Python</li>
+                <li itemprop="itemListElement">Bash</li>
+                <li itemprop="itemListElement">HTML/CSS/JavaScript</li>
+                <li itemprop="itemListElement">Linux/Unix system administration</li>
+                <li itemprop="itemListElement">SQL</li>
+                <li itemprop="itemListElement">Amazon Web Services</li>
+                <li itemprop="itemListElement">Hadoop</li>
+                <li itemprop="itemListElement">MapReduce</li>
+                <li itemprop="itemListElement">Git</li>
+            </ul>
+            <br />
+            <ul class="comma-list">
               <li itemprop="itemListElement">Mountain Biking</li>
               <li itemprop="itemListElement">Road Cycling</li>
-              <li itemprop="itemListElement">Skiing</li>
               <li itemprop="itemListElement">Running</li>
+              <li itemprop="itemListElement">Skiing</li>
               <li itemprop="itemListElement">Motorcycles</li>
             </ul>
         </section>
@@ -230,7 +221,7 @@
             <a href="http://tools.seomoves.org/microdata/?url=crc.io/resume">Microdata Structure</a>&nbsp;|&nbsp;
             <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fcrc.io%2Fresume&amp;charset=%28detect+automatically%29&amp;fbc=1&amp;doctype=Inline&amp;fbd=1&amp;group=0">Valid HTML5</a>
           </span>
-          <span id="last-updated"><a href="https://github.com/crcastle/crcastle.github.io/commits/master">Last updated 15 Sept 2014</a></span>
+          <span id="last-updated"><a href="https://github.com/crcastle/crcastle.github.io/commits/master">Last updated 24 Sept 2014</a></span>
         </footer>
 
     </div>
