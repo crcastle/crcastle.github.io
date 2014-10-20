@@ -6,15 +6,17 @@
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
      <meta name=viewport content="width=device-width, initial-scale=1"/>
 
-     <title>Travelog</title>
+     <title>115 Days Solo Around the World</title>
 
      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
-     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
+     <script src='http://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+     <link href='http://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
      <style>
        body { margin:0; padding:0; }
        #map { position:absolute; top:0; bottom:0; width:100%; }
      </style>
+
+     <script src='http://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 
      <!--[if lt IE 9]>
      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -23,21 +25,47 @@
 
 <body>
     <div id="map"></div>
+
     <script type="text/javascript">
 
-      // Provide your access token
       L.mapbox.accessToken = 'pk.eyJ1IjoiY3JjYXN0bGUiLCJhIjoiNmVuUHhXdyJ9.hkhoCoaFY8m1MEFf3K8BsA';
-      // Create a map in the div #map
       map = L.mapbox.map('map', 'crcastle.jnjo780p', { zoomControl: false });
-      map.tileLayer.setOpacity(0.7);
 
-      // Show marker tooltips on hover
-      map.featureLayer.on('mouseover', function(e) {
-        e.layer.openPopup();
-      });
-      map.featureLayer.on('mouseout', function(e) {
-        e.layer.closePopup();
-      });
+      omnivore.csv('/travel/markers.csv', null, L.mapbox.featureLayer())
+        .on('ready', function(layer) {
+          this.eachLayer(function(marker) {
+
+            var isPreviousDestination = (marker.toGeoJSON().properties["marker-color"] === "#6c6c6c");
+            var isCurrentDestination = (marker.toGeoJSON().properties["marker-color"] === "#548cba");
+            var isFutureDestination = (marker.toGeoJSON().properties["marker-color"] === "#ede8e4");
+
+            var content = '<div class="marker-title" style="text-align: center;">' +
+                          marker.toGeoJSON().properties.city + '</div>';
+            if (isCurrentDestination || isPreviousDestination) {
+              // TODO: commented out as prep for instagram photos carousel
+              // TODO: options: https://github.com/noreiller/bootstrap-modal-carousel or http://bulkan-evcimen.com/lazy_load_bootstrap_carousel_images.html
+              // var content = content + '<div class="marker-description" style="text-align: center;">' +
+              //                         '<a href="/resume">photosss</a></div>';
+            }
+            marker.bindPopup(content);
+
+            if (isCurrentDestination) {
+              marker.setZIndexOffset(1000);
+            }
+
+            // NOTE: not working :(
+            // Show marker tooltips on hover
+            // marker.on('mouseover', function(e) {
+            //   console.log(e)
+            //   e.layer.openPopup();
+            // });
+            // marker.on('mouseout', function(e) {
+            //   e.layer.closePopup();
+            // });
+          });
+        })
+        .addTo(map);
+
 
       // Disable drag and zoom handlers.
       // map.dragging.disable();
@@ -47,6 +75,12 @@
 
       // Disable tap handler, if present.
       if (map.tap) map.tap.disable();
+
+      // featureLayer.on('ready', function() {
+      //   // featureLayer.getBounds() returns the corners of the furthest-out markers,
+      //   // and map.fitBounds() makes sure that the map contains these.
+      //   map.fitBounds(featureLayer.getBounds());
+      // });
     </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
