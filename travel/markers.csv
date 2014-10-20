@@ -1,11 +1,11 @@
 marker-color,marker-symbol,marker-size,city,state,country,latitude,longitude,tag
-#6c6c6c,building,small,Seattle,WA,USA,47.6097,-122.3331,#seattle
-#6c6c6c,city,small,New York,NY,USA,40.783767,-73.965118,#nyc
-#548cba,toilets,small,Stonington,CT,USA,41.3650,-71.9067,#ct
-#ede8e4,bicycle,small,Amsterdam,,Netherlands,52.3667,4.9000,#netherlands
-#ede8e4,scooter,small,Marrakesh,,Morocco,33.533289,-7.583329,#morocco
-#ede8e4,dog-park,small,Kiruna,,Sweden,67.85,20.216700000000003,#sweden
-#ede8e4,swimming,small,Zanzibar,,Tanzania,-6.1333,39.3167,#zanzibar
-#ede8e4,school,small,Christchurch,,New Zealand,-43.53,172.6203,#nz
-#ede8e4,scooter,small,Bangkok,,Thailand,13.75,100.4667,#thailand
-#ede8e4,skiing,small,Sapporo,,Japan,43.0667,141.35000000000002,#japan
+#6c6c6c,building,medium,Seattle,WA,USA,47.6097,-122.3331,#seattle
+#6c6c6c,city,medium,New York,NY,USA,40.783767,-73.965118,#nyc
+#548cba,toilets,medium,Stonington,CT,USA,41.3650,-71.9067,#ct
+#ede8e4,bicycle,medium,Amsterdam,,Netherlands,52.3667,4.9000,#netherlands
+#ede8e4,scooter,medium,Marrakesh,,Morocco,33.533289,-7.583329,#morocco
+#ede8e4,dog-park,medium,Kiruna,,Sweden,67.85,20.216700000000003,#sweden
+#ede8e4,swimming,medium,Zanzibar,,Tanzania,-6.1333,39.3167,#zanzibar
+#ede8e4,school,medium,Christchurch,,New Zealand,-43.53,172.6203,#nz
+#ede8e4,scooter,medium,Bangkok,,Thailand,13.75,100.4667,#thailand
+#ede8e4,skiing,medium,Sapporo,,Japan,43.0667,141.35000000000002,#japan
