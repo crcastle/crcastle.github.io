@@ -2,8 +2,8 @@ marker-color,marker-symbol,marker-size,city,state,country,latitude,longitude,tag
 #6c6c6c,building,small,Seattle,WA,USA,47.6097,-122.3331,#seattle
 #6c6c6c,city,small,New York,NY,USA,40.783767,-73.965118,#nyc
 #6c6c6c,toilets,small,Stonington,CT,USA,41.3650,-71.9067,#ct
-#548cba,bicycle,small,Amsterdam,,Netherlands,52.3667,4.9000,#netherlands
-#ede8e4,swimming,small,Malaga,,Spain,36.7194,-4.4200,#malaga
+#6c6c6c,bicycle,small,Amsterdam,,Netherlands,52.3667,4.9000,#netherlands
+#548cba,swimming,small,Málaga,,Spain,36.7194,-4.4200,#malaga
 #ede8e4,scooter,small,Marrakesh,,Morocco,33.533289,-7.583329,#morocco
 #ede8e4,dog-park,small,Kiruna,,Sweden,67.85,20.216700000000003,#sweden
 #ede8e4,swimming,small,Zanzibar,,Tanzania,-6.1333,39.3167,#zanzibar
