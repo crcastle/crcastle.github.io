@@ -5,9 +5,9 @@ marker-color,marker-symbol,marker-size,city,state,country,latitude,longitude,tag
 #6c6c6c,bicycle,small,Amsterdam,,Netherlands,52.3667,4.9000,#netherlands
 #6c6c6c,swimming,small,Málaga,,Spain,36.7194,-4.4200,#malaga
 #6c6c6c,scooter,small,Marbella,,Spain,36.5167,-4.8833,#marbella
-#548cba,scooter,small,Marrakesh,,Morocco,33.533289,-7.583329,#morocco
+#6c6c6c,scooter,small,Marrakesh,,Morocco,33.533289,-7.583329,#morocco
+#548cba,swimming,small,Zanzibar,,Tanzania,-6.1333,39.3167,#zanzibar
 #ede8e4,dog-park,small,Kiruna,,Sweden,67.85,20.216700000000003,#sweden
-#ede8e4,swimming,small,Zanzibar,,Tanzania,-6.1333,39.3167,#zanzibar
 #ede8e4,school,small,Christchurch,,New Zealand,-43.53,172.6203,#nz
 #ede8e4,scooter,small,Bangkok,,Thailand,13.75,100.4667,#thailand
 #ede8e4,skiing,small,Sapporo,,Japan,43.0667,141.35000000000002,#japan
