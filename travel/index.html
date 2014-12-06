@@ -130,7 +130,11 @@
                     return image.tags.indexOf(tag) >= 0;
                   },
                   after: function(json) {
-                    $('#' + tag + '-images .item').first().addClass('active');
+                    if (this.hasNext()) {
+                      this.next();
+                    } else {
+                      $('#' + tag + '-images .item').first().addClass('active');
+                    }
                   }
                 });
                 feed.run();
