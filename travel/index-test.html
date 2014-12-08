@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <meta name=viewport content="width=device-width, initial-scale=1"/>
+
+     <title>115 Days Solo Around the World</title>
+
+     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+     <script src='http://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+     <link href='http://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
+     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/arc.js/v0.1.0/arc.js'></script>
+
+     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+     <style>
+       body { margin:0; padding:0; }
+       #map { position:absolute; top:0; bottom:0; width:100%; }
+     </style>
+
+     <script src='http://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+
+     <!--[if lt IE 9]>
+     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+     <![endif]-->
+</head>
+
+<body>
+    <!-- Button to trigger modal -->
+    <div id="map"></div>
+
+    <div id="modals"></div>
+
+    <!-- Modal -->
+    <!-- <div id="lazycarouselmodal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div id="lazycarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+              <div id="images" class="carousel-inner">
+              </div>
+              <a class="carousel-control left" href="#lazycarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="carousel-control right" href="#lazycarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <script type="text/javascript">
+
+      function createModal(tag) {
+        return $('<div id="' + tag + '-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">' +
+          '<div class="modal-dialog">' +
+            '<div class="modal-content">' +
+              '<div class="modal-body">' +
+                '<div id="' + tag + '-carousel" class="carousel slide" data-ride="carousel" data-interval="false">' +
+                  '<div id="' + tag + '-images" class="carousel-inner">' +
+                  '</div>' +
+                  '<a class="carousel-control left" href="#' + tag + '-carousel" role="button" data-slide="prev">' +
+                    '<span class="glyphicon glyphicon-chevron-left"></span>' +
+                  '</a>' +
+                  '<a class="carousel-control right" href="#' + tag + '-carousel" data-slide="next">' +
+                    '<span class="glyphicon glyphicon-chevron-right"></span>' +
+                  '</a>' +
+                '</div>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+        '</div>')
+        }
+
+      L.mapbox.accessToken = 'pk.eyJ1IjoiY3JjYXN0bGUiLCJhIjoiNmVuUHhXdyJ9.hkhoCoaFY8m1MEFf3K8BsA';
+      map = L.mapbox.map('map', 'crcastle.jnjo780p', { zoomControl: false, worldCopyJump: true });
+
+      omnivore.csv('/travel/markers.csv', null, L.mapbox.featureLayer())
+        .on('ready', function(layer) {
+          var visitedDestinations = [];
+          this.eachLayer(function(marker) {
+
+            var isPreviousDestination = (marker.toGeoJSON().properties["marker-color"] === "#6c6c6c");
+            var isCurrentDestination = (marker.toGeoJSON().properties["marker-color"] === "#548cba");
+            var isFutureDestination = (marker.toGeoJSON().properties["marker-color"] === "#ede8e4");
+            var tag = marker.toGeoJSON().properties.tag.substring(1);
+
+            var content = '<div class="marker-title" style="text-align: center;"><h2>' +
+                          marker.toGeoJSON().properties.city + '</h2></div>';
+            if (isCurrentDestination || isPreviousDestination) {
+              var content = content + '<div class="marker-description" style="text-align: center;">' +
+                                      '<button type="button" data-toggle="modal" data-target="#' + tag + '-modal">See Photos</button></div>';
+              visitedDestinations.push({x: marker.getLatLng().lng, y: marker.getLatLng().lat});
+            }
+            marker.bindPopup(content);
+
+            if (isCurrentDestination) {
+              marker.setZIndexOffset(1000);
+            }
+
+            marker.on('popupopen', function(e) {
+              if ($('#' + tag + '-modal').length == 0) {
+                // create modal and carousel
+                $('#modals').append(createModal(tag));
+
+                // get instagram photos and add to carousel in modal
+                var feed = new Instafeed({
+                  get: 'user',
+                  userId: 5012460,
+                  accessToken: '5012460.933ff88.703159327cad4be48478d7eaf0e54853',
+                  target: tag + '-images',
+                  template: '<div class="item">' +
+                              '<img src="{{image}}"/>' +
+                              '<div class="carousel-caption">' +
+                                '<p>{{caption}}</p>' +
+                                '<p><a target="_blank" href="{{link}}">original</a></p>' +
+                              '</div>' +
+                            '</div>',
+                  sortBy: 'least-recent',
+                  resolution: 'standard_resolution',
+                  // limit: 60,
+                  filter: function(image) {
+                    return image.tags.indexOf(tag) >= 0;
+                  },
+                  after: function(json) {
+                    if (this.hasNext()) {
+                      this.next();
+                    } else {
+                      $('#' + tag + '-images .item').first().addClass('active');
+                    }
+                  }
+                });
+                feed.run();
+              }
+            });
+          });
+
+          for (i = 0; i < visitedDestinations.length-1; i++) {
+            var generator = new arc.GreatCircle(visitedDestinations[i], visitedDestinations[i+1], null);
+            var line = generator.Arc(100, { offset: 10 });
+            console.log(line);
+            L.geoJson(line.json()).addTo(map);
+          }
+        })
+        .addTo(map);
+
+      // Disable drag and zoom handlers.
+      // map.dragging.disable();
+      // map.touchZoom.disable();
+      // map.doubleClickZoom.disable();
+      map.scrollWheelZoom.disable();
+
+      // Disable tap handler, if present.
+      if (map.tap) map.tap.disable();
+
+      // featureLayer.on('ready', function() {
+      //   // featureLayer.getBounds() returns the corners of the furthest-out markers,
+      //   // and map.fitBounds() makes sure that the map contains these.
+      //   map.fitBounds(featureLayer.getBounds());
+      // });
+    </script>
+    <script src="/travel/js/instafeed.min.js"></script>
+    <script>
+
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-54700563-1', 'auto');
+      ga('require', 'linkid', 'linkid.js');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+
+    </script>
+
+</body>
+
+</html>
