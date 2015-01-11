@@ -109,12 +109,6 @@
               marker.setZIndexOffset(1000);
             }
 
-  $('.show-photos').on('click', function () {
-    var $btn = $(this).button('loading')
-    // business logic...
-    //$btn.button('reset')
-  })
-
             marker.on('popupopen', function(e) {
               if ($('#' + tag + '-modal').length == 0) {
                 // create modal and carousel
@@ -160,6 +154,13 @@
           }
         })
         .addTo(map);
+
+  $('.show-photos').on('click', function () {
+    alert("button clicked");
+    var $btn = $(this).button('loading')
+    // business logic...
+    //$btn.button('reset')
+  });
 
       // Disable drag and zoom handlers.
       // map.dragging.disable();
