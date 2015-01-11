@@ -99,7 +99,7 @@
                           marker.toGeoJSON().properties.city + '</h2></div>';
             if (isCurrentDestination || isPreviousDestination) {
               var content = content + '<div class="marker-description" style="text-align: center;">' +
-                                      '<button type="button" data-loading-text="<i class=&quot;fa fa-refresh fa-spin&quot;></i> Loading" class="btn btn-primary show-photos">See Photos</button>';
+                                      '<button type="button" id="' + tag + '-modal" data-loading-text="<i class=&quot;fa fa-refresh fa-spin&quot;></i> Loading" class="btn btn-primary show-photos">See Photos</button>';
                                       //'<a class="btn btn-small btn-primary has-spinner"><span class="spinner"><i class="fa fa-refresh fa-spin"></i></span>See Photos</a></div>';
               visitedDestinations.push({x: marker.getLatLng().lng, y: marker.getLatLng().lat});
             }
