@@ -138,6 +138,7 @@
                       this.next();
                     } else {
                       $('#' + tag + '-images .item').first().addClass('active');
+alert($('#' + tag + '-button'));
                       if ($('#' + tag + '-button').is('[disabled]')) {
                         // show photos button was clicked
                         $('#' + tag + '-modal').modal('show');
@@ -161,8 +162,8 @@
         .addTo(map);
 
   $('body').on('click', '.show-photos', function (e) {
+    var $btn = $(this).button('loading');
     alert($btn);
-    var $btn = $(this).button('loading')
     // business logic...
     //$btn.button('reset')
   });
