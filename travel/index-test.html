@@ -155,7 +155,7 @@
         })
         .addTo(map);
 
-  $('.show-photos').on('click', function () {
+  $('body').on('click', '.show-photos', function (e) {
     alert("button clicked");
     var $btn = $(this).button('loading')
     // business logic...
