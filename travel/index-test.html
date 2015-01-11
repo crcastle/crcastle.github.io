@@ -138,7 +138,7 @@
                       this.next();
                     } else {
                       $('#' + tag + '-images .item').first().addClass('active');
-alert($('#' + tag + '-button'));
+alert($('#' + tag + '-button').prop('outerHTML');
                       if ($('#' + tag + '-button').is('[disabled]')) {
                         // show photos button was clicked
                         $('#' + tag + '-modal').modal('show');
