@@ -110,7 +110,7 @@
             }
 
             marker.on('popupopen', function(e) {
-              $(body).on('click', '#' + tag + '-button', function(e) {
+              $('body').on('click', '#' + tag + '-button', function(e) {
                 var btn = $(this).button('loading');
               });
 
