@@ -110,6 +110,10 @@
             }
 
             marker.on('popupopen', function(e) {
+              $(body).on('click', '#' + tag + '-button, function(e) {
+                var btn = $(this).button('loading');
+              }
+
 //alert("marker opened");
 //alert(tag + "-modal empty?" + ($('#' + tag + '-modal').length));
               if ($('#' + tag + '-modal').length == 0) {
@@ -151,8 +155,8 @@
                         $('#' + tag + '-button').button('reset');
                       } else {
                         // show photos button wasn't clicked but photos are done loading
-                        $('body').off('click', '.show-photos');
-                        $('body').on('click', '.show-photos', function() {
+                        $('body').off('click', '#' + tag + '-button);
+                        $('body').on('click', '#' + tag + '-button, function() {
                           $('#' + tag + '-modal').modal('show');
                         });
                       }
