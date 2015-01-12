@@ -152,13 +152,12 @@
                         // show photos button was clicked
                         $('#' + tag + '-modal').modal('show');
                         $('#' + tag + '-button').button('reset');
-                      } else {
-                        // show photos button wasn't clicked but photos are done loading
-                        $('body').off('click', '#' + tag + '-button');
-                        $('body').on('click', '#' + tag + '-button', function() {
-                          $('#' + tag + '-modal').modal('show');
-                        });
                       }
+                      // swap click handler on button to show modal when clicked
+                      $('body').off('click', '#' + tag + '-button');
+                      $('body').on('click', '#' + tag + '-button', function() {
+                        $('#' + tag + '-modal').modal('show');
+                      });
                     }
                   }
                 });
