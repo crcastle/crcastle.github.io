@@ -137,19 +137,19 @@ alert("need to create modal and carousel");
                     return image.tags.indexOf(tag) >= 0;
                   },
                   after: function(json) {
-alert("got first batch of images");
+//alert("got first batch of images");
                     if (this.hasNext()) {
-alert("there are more images");
+//alert("there are more images");
                       this.next();
                     } else {
                       $('#' + tag + '-images .item').first().addClass('active');
 alert("done getting images");
 //alert($('#' + tag + '-button').prop('outerHTML'));
-                      //if ($('#' + tag + '-button').is(':disabled')) {
+                      if ($('#' + tag + '-button').is(':disabled')) {
                         // show photos button was clicked
                         $('#' + tag + '-modal').modal('show');
                         $('#' + tag + '-button').button('reset');
-                      //}
+                      }
                     }
                   }
                 });
