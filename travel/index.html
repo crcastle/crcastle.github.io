@@ -17,6 +17,9 @@
      <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="/travel/css/spinner.css">
+
 
      <style>
        body { margin:0; padding:0; }
@@ -31,30 +34,8 @@
 </head>
 
 <body>
-    <!-- Button to trigger modal -->
     <div id="map"></div>
-
     <div id="modals"></div>
-
-    <!-- Modal -->
-    <!-- <div id="lazycarouselmodal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div id="lazycarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-              <div id="images" class="carousel-inner">
-              </div>
-              <a class="carousel-control left" href="#lazycarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a class="carousel-control right" href="#lazycarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <script type="text/javascript">
 
@@ -76,7 +57,7 @@
               '</div>' +
             '</div>' +
           '</div>' +
-        '</div>')
+        '</div>');
         }
 
       L.mapbox.accessToken = 'pk.eyJ1IjoiY3JjYXN0bGUiLCJhIjoiNmVuUHhXdyJ9.hkhoCoaFY8m1MEFf3K8BsA';
@@ -96,10 +77,13 @@
                           marker.toGeoJSON().properties.city + '</h2></div>';
             if (isCurrentDestination || isPreviousDestination) {
               var content = content + '<div class="marker-description" style="text-align: center;">' +
-                                      '<button type="button" data-toggle="modal" data-target="#' + tag + '-modal">See Photos</button></div>';
+                                      '<button type="button" id="' + tag + '-button" data-loading-text="<i class=&quot;fa fa-refresh fa-spin&quot;></i> Loading" class="btn btn-primary show-photos">See Photos</button>';
               visitedDestinations.push({x: marker.getLatLng().lng, y: marker.getLatLng().lat});
             }
             marker.bindPopup(content);
+            $('body').on('click', '#' + tag + '-button', function(e) {
+              var btn = $(this).button('loading');
+            });
 
             if (isCurrentDestination) {
               marker.setZIndexOffset(1000);
@@ -119,8 +103,8 @@
                   template: '<div class="item">' +
                               '<img src="{{image}}"/>' +
                               '<div class="carousel-caption">' +
-                                '<p>{{caption}}</p>' +
-                                '<p><a target="_blank" href="{{link}}">original</a></p>' +
+                                '<h3>{{caption}}</h3>' +
+                                '<h4><a target="_blank" href="{{link}}">original</a></h4>' +
                               '</div>' +
                             '</div>',
                   sortBy: 'least-recent',
@@ -134,6 +118,17 @@
                       this.next();
                     } else {
                       $('#' + tag + '-images .item').first().addClass('active');
+                      if ($('#' + tag + '-button').is(':disabled')) {
+                        // show photos button was clicked
+                        $('#' + tag + '-modal').modal('show');
+                        $('#' + tag + '-button').button('reset');
+                      }
+
+                      // swap click handler on button to show modal when clicked
+                      $('body').off('click', '#' + tag + '-button');
+                      $('body').on('click', '#' + tag + '-button', function() {
+                        $('#' + tag + '-modal').modal('show');
+                      });
                     }
                   }
                 });
