@@ -110,8 +110,10 @@
             }
 
             marker.on('popupopen', function(e) {
+alert("marker opened");
               if ($('#' + tag + '-modal').length == 0) {
                 // create modal and carousel
+alert("need to create modal and carousel");
                 $('#modals').append(createModal(tag));
 
                 // get instagram photos and add to carousel in modal
@@ -134,11 +136,13 @@
                     return image.tags.indexOf(tag) >= 0;
                   },
                   after: function(json) {
+alert("got first batch of images");
                     if (this.hasNext()) {
+alert("there are more images");
                       this.next();
                     } else {
                       $('#' + tag + '-images .item').first().addClass('active');
-alert("hi");
+alert("done getting images");
 //alert($('#' + tag + '-button').prop('outerHTML'));
                       //if ($('#' + tag + '-button').is(':disabled')) {
                         // show photos button was clicked
@@ -148,6 +152,7 @@ alert("hi");
                     }
                   }
                 });
+alert("about to get images");
                 feed.run();
               }
             });
