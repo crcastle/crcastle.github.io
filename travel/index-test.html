@@ -111,6 +111,7 @@
 
             marker.on('popupopen', function(e) {
 alert("marker opened");
+alert(tag + "-modal empty?" + ($('#' + tag + '-modal').length == 0));
               if ($('#' + tag + '-modal').length == 0) {
                 // create modal and carousel
 alert("need to create modal and carousel");
