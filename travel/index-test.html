@@ -110,11 +110,11 @@
             }
 
             marker.on('popupopen', function(e) {
-alert("marker opened");
-alert(tag + "-modal empty?" + ($('#' + tag + '-modal').length));
+//alert("marker opened");
+//alert(tag + "-modal empty?" + ($('#' + tag + '-modal').length));
               if ($('#' + tag + '-modal').length == 0) {
                 // create modal and carousel
-alert("need to create modal and carousel");
+//alert("need to create modal and carousel");
                 $('#modals').append(createModal(tag));
 
                 // get instagram photos and add to carousel in modal
@@ -143,17 +143,23 @@ alert("need to create modal and carousel");
                       this.next();
                     } else {
                       $('#' + tag + '-images .item').first().addClass('active');
-alert("done getting images");
+//alert("done getting images");
 //alert($('#' + tag + '-button').prop('outerHTML'));
                       if ($('#' + tag + '-button').is(':disabled')) {
                         // show photos button was clicked
                         $('#' + tag + '-modal').modal('show');
                         $('#' + tag + '-button').button('reset');
+                      } else {
+                        // show photos button wasn't clicked but photos are done loading
+                        $('body').off('click', '.show-photos');
+                        $('body').on('click', '.show-photos', function() {
+                          $('#' + tag + '-modal').modal('show');
+                        });
                       }
                     }
                   }
                 });
-alert("about to get images");
+//alert("about to get images");
                 feed.run();
               }
             });
