@@ -34,30 +34,8 @@
 </head>
 
 <body>
-    <!-- Button to trigger modal -->
     <div id="map"></div>
-
     <div id="modals"></div>
-
-    <!-- Modal -->
-    <!-- <div id="lazycarouselmodal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div id="lazycarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-              <div id="images" class="carousel-inner">
-              </div>
-              <a class="carousel-control left" href="#lazycarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a class="carousel-control right" href="#lazycarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <script type="text/javascript">
 
@@ -79,7 +57,7 @@
               '</div>' +
             '</div>' +
           '</div>' +
-        '</div>')
+        '</div>');
         }
 
       L.mapbox.accessToken = 'pk.eyJ1IjoiY3JjYXN0bGUiLCJhIjoiNmVuUHhXdyJ9.hkhoCoaFY8m1MEFf3K8BsA';
@@ -100,7 +78,6 @@
             if (isCurrentDestination || isPreviousDestination) {
               var content = content + '<div class="marker-description" style="text-align: center;">' +
                                       '<button type="button" id="' + tag + '-button" data-loading-text="<i class=&quot;fa fa-refresh fa-spin&quot;></i> Loading" class="btn btn-primary show-photos">See Photos</button>';
-                                      //'<a class="btn btn-small btn-primary has-spinner"><span class="spinner"><i class="fa fa-refresh fa-spin"></i></span>See Photos</a></div>';
               visitedDestinations.push({x: marker.getLatLng().lng, y: marker.getLatLng().lat});
             }
             marker.bindPopup(content);
@@ -113,11 +90,8 @@
             }
 
             marker.on('popupopen', function(e) {
-//alert("marker opened");
-//alert(tag + "-modal empty?" + ($('#' + tag + '-modal').length));
               if ($('#' + tag + '-modal').length == 0) {
                 // create modal and carousel
-//alert("need to create modal and carousel");
                 $('#modals').append(createModal(tag));
 
                 // get instagram photos and add to carousel in modal
@@ -140,19 +114,16 @@
                     return image.tags.indexOf(tag) >= 0;
                   },
                   after: function(json) {
-//alert("got first batch of images");
                     if (this.hasNext()) {
-//alert("there are more images");
                       this.next();
                     } else {
                       $('#' + tag + '-images .item').first().addClass('active');
-//alert("done getting images");
-//alert($('#' + tag + '-button').prop('outerHTML'));
                       if ($('#' + tag + '-button').is(':disabled')) {
                         // show photos button was clicked
                         $('#' + tag + '-modal').modal('show');
                         $('#' + tag + '-button').button('reset');
                       }
+
                       // swap click handler on button to show modal when clicked
                       $('body').off('click', '#' + tag + '-button');
                       $('body').on('click', '#' + tag + '-button', function() {
@@ -161,7 +132,6 @@
                     }
                   }
                 });
-//alert("about to get images");
                 feed.run();
               }
             });
@@ -175,15 +145,6 @@
           }
         })
         .addTo(map);
-
-/*
-  $('body').on('click', '.show-photos', function (e) {
-    var $btn = $(this).button('loading');
-    alert($btn);
-    // business logic...
-    //$btn.button('reset')
-  });
-*/
 
       // Disable drag and zoom handlers.
       // map.dragging.disable();
