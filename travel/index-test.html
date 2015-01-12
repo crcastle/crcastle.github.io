@@ -104,16 +104,15 @@
               visitedDestinations.push({x: marker.getLatLng().lng, y: marker.getLatLng().lat});
             }
             marker.bindPopup(content);
+            $('body').on('click', '#' + tag + '-button', function(e) {
+              var btn = $(this).button('loading');
+            });
 
             if (isCurrentDestination) {
               marker.setZIndexOffset(1000);
             }
 
             marker.on('popupopen', function(e) {
-              $('body').on('click', '#' + tag + '-button', function(e) {
-                var btn = $(this).button('loading');
-              });
-
 //alert("marker opened");
 //alert(tag + "-modal empty?" + ($('#' + tag + '-modal').length));
               if ($('#' + tag + '-modal').length == 0) {
