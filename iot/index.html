@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>IoT for Business Innovation Lab</title>
+		<title>IoT Business Innovation Lab</title>
 
 		<meta name="description" content="An IoT business framework">
 		<meta name="author" content="Chris Castle">
@@ -37,89 +37,157 @@
 	<body>
 
 		<div class="reveal">
+			<div id="problemSidebar" style="position: absolute; bottom: 0; left: 0; font-size: 0.5em; color: #666; margin: 1% 20% 1% 20%; padding: 0.5%; text-align: center; visibility: hidden; display: none;">
+				Businesses have been <span id='slow-highlight'>slow to adopt</span> <i>Internet of Things</i> innovations, missing out on <span id='opportunity-highlight'>opportunities</span> to improve efficiency and grow revenue.
+			</div>
+			<div id="thesisSidebar" style="position: absolute; bottom: 0; left: 0; font-size: 0.5em; color: #666; margin: 1% 10% 1% 10%; padding: 0.5%; text-align: center; visibility: hidden; display: none;">
+				Using a clear, repeatable <span id='framework-highlight'>framework</span> small, in-house <span id='teams-highlight'>teams</span> can <span id='dev-sell-highlight'>develop and sell</span> simple <span id='hardware-saas-highlight'>hardware + SaaS products</span> that <span id='efficiency-highlight'>improve efficiency</span> and <span id='revenue-highlight'>grow revenue</span> in businesses that have been slow to adopt new technology.
+			</div>
 
 			<div class="slides">
 				<section>
 					<h1>Problem</h1>
 					<section>
 						<p>
-							Businesses have been slow to adopt <i>Internet of Things</i> innovations, missing out on opportunities to improve efficiency and grow revenue.
+							Businesses have been <a href="#/slow">slow to adopt</a> <i>Internet of Things</i> innovations, missing out on <a href="#/opportunity">opportunities</a> to improve efficiency and grow revenue.
 						</p>
 					</section>
 				</section>
-				<section>
-					<blockquote cite="http://sandhill.com/article/the-internet-of-things-challenges-and-opportunities/">"Like many evolving IT and networking technologies, the Internet of Things will encounter multiple barriers to adoption. Traditional inertia, budget priorities, risk aversion..."</blockquote>
-					<p style="font-size: 0.6em;"><a href="http://sandhill.com/article/the-internet-of-things-challenges-and-opportunities/">Sandhill.com, November 2014</a><sup>1</sup></p>
-					<p class="fragment">And challenges unique to IoT...</p>
-					<ul style="font-size: 0.9em;">
-						<li class="fragment">Security</li>
-						<li class="fragment">Trust and Privacy</li>
-						<li class="fragment">Complexity, confusion and integration issues</li>
-						<li class="fragment">Evolving architectures, protocol wars and competing standards</li>
-						<li class="fragment">Concrete use cases and compelling value propositions</li>
-					</ul>
-				</section>
-				<section>
-					<blockquote cite="http://sandhill.com/article/the-internet-of-things-challenges-and-opportunities/">"These challenges will also provide new business opportunities for technology companies, middleware and tools developers, system integrators, device builders and cross-platform integration companies."</blockquote>
-					<p style="font-size: 0.6em;"><a href="http://sandhill.com/article/the-internet-of-things-challenges-and-opportunities/">Sandhill.com, November 2014</a><sup>1</sup>
-				</section>
-				<section>
+				<section id="slow" data-problem-sidebar="slow">
+					<h2>Slow to Adopt</h2>
 					<section>
-						<blockquote cite="http://www.businessinsider.com/how-the-internet-of-things-market-will-grow-2014-10">"The 'Internet of Things' will be the world's most massive device market and save companies billions of dollars"</blockquote>
-						<p style="font-size: 0.6em;"><a href="http://www.businessinsider.com/how-the-internet-of-things-market-will-grow-2014-10">Business Insider, October 2014</a><sup>2</sup></p>
-						<ul style="font-size: 0.9em;">
-							<li class="fragment"><quote cite="">"The IoT will result in $1.7 trillion in value added to the global economy in 2019."</quote></li>
-							<li class="fragment"><quote cite="">"Device shipments will reach 6.7 billion in 2019 for a five-year CAGR of 61%."</quote></li>
-							<li class="fragment"><quote cite="">"The enterprise sector will lead the IoT, accounting for 46% of device shipments this year."</quote></li>
-							<li class="fragment"><quote cite="">"The main benefit of growth in the IoT will be increased efficiency and lower costs."</quote></li>
+						<blockquote cite="http://sandhill.com/article/the-internet-of-things-challenges-and-opportunities/">"Like many evolving IT and networking technologies, the Internet of Things will encounter multiple barriers to adoption. Traditional inertia, budget priorities, risk aversion..."</blockquote>
+						<p style="font-size: 0.6em;"><a href="http://sandhill.com/article/the-internet-of-things-challenges-and-opportunities/">Sandhill.com, November 2014</a><sup>1</sup></p>
+						<p class="fragment">And challenges unique to IoT...</p>
+						<ul style="font-size: 0.8em;">
+							<li class="fragment">Security</li>
+							<li class="fragment">Trust and Privacy</li>
+							<li class="fragment">Complexity, confusion and integration issues</li>
+							<li class="fragment">Evolving architectures, protocol wars and competing standards</li>
+							<li class="fragment">Concrete use cases and compelling value propositions</li>
 						</ul>
-						<!-- <img style="width: 30%;" src="img/iot devices by sector-1.png"> -->
 					</section>
 				</section>
-				<section>
+
+				<section id="opportunity" data-problem-sidebar="opportunity">
+					<h2>Opportunity</h2>
+					<section>
+						<img style="border: none; background: none; box-shadow: none; max-width: 85%;" src="img/iot-growth-projection.svg">
+						<p style="position: absolute; bottom: 10%; left: 10%; font-size: 0.4em; text-align: left;">Source: <a href="http://harborresearch.com">Harbor Research</a> and <a href="http://postscapes.com">Postscapes</a></p>
+					</section>
+				</section>
+				<section data-problem-sidebar="opportunity">
+					<h2>Opportunity</h2>
+					<section>
+						<img style="border: none; background: none; box-shadow: none; max-width: 65%; text-align: left; float: left;" src="img/iot-growth-projection.svg">
+						<p style="font-size: 0.6em; text-align: left;">Examples</p>
+						<ul style="display: block; color: #cc0000; text-align: left; font-size: 0.6em; list-style: none;">
+							<li>Irrigation</li>
+							<li>Energy</li>
+						</ul>
+						<ul class="fragment" style="display: block; color: #ff9900; text-align: left; font-size: 0.6em; list-style: none;">
+							<li>Vehicle Telematics</li>
+							<li>Package Monitoring</li>
+							<li>Supply Chain</li>
+						</ul>
+						<ul class="fragment" style="display: block; color: #ffd966; text-align: left; font-size: 0.6em; list-style: none;">
+							<li>Product Labeling</li>
+							<li>Remote Monitoring</li>
+						</ul>
+						<ul class="fragment" style="display: block; color: #6aa84f; text-align: left; font-size: 0.6em; list-style: none;">
+							<li>HVAC</li>
+							<li>Lighting</li>
+							<li>Occupancy</li>
+						</ul>
+						<ul class="fragment" style="display: block; color: #3366ff; text-align: left; font-size: 0.6em; list-style: none;">
+							<li>Maintenance</li>
+							<li>Surveillance</li>
+							<li>Weather</li>
+						</ul>
+						<p style="position: absolute; bottom: 10%; left: 10%; font-size: 0.4em; text-align: left;">Source: <a href="http://harborresearch.com">Harbor Research</a> and <a href="http://postscapes.com">Postscapes</a></p>
+					</section>
+				</section>
+
+				<section data-problem-sidebar="opportunity">
+					<h2>Revenue Sources</h2>
+					<section>
+						<img style="border: none; background: none; box-shadow: none;" src="img/iot-revenue-sources.svg">
+					</section>
+				</section>
+				<section data-problem-sidebar="opportunity">
+					<h2>Revenue Sources</h2>
+					<section>
+						<img style="border: none; background: none; box-shadow: none; max-width: 60%; float: left;" src="img/iot-revenue-sources.svg">
+						<p style="font-size: 0.6em; text-align: left;">Examples</p>
+						<ul style="display: block; color: #1155cc; text-align: left; font-size: 0.6em; list-style: none;">
+							<li>Data and Analytics</li>
+							<li>Mobile and Cloud Computing</li>
+							<li>Value-Added Applications</li>
+						</ul>
+						<ul class="fragment" style="display: block; color: #6aa84f; text-align: left; font-size: 0.6em; list-style: none;">
+							<li>Cellular Data/SMS</li>
+							<li>Cable/DSL/Fiber</li>
+							<li>Other M2M Networking</li>
+						</ul>
+						<ul class="fragment" style="display: block; color: #ff0000; text-align: left; font-size: 0.6em; list-style: none;">
+							<li>Sensors</li>
+							<li>Wifi/Cell Modems</li>
+							<li>Integrated Circuits</li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-problem-sidebar="opportunity">
+					<blockquote cite="http://www.businessinsider.com/how-the-internet-of-things-market-will-grow-2014-10">"The 'Internet of Things' will be the world's most massive device market and save companies billions of dollars"</blockquote>
+					<p style="font-size: 0.6em;"><a href="http://www.businessinsider.com/how-the-internet-of-things-market-will-grow-2014-10">Business Insider, October 2014</a><sup>2</sup></p><br>
 					<blockquote cite="https://hbr.org/2014/07/how-the-internet-of-things-changes-business-models">
-						"...today’s companies will need to fundamentally rethink their orthodoxies about value creation and value capture..."
+						"As the Internet of Things spreads...today’s companies will need to fundamentally rethink their orthodoxies about value creation and value capture..."
 					</blockquote>
 					<p style="font-size: 0.6em;"><a href="https://hbr.org/2014/07/how-the-internet-of-things-changes-business-models">Harvard Business Review, July 2014</a><sup>3</sup></p>
-					<ul style="font-size: 0.9em;">
-						<li class="fragment">IoT provides a new way to add value beyond new features and price competition</li>
-						<li class="fragment">Provides new ways to monitize customer value</li>
-						<li class="fragment">Helps companies with <quote cite="https://hbr.org/2014/07/how-the-internet-of-things-changes-business-models">"differentiation, cost leadership, and focus"</quote></li>
-						<li class="fragment">Even pushes wholesale changes to business models</li>
-					</ul>
+					<aside class="notes">
+						"The IoT will result in $1.7 trillion in value added to the global economy in 2019."
+						"Device shipments will reach 6.7 billion in 2019 for a five-year CAGR of 61%."
+						"The enterprise sector will lead the IoT, accounting for 46% of device shipments this year."
+						"The main benefit of growth in the IoT will be increased efficiency and lower costs."
+						IoT provides a new way to add value beyond new features and price competition
+						Provides new ways to monitize customer value
+						Helps companies with "differentiation, cost leadership, and focus"
+						Even pushes wholesale changes to business models
+					</aside>
 				</section>
-				<section>
-					<h3>Big companies beginning to invest in IoT</h3>
+
+				<section data-problem-sidebar="opportunity">
+					<h2>Big Names Already Investing</h2>
 					<section>
-						<ul style="list-style: none;">
-							<li><a href="http://www.fool.com/investing/general/2015/04/16/microsoft-corporations-latest-internet-of-things-p.aspx">Microsoft</a> (e.g. <a href="http://www.fool.com/investing/general/2015/04/16/microsoft-corporations-latest-internet-of-things-p.aspx">1</a>, <a href="http://www.theverge.com/2015/2/2/7962179/raspberry-pi-windows-10">2</a>)</li>
-							<li><a href="http://www.investopedia.com/stock-analysis/041615/intels-investing-heavily-internet-things-intc.aspx">Intel</a></li>
-							<li><a href="http://www.fool.com/investing/general/2014/12/29/why-cisco-is-the-ultimate-internet-of-things-stock.aspx">Cisco</a></li>
-							<li><a href="http://www.cnet.com/news/ibm-to-invest-3b-in-building-internet-of-things-business/">IBM</a></li>
-						</ul>
+						<p>IBM: <a href="http://www.cnet.com/news/ibm-to-invest-3b-in-building-internet-of-things-business/">Investing $3b over four years</a></p>
+						<p>Intel: <a href="http://www.investopedia.com/stock-analysis/041615/intels-investing-heavily-internet-things-intc.aspx">Dedicated Internet of Things team</a></p>
+						<p>Microsoft: <a href="http://www.fool.com/investing/general/2015/04/16/microsoft-corporations-latest-internet-of-things-p.aspx">Partnership with appliance maker</a></p>
+						<p>Microsoft: <a href="http://www.theverge.com/2015/2/2/7962179/raspberry-pi-windows-10">Windows now supports Raspberry Pi</a></p>
+						<p>Cisco: <a href="http://www.fool.com/investing/general/2014/12/29/why-cisco-is-the-ultimate-internet-of-things-stock.aspx">"Connected Analytics for the Internet of Everything"</a></p>
+						<p>Dell: <a href="http://www.dell.com/learn/us/en/uscorp1/press-releases/2014-09-09-dell-oem-solutions-internet-of-things-lab">Opened Internet of Things Lab</a></p>
 					</section>
 				</section>
 				<section>
 					<h1>Business Thesis</h1>
 					<section>
 						<p>
-							Following a clear, repeatable <a href="#/framework">framework</a>, small, in-house <a href="#/teams">teams</a> can <a href="#/develop-and-sell">develop and sell</a> simple <a href="#/hardware-saas">hardware + SaaS products</a> that <a href="#/improve-efficiency">improve efficiency</a> and <a href="#/grow-revenue">grow revenue</a> in businesses that have been slow to adopt new technology.
+							Using a clear, repeatable <a href="#/framework">framework</a>, small, in-house <a href="#/teams">teams</a> can <a href="#/develop-and-sell">develop and sell</a> simple <a href="#/hardware-saas">hardware + SaaS products</a> that <a href="#/improve-efficiency">improve efficiency</a> and <a href="#/grow-revenue">grow revenue</a> in businesses that have been slow to adopt new technology.
 						</p>
 					</section>
 				</section>
 
-				<section id="framework">
+				<section data-thesis-sidebar="framework">
 					<h2>Framework</h2>
 					<section>
 						<h2>Decrease Risk!</h2>
 						<p class="fragment">both market risk and execution risk</p>
 					</section>
 					<section>
-						<ul>
-							<li>Formalize failure into business model</li>
-							<li>Provide means for process introspection</li>
-							<li>Decrease day-to-day cognitive overhead</li>
-						</ul>
+						<!-- <ul> -->
+							<p>Formalize failure in business model</p>
+							<p>Provide means for process introspection and improvement</p>
+							<p>Decrease day-to-day cognitive overhead</p>
+						<!-- </ul> -->
 						<aside class="notes">
 							Product failure has a much lower consequence on success of company
 							Embracing product failure as a regular part of the business allows for faster iteration through product ideas and continuous improvement of the product development process.
@@ -139,7 +207,7 @@
 					</section>
 				</section>
 
-				<section id="teams">
+				<section id="teams" data-thesis-sidebar="teams">
 					<h2>Team</h2>
 					<section data-transition="fade">
 						<img style="border: none; background: none; box-shadow: none;" src="img/maker-bizdev venn diagram 1.svg">
@@ -168,14 +236,14 @@
 					</section>
 				</section>
 
-				<section id="develop-and-sell">
+				<section id="develop-and-sell" data-thesis-sidebar="dev-sell">
 					<h2>Develop and Sell</h2>
 					<section>
 						<i>WIP: Need a lot more thought (and help) on sales and marketing model</i>
 					</section>
 				</section>
 
-				<section id="hardware-saas">
+				<section id="hardware-saas" data-thesis-sidebar="hardware-saas">
 					<h2>Hardware + SaaS</h2>
 					<section>
 						<div style="float: left; width: 50%;">
@@ -189,9 +257,9 @@
 						<div style="float: right; width: 47%; border-left: 2px solid #666; padding-left: 2%;">
 							<h4 style="text-align: left;">Software service</h4>
 							<ul>
-								<li>Intuitive</li>
 								<li>Focused on customer's needs</li>
 								<li>Desktop or mobile accessible</li>
+								<li>Intuitive</li>
 							</ul>
 						</div>
 						<aside class="notes">
@@ -201,14 +269,14 @@
 
 				</section>
 
-				<section id="improve-efficiency">
+				<section id="improve-efficiency" data-thesis-sidebar="efficiency">
 					<h2>Improve Efficiency</h2>
 					<section>
 						<i>WIP: Fill-in real examples of IoT improving efficiency</i>
 					</section>
 				</section>
 
-				<section id="grow-revenue">
+				<section id="grow-revenue" data-thesis-sidebar="revenue">
 					<h2>Grow Revenue</h2>
 					<section>
 						<i>WIP: Fill-in real examples of IoT growing revenue</i>
@@ -226,7 +294,7 @@
 					<h2>References</h2>
 					<section>
 						<ul style="font-size: 0.7em; text-align: left; list-style: none;">
-							<li><sup>1</sup>Kocher, Chris, and Grey Heron. <a href="http://sandhill.com/article/the-internet-of-things-challenges-and-opportunities/">'The Internet Of Things: Challenges And Opportunities | Sandhill'</a>. Sand Hill. N.p., 2014. Web. 29 Apr. 2015.</li>
+							<li><sup>1</sup>Kocher, Chris. <a href="http://sandhill.com/article/the-internet-of-things-challenges-and-opportunities/">'The Internet Of Things: Challenges And Opportunities | Sandhill'</a>. Sand Hill. N.p., 2014. Web. 29 Apr. 2015.</li>
 							<li><sup>2</sup>Greenough, John. <a href="http://www.businessinsider.com/how-the-internet-of-things-market-will-grow-2014-10">'The 'Internet Of Things' Will Be The World's Most Massive Device Market And Save Companies Billions Of Dollars'</a>. Business Insider. N.p., 2014. Web. 24 Apr. 2015.</li>
 							<li><sup>3</sup>Hui, Gordon. <a href="https://hbr.org/2014/07/how-the-internet-of-things-changes-business-models">'How The Internet Of Things Changes Business Models'</a>. Harvard Business Review. N.p., 2014. Web. 23 Apr. 2015.</li>
 							<li><sup>4</sup> Pink, Daniel H. Drive. New York, NY: Riverhead Books, 2009. Print.</li>
@@ -274,7 +342,72 @@
 				if(notes) {
 					console.log('%c' + notes.innerHTML.replace(/\n\s+/g,'\n'), 'background: #222; color: #bada55; font-size: 14px;');
 				}
+
+				curSlide = event.currentSlide;
+				var pSidebar = curSlide.dataset.problemSidebar ?
+											 curSlide.dataset.problemSidebar :
+											 curSlide.parentElement.dataset.problemSidebar;
+
+				var tSidebar = curSlide.dataset.thesisSidebar ?
+											 curSlide.dataset.thesisSidebar :
+											 curSlide.parentElement.dataset.thesisSidebar;
+
+				if (pSidebar) {
+					thesisSidebar.style.display = 'none';
+					thesisSidebar.style.visibility = 'hidden';
+
+					clearProblemSidebarHighlights();
+					updateSidebar(pSidebar);
+					problemSidebar.style.display = 'block';
+					problemSidebar.style.visibility = 'visible';
+				} else if (tSidebar) {
+					problemSidebar.style.display = 'none';
+					problemSidebar.style.visibility = 'hidden';
+
+					clearThesisSidebarHighlights();
+					updateSidebar(tSidebar);
+					thesisSidebar.style.display = 'block';
+					thesisSidebar.style.visibility = 'visible';
+				} else {
+					thesisSidebar.style.display = 'none';
+					thesisSidebar.style.visibility = 'hidden';
+					problemSidebar.style.display = 'none';
+					problemSidebar.style.visibility = 'hidden';
+				}
 			});
+
+			function clearProblemSidebarHighlights() {
+				var spanIds = [
+					'slow-highlight',
+					'opportunity-highlight'
+				];
+
+				clearSidebarHighlights(spanIds);
+			}
+
+			function clearThesisSidebarHighlights() {
+				var spanIds = [
+					'framework-highlight',
+					'teams-highlight',
+					'dev-sell-highlight',
+					'hardware-saas-highlight',
+					'efficiency-highlight',
+					'revenue-highlight'
+				];
+
+				clearSidebarHighlights(spanIds);
+			}
+
+			function clearSidebarHighlights(spanIds) {
+				spanIds.forEach(function(span) {
+					document.getElementById(span).className = "";
+				});
+			}
+
+			function updateSidebar( phrase ) {
+				span = document.getElementById(phrase + "-highlight");
+				span.className = "highlight";
+			}
 
 		</script>
 

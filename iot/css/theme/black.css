@@ -263,3 +263,7 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #42affa; }
+
+.reveal .highlight {
+  color: #42affa;
+}
