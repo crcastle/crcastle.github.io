@@ -267,3 +267,16 @@ body {
 .reveal .highlight {
   color: #42affa;
 }
+
+span.stamp {
+  color: red;
+  border: 3px dotted red;
+  display: inline-block;
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  position: relative;
+  left: -10px;
+  top: -25px;
+  font-weight: bold;
+  padding: 5px;
+}
