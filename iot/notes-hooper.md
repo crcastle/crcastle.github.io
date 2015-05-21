@@ -37,3 +37,11 @@ If no one, why not?
 Ted talk about "fake it until you become it" (speaker from HBS)
 
 - Ombitron: how to approach and create a positive interaction
+
+
+Feedback on Customer Partner Program:
+- Don't get blinders on with 1 or 2 partner customers
+- Maintain conversation with large group of potential customers
+
+
+- Find consultants to help part-time with small jobs I need help handling
