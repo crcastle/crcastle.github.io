@@ -10,4 +10,4 @@ marker-color,marker-symbol,marker-size,city,state,country,latitude,longitude,tag
 #6c6c6c,dog-park,small,Kiruna,,Sweden,67.85,20.216700000000003,#sweden
 #6c6c6c,school,small,Christchurch,,New Zealand,-43.53,172.6203,#nz
 #6c6c6c,scooter,small,Bangkok,,Thailand,13.75,100.4667,#thailand
-#548cba,skiing,small,Sapporo,,Japan,43.0667,141.35000000000002,#japan
+#6c6c6c,skiing,small,Sapporo,,Japan,43.0667,141.35000000000002,#japan
