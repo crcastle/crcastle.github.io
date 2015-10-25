@@ -74,12 +74,13 @@ body {
   text-align: left;
   list-style: none;
   font-size: 64px;
-  line-height: 1.5em;
+  line-height: 1em;
 }
 
 .masthead-nav > li {
   /*display: inline-block;*/
   /*list-style: none;*/
+  margin-bottom: 35px;
 }
 /*.masthead-nav > li + li {
   margin-left: 20px;
@@ -118,6 +119,7 @@ body {
   }
   .masthead-nav {
     float: left;
+    line-height: 1.3em;
   }
 }
 
