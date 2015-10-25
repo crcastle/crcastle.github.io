@@ -75,7 +75,7 @@
       Mousetrap.bind('c a t', function() {
         var i = document.getElementById('cat');
         if (i) {
-          i.contentWindow.document.body.style.display = "block";
+          i.style.display = "block";
         } else {
           i = document.createElement('iframe');
           i.id = 'cat';
