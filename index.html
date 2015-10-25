@@ -69,6 +69,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script async defer src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/mousetrap.min.js"></script>
+    <script type="text/javascript">
+      Mousetrap.bind('c a t', function() {
+        var i = document.getElementById('cat');
+        if (i) {
+          i.contentWindow.document.body.style.display = "block";
+        } else {
+          i = document.createElement('iframe');
+          i.id = 'cat';
+          i.src = '/cat/';
+          i.width = '320';
+          i.height = '430';
+          i.style.position = 'fixed';
+          i.style.bottom = '0px';
+          i.style.right = '10px';
+          i.style.zIndex = '100';
+          i.frameBorder = '0';
+          document.body.appendChild(i);
+        }
+      });
+    </script>
   </body>
 </html>
