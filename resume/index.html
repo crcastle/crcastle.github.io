@@ -23,6 +23,7 @@
         ul { margin: 0 0 24px 25px; }
         section { margin: 20px 0 0 0; }
         /*section.first { margin: 10px 0 0 0; }*/
+        abbr { border-bottom: 1px dashed #ccc; }
         #person { margin-top: 0;}
         #other-profiles { display: inline; }
         #other-profiles li { display: inline; }
@@ -82,8 +83,6 @@
 </head>
 
 <body>
-    <!--<a href="/travel"><img style="position: absolute; top: 0; left: 0; border: 0;" src="images/traveling-ribbon-dark.png" alt="Currently traveling"></a>-->
-
     <div id="page-wrap">
 
         <section id="person" itemscope itemtype="http://schema.org/Person">
@@ -136,6 +135,14 @@
         <section class="first">
             <h2>Experience</h2>
                 <div itemscope itemtype="http://schema.org/OrganizationRole">
+                    <h3><span itemprop="namedPosition">Founder</span>, <span itemprop="namedPosition">Product Manager</span>, <span itemprop="namedPosition">Software and Hardware Engineer</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"><a href="http://ctrl.industries/" itemprop="name">ctrl industries</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">March 2015</span> to <span itemprop="endDate">present</span></span></h3>
+                    <ul>
+                        <li itemprop="description">Founded B2B Internet of Things Hardware+SaaS business focused on bringing better technology to "<abbr title="Agriculture, Forestry, Fishing, Construction, Trucking, Manufacturing, Oil and Gas, etc.">analog</abbr>" industries</li>
+                        <li itemprop="description">Conducted primary and secondary research to understand market needs and formulate product vision</li>
+                        <li itemprop="description">Architected and built <a href="http://ctrl.industries">wireless sensor hardware prototype and SaaS technology platform</a></li>
+                    </ul>
+                </div>
+                <div itemscope itemtype="http://schema.org/OrganizationRole">
                     <h3><span itemprop="namedPosition">Technical Product Manager</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://simplymeasured.com/" itemprop="name">Simply Measured</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">July 2012</span> to <span itemprop="endDate">August 2014</span></span></h3>
                     <ul>
                         <li itemprop="description">Developed, planned, and directed launch of report management product for Simply Measured's analysts, making report creation process faster and more powerful while reducing defect rate; grew and managed six-person team including engineers and a junior product manager</li>
@@ -147,7 +154,7 @@
                 <div itemscope itemtype="http://schema.org/OrganizationRole">
                     <h3><span itemprop="namedPosition">Product Manager, Cloud Technologies</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.vivaki.com/" itemprop="name">VivaKi Nerve Center</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">February 2008</span> to <span itemprop="endDate">July 2012</span></span></h3>
                     <ul>
-                        <li itemprop="description">Created product vision, prototyped (Node.js, Ruby) and directed development of multi-agency API to to allow internal development groups to access and use our managed AWS infrastructure</li>
+                        <li itemprop="description">Created product vision, prototyped (Node.js, Ruby), and directed development of multi-agency API to to allow internal development groups to access and use our managed AWS infrastructure</li>
                         <li itemprop="description">Defined functionality and led development of data processing engine, processing ~1PB/week (Hadoop / AWS Elastic MapReduce)</li>
                         <li itemprop="description">Collected business requirements from 1,000+ users and defined product spec for centralized marketing data storage and provisioning system</li>
                     </ul>
@@ -158,10 +165,10 @@
                     <h3><span itemprop="namedPosition">Client Service Engineer</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">October 2005</span> to <span itemprop="endDate">February 2008</span></span></h3>
                     <ul>
                         <li itemprop="description">Managed feature development of online messaging, tracking, and reporting products</li>
-                        <li itemprop="description">Guided development of in-house web analytics tool using the Atlas ad-serving system and other web technologies, including Google Analytics and Omniture SiteCatalyst</li>
-                        <li itemprop="description">Acted as Atlas ad serving technical subject matter expert</li>
-                        <li itemprop="description">Planned and managed ad operations for online advertising campaigns</li>
-                        <li itemprop="description">Implemented pixel tracking tags on client websites</li>
+                        <li itemprop="description">Guided development of in-house web analytics tool using the Atlas ad-serving system and other web technologies</li>
+                        <!-- <li itemprop="description">Acted as Atlas ad serving technical subject matter expert</li> -->
+                        <!-- <li itemprop="description">Planned and managed ad operations for online advertising campaigns</li> -->
+                        <!-- <li itemprop="description">Implemented pixel tracking tags on client websites</li> -->
                     </ul>
                 </div>
 
@@ -195,28 +202,31 @@
 
         <section itemscope itemtype="http://schema.org/ItemList">
             <ul class="comma-list">
+                <li itemprop="itemListElement">Product Management</li>
+                <li itemprop="itemListElement">Software Development</li>
+                <li itemprop="itemListElement">Hardware Development</li>
                 <li itemprop="itemListElement">UX Design</li>
-                <li itemprop="itemListElement">Analytics</li>
-                <li itemprop="itemListElement">ETL</li>
                 <li itemprop="itemListElement">Web Analytics</li>
                 <li itemprop="itemListElement">Data Visualization</li>
-                <li itemprop="itemListElement">Digital Marketing</li>
-                <li itemprop="itemListElement">Online Ad Serving Technologies</li>
-                <li itemprop="itemListElement">Site Personalization and Measurement</li>
+                <li itemprop="itemListElement">ETL</li>
+                <li itemprop="itemListElement">Analytics</li>
+                <!-- <li itemprop="itemListElement">Digital Marketing</li> -->
+                <!-- <li itemprop="itemListElement">Online Ad Serving Technologies</li> -->
+                <!-- <li itemprop="itemListElement">Site Personalization and Measurement</li> -->
             </ul>
             <br />
             <ul class="comma-list">
                 <li itemprop="itemListElement">Ruby</li>
                 <li itemprop="itemListElement">Node.js</li>
                 <li itemprop="itemListElement">Python</li>
-                <li itemprop="itemListElement">Bash</li>
+                <!-- <li itemprop="itemListElement">Bash</li> -->
                 <li itemprop="itemListElement">HTML/CSS/JavaScript</li>
                 <li itemprop="itemListElement">Linux/Unix system administration</li>
                 <li itemprop="itemListElement">SQL</li>
+                <li itemprop="itemListElement">Git</li>
                 <li itemprop="itemListElement">Amazon Web Services</li>
                 <li itemprop="itemListElement">Hadoop</li>
                 <li itemprop="itemListElement">MapReduce</li>
-                <li itemprop="itemListElement">Git</li>
             </ul>
             <br />
             <ul class="comma-list">
@@ -225,6 +235,7 @@
               <li itemprop="itemListElement">Motorcycles</li>
               <li itemprop="itemListElement">Road Cycling</li>
               <li itemprop="itemListElement">Running</li>
+              <li itemprop="itemListElement">Yoga</li>
             </ul>
         </section>
 
@@ -234,7 +245,7 @@
             <a href="http://tools.seomoves.org/microdata/?url=crc.io/resume">Microdata</a>&nbsp;|&nbsp;
             <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fcrc.io%2Fresume&amp;charset=%28detect+automatically%29&amp;fbc=1&amp;doctype=Inline&amp;fbd=1&amp;group=0">Valid HTML5</a>
           </span>
-          <span id="last-updated"><a href="https://github.com/crcastle/crcastle.github.io/commits/master">Last updated 23 October 2015</a></span>
+          <span id="last-updated"><a href="https://github.com/crcastle/crcastle.github.io/commits/master">Last updated 28 October 2015</a></span>
         </footer>
 
     </div>
