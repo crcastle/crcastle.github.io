@@ -121,7 +121,7 @@ body {
     float: left;
   }
   .masthead-nav {
-    float: left;
+    /*float: left;*/
     line-height: 1.3em;
   }
 }
@@ -165,7 +165,7 @@ body {
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    /*position: fixed;*/
     bottom: 0;
   }
   /* Start the vertical centering */
