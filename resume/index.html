@@ -303,6 +303,9 @@
            // fade out read-more
            $p.fadeOut();
 
+           // track "more" click with GA
+           ga('send', 'event', 'More', 'click', '999to333-3s');
+
            // prevent jump-down
            return false;
 
