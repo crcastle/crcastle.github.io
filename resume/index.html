@@ -47,6 +47,16 @@
             font-style: normal;
         }
         #summary a { color: #999; }
+        #summary .read-more a {
+            animation-name: textCycle;
+            animation-duration:3s;
+            animation-direction:alternate;
+            animation-iteration-count:infinite;
+        }
+        @keyframes textCycle {
+          0% {color:#999;}
+          50% {color:#333;}
+        }
         #summary a:hover { color: #000; }
         .comma-list { margin: 0; padding: 0; }
         .comma-list li { display: inline; }
