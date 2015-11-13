@@ -95,7 +95,7 @@
 <body>
     <div id="page-wrap">
 
-        <section id="person" itemscope itemtype="http://schema.org/Person">
+        <section id="person" itemscope itemtype="http://schema.org/Person" itemref="summary sm-org ctrl-org vivaki-org rf-org ms-org brattle-org colby-org">
 
           <!-- Microdata! -->
 
@@ -120,7 +120,7 @@
           </ul>
         </section>
 
-        <div id="summary">
+        <div id="summary" itemprop="description">
             <p>
                 I conceptualize, design, manage, and build digital products. I like to solve challenges previously thought impossible and help my team grow along the way. I'll do whatever necessary to keep moving toward the goal: write code, prototype hardware, hire new team members, coach employees, or define and communicate an inspiring product vision.
             </p>
@@ -155,36 +155,96 @@
 
         <section class="first">
             <h2>Experience</h2>
-                <div itemscope itemtype="http://schema.org/OrganizationRole">
-                    <h3><span itemprop="namedPosition">Founder</span>, <span itemprop="namedPosition">Product Manager</span>, <span itemprop="namedPosition">Software and Hardware Engineer</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Organization"><a href="http://ctrl.industries/" itemprop="name">ctrl industries</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">March 2015</span> to <span itemprop="endDate">present</span></span></h3>
-                    <ul>
+                <div>
+                    <h3>
+                      <span id="ctrl-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="ctrl-dates ctrl-descriptions">
+                        <span itemprop="roleName">Founder</span>, <span itemprop="roleName">Product Manager</span>, <span itemprop="roleName">Software and Hardware Engineer</span>
+                      </span>
+                      <span class="job-properties">
+                        <span id="ctrl-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Organization" itemref="ctrl-role">
+                          <a href="http://ctrl.industries/" itemprop="name">ctrl industries</a> -
+                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
+                          </span>
+                        </span> -
+                        <span id="ctrl-dates">
+                          <span itemprop="startDate" content="2015-03-01">March 2015</span> to <span itemprop="endDate" content="2015-10-15">present</span>
+                        </span>
+                      </span>
+                    </h3>
+                    <ul id="ctrl-descriptions">
                         <li itemprop="description">Founded B2B Internet of Things Hardware+SaaS business focused on bringing better technology to "<abbr title="Agriculture, Forestry, Fishing, Construction, Trucking, Manufacturing, Oil and Gas, etc.">analog</abbr>" industries</li>
                         <li itemprop="description">Conducted primary and secondary research to understand market needs and formulate product vision</li>
                         <li itemprop="description">Architected and built <a href="http://ctrl.industries">wireless sensor hardware prototype and SaaS technology platform</a></li>
                     </ul>
                 </div>
-                <div itemscope itemtype="http://schema.org/OrganizationRole">
-                    <h3><span itemprop="namedPosition">Technical Product Manager</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://simplymeasured.com/" itemprop="name">Simply Measured</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">July 2012</span> to <span itemprop="endDate">August 2014</span></span></h3>
-                    <ul>
+                <div>
+                    <h3>
+                      <span id="sm-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="sm-dates sm-descriptions">
+                        <span itemprop="roleName">Technical Product Manager</span>
+                      </span>
+                      <span class="job-properties">
+                        <span id="sm-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="sm-role">
+                          <a href="http://simplymeasured.com/" itemprop="name">Simply Measured</a> -
+                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
+                          </span>
+                        </span> -
+                        <span id="sm-dates">
+                          <span itemprop="startDate" content="2012-07-10">July 2012</span> to <span itemprop="endDate" content="2014-08-25">August 2014</span>
+                        </span>
+                      </span>
+                    </h3>
+                    <ul id="sm-descriptions">
                         <li itemprop="description">Developed, planned, and directed launch of report management product for Simply Measured's analysts, making report creation process faster and more powerful while reducing defect rate; grew and managed six-person team including engineers and a junior product manager</li>
                         <li itemprop="description">Managed four-person analyst team responsible for design and implementation of Simply Measured's product, 50+ customer-facing reports</li>
                         <li itemprop="description">Adapted my role from product management generalist to product owner of Report Builder during substantial company growth (20 to 150 employees)</li>
                     </ul>
                 </div>
 
-                <div itemscope itemtype="http://schema.org/OrganizationRole">
-                    <h3><span itemprop="namedPosition">Product Manager, Cloud Technologies</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.vivaki.com/" itemprop="name">VivaKi Nerve Center</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">February 2008</span> to <span itemprop="endDate">July 2012</span></span></h3>
-                    <ul>
+                <div>
+                    <h3>
+                      <span id="vivaki-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="vivaki-dates vivaki-descriptions">
+                        <span itemprop="roleName">Product Manager, Cloud Technologies</span>
+                      </span>
+                      <span class="job-properties">
+                        <span id="vivaki-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="vivaki-role">
+                          <a href="http://www.vivaki.com/" itemprop="name">VivaKi Nerve Center</a> -
+                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
+                          </span>
+                        </span> -
+                        <span id="vivaki-dates">
+                          <span itemprop="startDate" content="2008-02-01">February 2008</span> to <span itemprop="endDate" content="2012-07-01">July 2012</span>
+                        </span>
+                      </span>
+                    </h3>
+                    <ul id="vivaki-descriptions">
                         <li itemprop="description">Created product vision, prototyped (Node.js, Ruby), and directed development of multi-agency API to to allow internal development groups to access and use our managed AWS infrastructure</li>
                         <li itemprop="description">Defined functionality and led development of data processing engine, processing ~1PB/week (Hadoop / AWS Elastic MapReduce)</li>
                         <li itemprop="description">Collected business requirements from 1,000+ users and defined product spec for centralized marketing data storage and provisioning system</li>
                     </ul>
                 </div>
 
-                <div itemscope itemtype="http://schema.org/OrganizationRole">
-                    <h3><span itemprop="namedPosition">Media Technology Specialist</span></h3>
-                    <h3><span itemprop="namedPosition">Client Service Engineer</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">October 2005</span> to <span itemprop="endDate">February 2008</span></span></h3>
-                    <ul>
+                <div>
+                    <h3>
+                      <span id="rf-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="rf-dates rf-descriptions">
+                        <span itemprop="roleName">Media Technology Specialist</span>
+                        <span itemprop="roleName">Client Service Engineer</span>
+                      </span>
+                      <span class="job-properties">
+                        <span id="rf-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="rf-role">
+                          <a href="http://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> -
+                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
+                          </span>
+                        </span> -
+                        <span id="rf-dates">
+                          <span itemprop="startDate" content="2005-10-01">October 2005</span> to <span itemprop="endDate" content="2008-02-01">February 2008</span>
+                        </span>
+                      </span>
+                    </h3>
+                    <ul id="rf-descriptions">
                         <li itemprop="description">Managed feature development of online messaging, tracking, and reporting products</li>
                         <li itemprop="description">Guided development of in-house web analytics tool using the Atlas ad-serving system and other web technologies</li>
                         <!-- <li itemprop="description">Acted as Atlas ad serving technical subject matter expert</li> -->
@@ -193,17 +253,47 @@
                     </ul>
                 </div>
 
-                <div itemscope itemtype="http://schema.org/OrganizationRole">
-                    <h3><span itemprop="namedPosition">Strategy Analyst</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.microsoft.com/" itemprop="name">Microsoft</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Redmond</span>, <span itemprop="addressRegion">WA</span></span></span> - <span itemprop="startDate">March 2004</span> to <span itemprop="endDate">March 2005</span></span></h3>
-                    <ul>
+                <div>
+                    <h3>
+                      <span id="ms-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="ms-dates ms-descriptions">
+                        <span itemprop="roleName">Strategy Analyst</span>
+                      </span>
+                      <span class="job-properties">
+                        <span id="ms-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="ms-role">
+                          <a href="http://www.microsoft.com/" itemprop="name">Microsoft</a> -
+                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="addressLocality">Redmond</span>, <span itemprop="addressRegion">WA</span>
+                          </span>
+                        </span> -
+                        <span id="ms-dates">
+                          <span itemprop="startDate" content="2004-03-01">March 2004</span> to <span itemprop="endDate" content="2005-03-01">March 2005</span>
+                        </span>
+                      </span>
+                    </h3>
+                    <ul id="ms-descriptions">
                         <li itemprop="description">Assessed advertising and technology markets in 30 countries to determine the potential viability of MSN’s business in those markets</li>
                         <li itemprop="description">Supported strategy creation for MSN's worldwide sales and marketing organization</li>
                     </ul>
                 </div>
 
-                <div itemscope itemtype="http://schema.org/OrganizationRole">
-                    <h3><span itemprop="namedPosition">Research Analyst</span> <span class="job-properties"><span itemprop="memberOf" itemscope itemtype="http://schema.org/Corporation"><a href="http://www.brattle.com/" itemprop="name">The Brattle Group</a> - <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Cambridge</span>, <span itemprop="addressRegion">MA</span></span></span> - <span itemprop="startDate">August 2002</span> to <span itemprop="endDate">March 2004</span></span></h3>
-                    <ul>
+                <div>
+                    <h3>
+                      <span id="brattle-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="brattle-dates brattle-descriptions">
+                        <span itemprop="roleName">Research Analyst</span>
+                      </span>
+                      <span class="job-properties">
+                        <span id="brattle-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="brattle-role">
+                          <a href="http://www.brattle.com/" itemprop="name">The Brattle Group</a> -
+                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                            <span itemprop="addressLocality">Cambridge</span>, <span itemprop="addressRegion">MA</span>
+                          </span>
+                        </span> -
+                        <span id="brattle-dates">
+                          <span itemprop="startDate" content="2002-08-01">August 2002</span> to <span itemprop="endDate" content="2004-03-01">March 2004</span>
+                        </span>
+                      </span>
+                    </h3>
+                    <ul id="brattle-descriptions">
                         <li itemprop="description">Created econometric models to support expert testimony for electric, telecommunications, financial, and natural gas companies</li>
                         <li itemprop="description">Taught in-house SAS (statistical analysis package) classes</li>
                     </ul>
@@ -214,14 +304,27 @@
 
         <section>
             <h2>Education, Skills, and Expertise</h2>
-                <div itemscope itemtype="http://schema.org/EducationalOrganization">
-                    <h3><span itemprop="name">Colby College</span> <span class="job-properties" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">Waterville</span>, <span itemprop="addressRegion">ME</span> - August 1998 to May 2002</span></h3>
-                    <p>B.A., Economics and Mathematical Sciences with Computer Science concentration<br />
-                    Senior Paper: Economic Consequences of Increased Internet Usage on Music Industry Sales</p>
+                <div>
+                    <h3>
+                      <span id="colby-org" itemprop="memberOf" itemscope itemtype="http://schema.org/CollegeOrUniversity" itemref="colby-role">
+                        <span itemprop="name">Colby College</span>
+                        <span class="job-properties" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                          <span itemprop="addressLocality">Waterville</span>, <span itemprop="addressRegion">ME</span> -
+                        </span>
+                      </span>
+                      <span id="colby-dates">
+                        <span itemprop="startDate" content="1998-08-01">August 1998</span> to <span itemprop="endDate" content="2002-05-01">May 2002</span>
+                      </span>
+                    </h3>
+                    <span id="colby-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="colby-dates">
+                      <p><span itemprop="roleName">B.A., Economics and Mathematical Sciences with Computer Science concentration</span><br />
+                      <span itemprop="description">Senior Paper: Economic Consequences of Increased Internet Usage on Music Industry Sales</span></p>
+                    </span>
                 </div>
         </section>
 
         <section itemscope itemtype="http://schema.org/ItemList">
+            <meta itemprop="itemListOrder" content="http://schema.org/ItemListOrderDescending" />
             <ul class="comma-list">
                 <li itemprop="itemListElement">Product Management</li>
                 <li itemprop="itemListElement">Software Development</li>
