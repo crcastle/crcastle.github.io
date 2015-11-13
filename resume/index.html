@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html lang="en">
 
 <head>
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-     <meta name=viewport content="width=device-width, initial-scale=1"/>
+     <meta name="author" content="Chris Castle">
+     <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
 
      <title>Chris Castle Résumé</title>
 
      <style type="text/css">
         * { margin: 0; padding: 0; }
-        body { font-size: 17px; font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif; line-height: 24px; background: url(images/noise.jpg); }
-        .clear { clear: both; height: 0px; background-color: #7EA9DE; margin: 15px 0 0 0; border: 5px solid #7EA9DE; }
-        #page-wrap { width: 1100px; margin: 20px auto 0px; }
+        body { font-size: 17px; font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif; line-height: 24px; background: url(images/noise.jpg); -webkit-font-smoothing: subpixel-antialiased; }
+        .clear { clear: both; height: 0px; background-color: #7EA9DE; margin: 5px 0 0 0; border: 5px solid #7EA9DE; }
+        #page-wrap { width: 90%; margin: 20px auto 0px; }
         #pic { float: right; margin: -20px 0 0 0; }
         h1 { margin: 0 0 2px -2px; padding: 0 0 5px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; display: inline; } /* Franklin Gotic Book 22pt */
-        h2 { font-weight: bold; font-size: 32px; margin-bottom: 25px; text-align: center; text-transform: uppercase; } /* Franklin Gotic Medium 14pt */
+        h2 { font-weight: bold; font-size: 32px; margin-bottom: 20px; text-align: center; text-transform: uppercase; line-height: 0.95em;  } /* Franklin Gotic Medium 14pt */
         h3 { font-size: 20px; margin: 0 0 3px 0; position: relative; }
         h3 span.job-properties { position: absolute; bottom: 0; right: 0; } /* Franklin Gotic Medium 11pt */
         a { color: #000; text-decoration: none; border-bottom: 1px dotted #999; }
         a:hover { border-bottom-style: solid; color: black; }
         ul { margin: 0 0 24px 25px; }
-        section { margin: 20px 0 0 0; }
+        section { margin: 15px 0 0 0; }
         /*section.first { margin: 10px 0 0 0; }*/
         abbr { border-bottom: 1px dashed #ccc; }
         #person { margin-top: 0;}
@@ -35,27 +35,27 @@
         #contact-info li + li:before { content: '—'; position: relative; left: -8px; }
         #contact-info a { color: #999; }
         #contact-info a:hover { color: #000; }
-        #summary { width: 950px; position: relative; left: 0; top: 0; max-height: 70px; overflow: hidden; margin-top: 0; }
+        #summary { width: 90%; position: relative; left: 0; top: 0; overflow: hidden; margin-top: 0; }
         #summary p { font-size: 16px; font-style: italic; color: #666; margin: 0 0 16px 0; }
-        #summary .read-more {
+        #summary .read-more, #summary .read-less {
             position: absolute;
-            bottom: 0; left: 250px;
+            bottom: 0; left: 25%;
             width: 100%;
             text-align: center;
             margin: 0; padding: 0;
             font-size: 14px;
             font-style: normal;
         }
-        #summary a { color: #999; }
-        #summary .read-more a {
-            animation-name: textCycle;
-            animation-duration:3s;
-            animation-direction:alternate;
-            animation-iteration-count:infinite;
+        #summary .read-more {
+          animation-name: pulse;
+          animation-delay: 3s;
+          animation-duration: 1s;
+          animation-iteration-count: 2;
         }
-        @keyframes textCycle {
-          0% {color:#999;}
-          50% {color:#333;}
+        @keyframes pulse {
+          from { transform: scale3d(1, 1, 1); }
+          50% { color: red; transform: scale3d(1.2, 1.2, 1.2); }
+          to { transform: scale3d(1, 1, 1); }
         }
         #summary a:hover { color: #000; }
         .comma-list { margin: 0; padding: 0; }
@@ -66,9 +66,24 @@
         #doc-info { float: left; }
         #last-updated { float: right; color: #ccc; }
 
+        p.no-print { display: none; }
+        .read-more.no-print, img.no-print { display: block; }
         @media print {
             .no-print, .no-print * { display: none !important; }
             #summary { height: 70px !important; }
+            #page-wrap { width: 1100px; }
+        }
+        @media only screen and (max-width: 1210px) {
+          h3 span.job-properties {
+            position: relative;
+            display: block;
+            color: #999;
+            font-weight: normal;
+            font-size: 18px;
+          }
+          h3 span.job-properties a { color: #999; }
+          #doc-info { float: none; }
+          #last-updated { float: none; }
         }
      </style>
      <!--[if lt IE 9]>
@@ -125,7 +140,7 @@
                 I conceptualize, design, manage, and build digital products. I like to solve challenges previously thought impossible and help my team grow along the way. I'll do whatever necessary to keep moving toward the goal: write code, prototype hardware, hire new team members, coach employees, or define and communicate an inspiring product vision.
             </p>
 
-            <p class="read-more no-print"><a href="javascript:void(0);" class="button">⬇More</a></p>
+            <p class="read-more no-print"><a href="javascript:void(0);" class="button">☟ More</a></p>
 
             <p class="no-print">
               I've focused my career around analytics and data visualization
@@ -149,6 +164,8 @@
             <p class="no-print">
                 Also I've been told I'm like this guy - <a href="http://youtu.be/nrLxySqQn6E">http://youtu.be/nrLxySqQn6E</a>
             </p>
+
+            <p class="read-less no-print"><a href="javascript:void(0);" class="button">☝ Less</a></p>
         </div>
 
         <div class="clear"></div>
@@ -227,11 +244,11 @@
                 </div>
 
                 <div>
+                    <h3 id="rf-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="rf-dates rf-descriptions">
+                      <span itemprop="roleName">Media Technology Specialist</span><br/>
+                      <span itemprop="roleName">Client Service Engineer</span>
+                    </h3>
                     <h3>
-                      <span id="rf-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="rf-dates rf-descriptions">
-                        <span itemprop="roleName">Media Technology Specialist</span>
-                        <span itemprop="roleName">Client Service Engineer</span>
-                      </span>
                       <span class="job-properties">
                         <span id="rf-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="rf-role">
                           <a href="http://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> -
@@ -310,16 +327,16 @@
                         <span itemprop="name">Colby College</span>
                         <span class="job-properties" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                           <span itemprop="addressLocality">Waterville</span>, <span itemprop="addressRegion">ME</span> -
+                          <span id="colby-dates">
+                            <span itemprop="startDate" content="1998-08-01">August 1998</span> to <span itemprop="endDate" content="2002-05-01">May 2002</span>
+                          </span>
                         </span>
                       </span>
-                      <span id="colby-dates">
-                        <span itemprop="startDate" content="1998-08-01">August 1998</span> to <span itemprop="endDate" content="2002-05-01">May 2002</span>
-                      </span>
                     </h3>
-                    <span id="colby-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="colby-dates">
-                      <p><span itemprop="roleName">B.A., Economics and Mathematical Sciences with Computer Science concentration</span><br />
-                      <span itemprop="description">Senior Paper: Economic Consequences of Increased Internet Usage on Music Industry Sales</span></p>
-                    </span>
+                    <p id="colby-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="colby-dates">
+                      <span itemprop="roleName">B.A., Economics and Mathematical Sciences with Computer Science concentration</span><br/>
+                      <span itemprop="description">Senior Paper: Economic Consequences of Increased Internet Usage on Music Industry Sales</span>
+                    </p>
                 </div>
         </section>
 
@@ -364,12 +381,12 @@
         </section>
 
         <footer class="no-print">
-          <span id="doc-info">
-            <a href="http://www.google.com/webmasters/tools/richsnippets?q=crc.io%2Fresume">Google Structured Data</a>&nbsp;|&nbsp;
+          <div id="doc-info">
+            <a href="https://developers.google.com/structured-data/testing-tool?url=https%253A%252F%252Fcrc.io%252Fresume%252F">Google Structured Data</a>&nbsp;|&nbsp;
             <a href="http://tools.seomoves.org/microdata/?url=crc.io/resume">Microdata</a>&nbsp;|&nbsp;
             <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fcrc.io%2Fresume&amp;charset=%28detect+automatically%29&amp;fbc=1&amp;doctype=Inline&amp;fbd=1&amp;group=0">Valid HTML5</a>
-          </span>
-          <span id="last-updated"><a href="https://github.com/crcastle/crcastle.github.io/commits/master">Last updated 28 October 2015</a></span>
+          </div>
+          <div id="last-updated"><a href="https://github.com/crcastle/crcastle.github.io/commits/master">Last updated 12 November 2015</a></div>
         </footer>
 
     </div>
@@ -378,7 +395,8 @@
     <script type="text/javascript">
        var $el, $ps, $section, totalHeight;
 
-       $("#summary .button").click(function() {
+       $("#summary p.read-more .button").click(function(event) {
+           event.preventDefault();
 
            totalHeight = 0
 
@@ -388,22 +406,17 @@
            $ps = $section.find("p:not('.read-more')");
 
            // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-           $ps.each(function() {
+           $ps.each(function(idx, element) {
                totalHeight += $(this).outerHeight(true);
            });
-           console.log(totalHeight);
 
-           $section
-               .css({
-                   // Set height to prevent instant jumpdown when max height is removed
-                   "height": $section.height(),
-                   "max-height": 9999
-               })
-               .animate({
-                   "height": totalHeight
-               });
+           // animate height to totalHeight and show text
+           $section.animate({ "height": totalHeight });
+           $ps.each(function(idx, element) {
+             $(element).fadeIn();
+           });
 
-           // fade out read-more
+           // fade out read-more link
            $p.fadeOut();
 
            // track "more" click with GA
@@ -412,6 +425,33 @@
            // prevent jump-down
            return false;
 
+       });
+       $("#summary .read-less .button").click(function(event) {
+         event.preventDefault();
+
+         var el = $(this);
+         var p = el.parent();
+         var section = p.parent();
+         var ps = section.find("p:not(:first-child)");
+
+         // determine new height and animate to it
+         var firstP = $('#summary p:first-child');
+         var collapsedHeight = $(firstP).outerHeight(true);
+         $section.animate({ "height": collapsedHeight });
+
+         // fade out text
+         ps.each(function(idx, element) {
+           $(element).fadeOut();
+         });
+
+         // fade in read more link
+         $("#summary .read-more").fadeIn();
+
+         // track "less" click with GA
+         ga('send', 'event', 'Less', 'click', '999to333-3s');
+
+         // prevent jump down
+         return false;
        });
     </script>
     <script>
