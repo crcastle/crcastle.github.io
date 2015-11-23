@@ -33,8 +33,22 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  background-color: rgba(120, 120, 120);
+}
+
+#background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -5;
+  display: block;
+  width: 100%;
+  height: 100%;
   background: url(/img/fall-snow.jpg) no-repeat center center fixed;
   background-size: cover;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
