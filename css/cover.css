@@ -46,6 +46,7 @@ html,
 body {
   height: 100%;
   /*background-color: #333;*/
+  overflow-x: hidden;
 }
 body {
   color: #fff;
@@ -261,6 +262,18 @@ ul.feature-list p {
 ul.oss-contribs {
   font-size: 16px;
   line-height: 1.4em;
+}
+
+iframe {
+  width: 280px;
+  height: 158px;
+}
+
+@media (min-width: 768px) {
+  iframe {
+    width: 560px;
+    height: 315px;
+  }
 }
 
 /*
