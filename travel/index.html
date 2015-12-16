@@ -55,6 +55,31 @@
       })();
      </script>
      <!-- End Inspectlet Embed Code -->
+
+     <!-- Begin Jaco code -->
+     <script type="text/javascript">
+     (function(e, t) {
+         var n = "JacoRecorder";
+         (function(e, t, r, i) {
+             if (!r.__VERSION) {
+                 function s(e, t) {
+                     e[t] = function() {
+                         e.q.push([ t ].concat(Array.prototype.slice.call(arguments, 0)));
+                     };
+                 }
+                 e[n] = r, r.q = [];
+                 var o = [ "init", "identify", "startRecording", "stopRecording", "removeUserTracking", "setUserInfo", "exec" ];
+                 for (var u = 0; u < o.length; u++) s(r, o[u]);
+                 r.__VERSION = .9, r.__INIT_TIME = 1 * new Date;
+                 var a = t.createElement("script");
+                 a.async = !0, a.setAttribute("crossorigin", "anonymous"), a.src = i;
+                 var f = t.getElementsByTagName("head")[0];
+                 f.appendChild(a);
+             }
+         })(e, t, e[n] || [], "//bo.getjaco.com/build/recorder.js");
+     })(window, document), JacoRecorder.init("4a94c410-40af-4cd2-a05f-7ae432505992", {});
+     </script>
+     <!-- End Jaco code -->
 </head>
 
 <body>
