@@ -1,2 +1,5 @@
 .DS_Store
 NOTES.md
+bin
+vendor
+.bundle
