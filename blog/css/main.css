@@ -328,18 +328,24 @@ article {
   text-shadow: none; }
   .post-content a {
     text-decoration: underline; }
+  .post-content img {
+    padding: 3px;
+    margin: 5px 0; }
   .post-content h2 {
-    font-size: 32px; }
+    font-size: 32px;
+    margin-top: 30px; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
         font-size: 28px; } }
   .post-content h3 {
-    font-size: 26px; }
+    font-size: 26px;
+    margin-top: 30px; }
     @media screen and (max-width: 800px) {
       .post-content h3 {
         font-size: 22px; } }
   .post-content h4 {
-    font-size: 20px; }
+    font-size: 20px;
+    margin-top: 30px; }
     @media screen and (max-width: 800px) {
       .post-content h4 {
         font-size: 18px; } }
