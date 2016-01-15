@@ -5,32 +5,28 @@
     <description></description>
     <link>https://crc.io/blog/</link>
     <atom:link href="https://crc.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Jan 2016 23:29:07 -0800</pubDate>
-    <lastBuildDate>Wed, 13 Jan 2016 23:29:07 -0800</lastBuildDate>
+    <pubDate>Thu, 14 Jan 2016 22:54:42 -0800</pubDate>
+    <lastBuildDate>Thu, 14 Jan 2016 22:54:42 -0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>Reading</title>
-        <description>&lt;p&gt;I read a lot on the internet that I&lt;/p&gt;
+        <title>Highlighting the Internet (Part 1)</title>
+        <description>&lt;p&gt;I spend a large chunk of my day reading – trying to make sense of my world, &lt;em&gt;the&lt;/em&gt; world, the people in the world, and the ways in which we interact.  So many people, events, and discoveries just 15 years ago were hidden because the ease or expense of sharing that thing publicly was too large a hurdle.  The internet and its &lt;a href=&quot;https://news.google.com&quot;&gt;news.google.com&lt;/a&gt; and &lt;a href=&quot;https://twitter.com&quot;&gt;Twitter&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com&quot;&gt;Hacker News&lt;/a&gt; and &lt;a href=&quot;https://medium.com&quot;&gt;Medium&lt;/a&gt; and a multitude of other sites and applications have made the world’s information quickly and cheaply accessible.&lt;/p&gt;
 
-&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;p&gt;As I was finding more and more to read, I grew frustrated by not being able to recall the important parts.  Remember back in school you used to underline and highlight and annotate the crap out of stuff you read for class?  I wanted that experience back.  Highlighting not only helps me better remember what I’m reading, it helps me distill and remember the important parts.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;But how do you highlight in a web browser on a laptop?  And what about on a phone?  Or a Kindle?&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;Last year &lt;a href=&quot;https://medium.com/the-story/is-it-ok-to-highlight-your-own-stuff-fd3768dace9a#.djpp8o5z3&quot;&gt;Medium began allowing readers to save bits of text from blog posts by highlighting them&lt;/a&gt;!  And the Kindle has always allowed readers to highlight and save bits of text.  These two constitute a large part of my reading, but what about other websites.  I’ll come back to this question in a future post.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;Ok, now that we’ve got a solution to highlighting text on the internet, let’s talk about how we might collect and organize those highlights.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Check back for Part 2, where I’ll cover how I used &lt;a href=&quot;https://aws.amazon.com/lambda/&quot;&gt;AWS Lambda&lt;/a&gt; to automatically extract my highlights and store them in a &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1VCkPCinhG-HiZJuvWPYq1wMIEpdHOdbCRF2lTDsOMBc&quot;&gt;Google Spreadsheet&lt;/a&gt; for posterity, manual review/lookup, statistical analysis, and even to power a section of this site! (and all for $FREE.99 per month)&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 13 Jan 2016 21:31:02 -0800</pubDate>
-        <link>https://crc.io/blog/2016/01/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">https://crc.io/blog/2016/01/welcome-to-jekyll/</guid>
+        <link>https://crc.io/blog/2016/01/highlighting-the-internet/</link>
+        <guid isPermaLink="true">https://crc.io/blog/2016/01/highlighting-the-internet/</guid>
         
         
         <category>reading</category>
@@ -39,24 +35,17 @@
         
         <category>quotes</category>
         
+        <category>aws</category>
+        
+        <category>lambda</category>
+        
+        <category>serverless</category>
+        
       </item>
     
       <item>
         <title>International Travel</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
+        <description>&lt;p&gt;In the winter of 2014/15, I disappeared from the USA for four months to explore.  I hadn’t traveled internationally much prior to this other than the semester abroad in Ireland, which didn’t really seem like long-term, solo, international travel – maybe because I was in&lt;/p&gt;
 </description>
         <pubDate>Tue, 08 Dec 2015 21:31:02 -0800</pubDate>
         <link>https://crc.io/blog/2015/12/international-travel/</link>
@@ -66,6 +55,23 @@
         <category>travel</category>
         
         <category>project</category>
+        
+      </item>
+    
+      <item>
+        <title>Another Attempt</title>
+        <description>
+</description>
+        <pubDate>Thu, 01 Oct 2015 22:31:02 -0700</pubDate>
+        <link>https://crc.io/blog/2015/10/another-attempt/</link>
+        <guid isPermaLink="true">https://crc.io/blog/2015/10/another-attempt/</guid>
+        
+        
+        <category>ctrl</category>
+        
+        <category>industries</category>
+        
+        <category>startup</category>
         
       </item>
     

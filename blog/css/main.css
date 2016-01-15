@@ -278,8 +278,6 @@ pre {
 .post-list {
   margin-left: 0;
   list-style: none; }
-  .post-list > li {
-    margin-bottom: 30px; }
 
 .post-meta {
   font-size: 14px;
@@ -287,10 +285,10 @@ pre {
   text-align: right;
   float: right;
   font-weight: bold;
-  margin-top: 0.7em; }
+  margin-top: 0.3em; }
 
 .post-link {
-  font-size: 24px;
+  font-size: 18px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /**
@@ -299,25 +297,37 @@ pre {
 article {
   background-color: rgba(75, 75, 75, 0.7);
   box-shadow: 10px 10px 20px rgba(75, 75, 75, 0.6);
-  padding: 5px 50px; }
+  padding: 20px 50px 5px; }
 
 .post-header {
   margin-bottom: 30px;
   text-align: left; }
+  .post-header .post-meta {
+    float: none;
+    text-align: left;
+    margin-top: 1em;
+    font-weight: 400;
+    color: #e8e8e8; }
 
 .post-title {
   display: inline;
-  font-size: 42px;
+  font-size: 38px;
   letter-spacing: -1px;
-  line-height: 1; }
+  line-height: 1;
+  margin-left: -2px; }
   @media screen and (max-width: 800px) {
     .post-title {
       font-size: 36px; } }
 
 .post-content {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
   margin-bottom: 30px;
   text-align: left;
   text-shadow: none; }
+  .post-content a {
+    text-decoration: underline; }
   .post-content h2 {
     font-size: 32px; }
     @media screen and (max-width: 800px) {

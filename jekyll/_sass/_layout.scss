@@ -187,7 +187,7 @@
     list-style: none;
 
     > li {
-        margin-bottom: $spacing-unit;
+        // margin-bottom: $spacing-unit;
     }
 }
 
@@ -197,11 +197,11 @@
     text-align: right;
     float: right;
     font-weight: bold;
-    margin-top: 0.7em;
+    margin-top: 0.3em;
 }
 
 .post-link {
-    font-size: 24px;
+    font-size: 18px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -214,19 +214,28 @@
 article {
     background-color: rgba(75, 75, 75, 0.7);
     box-shadow: 10px 10px 20px rgba(75, 75, 75, 0.6);
-    padding: 5px 50px;
+    padding: 20px 50px 5px;
 }
 
 .post-header {
     margin-bottom: $spacing-unit;
     text-align: left;
+
+    .post-meta {
+        float: none;
+        text-align: left;
+        margin-top: 1em;
+        font-weight: $base-font-weight;
+        color: $grey-color-light;
+    }
 }
 
 .post-title {
     display: inline;
-    font-size: 42px;
+    font-size: 38px;
     letter-spacing: -1px;
     line-height: 1;
+    margin-left: -2px;
 
     @include media-query($on-laptop) {
         font-size: 36px;
@@ -234,9 +243,16 @@ article {
 }
 
 .post-content {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: $base-font-size;
     margin-bottom: $spacing-unit;
     text-align: left;
     text-shadow: none;
+
+    a {
+        text-decoration: underline;
+    }
 
     h2 {
         font-size: 32px;
