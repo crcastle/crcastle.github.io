@@ -244,13 +244,14 @@ ul.feature-list {
 }
 
 ul.feature-list li {
-  width: 200px;
+  width: 300px;
   float: left;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 ul.feature-list img {
-  height: 100px;
+  height: 110px;
   border: 1px solid #999;
   padding: 3px;
 }
