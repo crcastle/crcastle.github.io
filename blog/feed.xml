@@ -5,23 +5,34 @@
     <description></description>
     <link>https://crc.io/blog/</link>
     <atom:link href="https://crc.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 14 Jan 2016 22:54:42 -0800</pubDate>
-    <lastBuildDate>Thu, 14 Jan 2016 22:54:42 -0800</lastBuildDate>
+    <pubDate>Fri, 15 Jan 2016 12:12:52 -0800</pubDate>
+    <lastBuildDate>Fri, 15 Jan 2016 12:12:52 -0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>Highlighting the Internet (Part 1)</title>
-        <description>&lt;p&gt;I spend a large chunk of my day reading – trying to make sense of my world, &lt;em&gt;the&lt;/em&gt; world, the people in the world, and the ways in which we interact.  So many people, events, and discoveries just 15 years ago were hidden because the ease or expense of sharing that thing publicly was too large a hurdle.  The internet and its &lt;a href=&quot;https://news.google.com&quot;&gt;news.google.com&lt;/a&gt; and &lt;a href=&quot;https://twitter.com&quot;&gt;Twitter&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com&quot;&gt;Hacker News&lt;/a&gt; and &lt;a href=&quot;https://medium.com&quot;&gt;Medium&lt;/a&gt; and a multitude of other sites and applications have made the world’s information quickly and cheaply accessible.&lt;/p&gt;
+        <title>Highlighting the Internet</title>
+        <description>&lt;p&gt;I spend a large chunk of my day reading – learning about the world, the people in it, and the ways in which we interact.  So many people, events, and discoveries only 15 years ago were hidden (from me) because they weren’t easy to broadly, publicly share.  The internet and its &lt;a href=&quot;https://news.google.com&quot;&gt;news.google.com&lt;/a&gt; and &lt;a href=&quot;https://twitter.com&quot;&gt;Twitter&lt;/a&gt; and &lt;a href=&quot;https://news.ycombinator.com&quot;&gt;Hacker News&lt;/a&gt; and &lt;a href=&quot;https://medium.com&quot;&gt;Medium&lt;/a&gt; and &lt;a href=&quot;http://www.amazon.com/Kindle-eBooks&quot;&gt;Amazon&lt;/a&gt; a multitude of other sites and applications have made the world’s information quickly and cheaply accessible.&lt;/p&gt;
 
+&lt;h4 id=&quot;recall&quot;&gt;Recall&lt;/h4&gt;
 &lt;p&gt;As I was finding more and more to read, I grew frustrated by not being able to recall the important parts.  Remember back in school you used to underline and highlight and annotate the crap out of stuff you read for class?  I wanted that experience back.  Highlighting not only helps me better remember what I’m reading, it helps me distill and remember the important parts.&lt;/p&gt;
 
+&lt;h4 id=&quot;highlighting-browser-text&quot;&gt;Highlighting Browser Text&lt;/h4&gt;
 &lt;p&gt;But how do you highlight in a web browser on a laptop?  And what about on a phone?  Or a Kindle?&lt;/p&gt;
 
-&lt;p&gt;Last year &lt;a href=&quot;https://medium.com/the-story/is-it-ok-to-highlight-your-own-stuff-fd3768dace9a#.djpp8o5z3&quot;&gt;Medium began allowing readers to save bits of text from blog posts by highlighting them&lt;/a&gt;!  And the Kindle has always allowed readers to highlight and save bits of text.  These two constitute a large part of my reading, but what about other websites.  I’ll come back to this question in a future post.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/medium-highlight.png&quot; alt=&quot;Medium Highlight&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Ok, now that we’ve got a solution to highlighting text on the internet, let’s talk about how we might collect and organize those highlights.&lt;/p&gt;
+&lt;p&gt;Last year &lt;a href=&quot;https://medium.com/the-story/is-it-ok-to-highlight-your-own-stuff-fd3768dace9a#.djpp8o5z3&quot;&gt;Medium began allowing readers to highlight and save bits of text from blog posts&lt;/a&gt;.  And the Kindle has always allowed readers to do this.  These two constitute a large part of my reading, but what about other websites?  Maybe a browser plugin?  I’ll come back to this idea in a future post.&lt;/p&gt;
 
-&lt;p&gt;Check back for Part 2, where I’ll cover how I used &lt;a href=&quot;https://aws.amazon.com/lambda/&quot;&gt;AWS Lambda&lt;/a&gt; to automatically extract my highlights and store them in a &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1VCkPCinhG-HiZJuvWPYq1wMIEpdHOdbCRF2lTDsOMBc&quot;&gt;Google Spreadsheet&lt;/a&gt; for posterity, manual review/lookup, statistical analysis, and even to power a section of this site! (and all for $FREE.99 per month)&lt;/p&gt;
+&lt;h4 id=&quot;organizing-my-highlights&quot;&gt;Organizing My Highlights&lt;/h4&gt;
+&lt;p&gt;Ok, now that I’ve got a solution to highlighting text on the internet, let’s talk about how to collect and organize those highlights.  Why might I want to do that?  It started from an urge to better journal and reflect on my days, but there are lots of other reasons: posterity, manual review/lookup, statistical analysis, or even to power a section of this site!&lt;/p&gt;
+
+&lt;p&gt;I’m currently working on a set of simple &lt;a href=&quot;https://aws.amazon.com/lambda/&quot;&gt;AWS Lambda&lt;/a&gt; functions to automatically collect all my highlights and write them to a Google Spreadsheet.  &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1VCkPCinhG-HiZJuvWPYq1wMIEpdHOdbCRF2lTDsOMBc&quot;&gt;Check out the spreadsheet&lt;/a&gt;, fully populated from an AWS Lambda function.  The Google Spreadsheet acts as a database in this setup.  &lt;a href=&quot;http://jlord.us/sheetsee.js/docs/basics.html&quot;&gt;Google Spreadsheets work very well as databases for simple applications like this&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/highlights-architecture.png&quot; alt=&quot;Reading Highlights Architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s a quick overview of how all the pieces fit together.&lt;/p&gt;
+
+&lt;p&gt;Check back for Part 2, where I’ll share more details about this and what I’m using it for!&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 13 Jan 2016 21:31:02 -0800</pubDate>
@@ -40,38 +51,6 @@
         <category>lambda</category>
         
         <category>serverless</category>
-        
-      </item>
-    
-      <item>
-        <title>International Travel</title>
-        <description>&lt;p&gt;In the winter of 2014/15, I disappeared from the USA for four months to explore.  I hadn’t traveled internationally much prior to this other than the semester abroad in Ireland, which didn’t really seem like long-term, solo, international travel – maybe because I was in&lt;/p&gt;
-</description>
-        <pubDate>Tue, 08 Dec 2015 21:31:02 -0800</pubDate>
-        <link>https://crc.io/blog/2015/12/international-travel/</link>
-        <guid isPermaLink="true">https://crc.io/blog/2015/12/international-travel/</guid>
-        
-        
-        <category>travel</category>
-        
-        <category>project</category>
-        
-      </item>
-    
-      <item>
-        <title>Another Attempt</title>
-        <description>
-</description>
-        <pubDate>Thu, 01 Oct 2015 22:31:02 -0700</pubDate>
-        <link>https://crc.io/blog/2015/10/another-attempt/</link>
-        <guid isPermaLink="true">https://crc.io/blog/2015/10/another-attempt/</guid>
-        
-        
-        <category>ctrl</category>
-        
-        <category>industries</category>
-        
-        <category>startup</category>
         
       </item>
     

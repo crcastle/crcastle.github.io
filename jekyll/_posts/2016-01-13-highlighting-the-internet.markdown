@@ -1,26 +1,39 @@
 ---
 layout: post
-title:  Highlighting the Internet (Part 1)
+title:  Highlighting the Internet
 date:   2016-01-13 21:31:02 -0800
 categories: reading highlights quotes aws lambda serverless
 ---
-I spend a large chunk of my day reading -- trying to make sense of my world, *the* world, the people in the world, and the ways in which we interact.  So many people, events, and discoveries just 15 years ago were hidden because the ease or expense of sharing that thing publicly was too large a hurdle.  The internet and its [news.google.com][news] and [Twitter][twitter] and [Hacker News][hackernews] and [Medium][medium] and a multitude of other sites and applications have made the world's information quickly and cheaply accessible.
+I spend a large chunk of my day reading -- learning about the world, the people in it, and the ways in which we interact.  So many people, events, and discoveries only 15 years ago were hidden (from me) because they weren't easy to broadly, publicly share.  The internet and its [news.google.com][news] and [Twitter][twitter] and [Hacker News][hackernews] and [Medium][medium] and [Amazon][amazon] a multitude of other sites and applications have made the world's information quickly and cheaply accessible.
 
+#### Recall
 As I was finding more and more to read, I grew frustrated by not being able to recall the important parts.  Remember back in school you used to underline and highlight and annotate the crap out of stuff you read for class?  I wanted that experience back.  Highlighting not only helps me better remember what I'm reading, it helps me distill and remember the important parts.
 
+#### Highlighting Browser Text
 But how do you highlight in a web browser on a laptop?  And what about on a phone?  Or a Kindle?
 
-Last year [Medium began allowing readers to save bits of text from blog posts by highlighting them][medium-highlights]!  And the Kindle has always allowed readers to highlight and save bits of text.  These two constitute a large part of my reading, but what about other websites.  I'll come back to this question in a future post.
+![Medium Highlight](/img/medium-highlight.png)
 
-Ok, now that we've got a solution to highlighting text on the internet, let's talk about how we might collect and organize those highlights.
+Last year [Medium began allowing readers to highlight and save bits of text from blog posts][medium-highlights].  And the Kindle has always allowed readers to do this.  These two constitute a large part of my reading, but what about other websites?  Maybe a browser plugin?  I'll come back to this idea in a future post.
 
-Check back for Part 2, where I'll cover how I used [AWS Lambda][aws-lambda] to automatically extract my highlights and store them in a [Google Spreadsheet][highlights-spreadsheet] for posterity, manual review/lookup, statistical analysis, and even to power a section of this site! (and all for $FREE.99 per month)
+#### Organizing My Highlights
+Ok, now that I've got a solution to highlighting text on the internet, let's talk about how to collect and organize those highlights.  Why might I want to do that?  It started from an urge to better journal and reflect on my days, but there are lots of other reasons: posterity, manual review/lookup, statistical analysis, or even to power a section of this site!
+
+I'm currently working on a set of simple [AWS Lambda][aws-lambda] functions to automatically collect all my highlights and write them to a Google Spreadsheet.  [Check out the spreadsheet][highlights-spreadsheet], fully populated from an AWS Lambda function.  The Google Spreadsheet acts as a database in this setup.  [Google Spreadsheets work very well as databases for simple applications like this][sheetsee-basics].
+
+![Reading Highlights Architecture](/img/highlights-architecture.png)
+
+Here's a quick overview of how all the pieces fit together.
+
+Check back for Part 2, where I'll share more details about this and what I'm using it for!
 
 
 [news]: https://news.google.com
 [twitter]: https://twitter.com
 [hackernews]: https://news.ycombinator.com
 [medium]: https://medium.com
+[amazon]: http://www.amazon.com/Kindle-eBooks
 [medium-highlights]: https://medium.com/the-story/is-it-ok-to-highlight-your-own-stuff-fd3768dace9a#.djpp8o5z3
 [aws-lambda]: https://aws.amazon.com/lambda/
 [highlights-spreadsheet]: https://docs.google.com/spreadsheets/d/1VCkPCinhG-HiZJuvWPYq1wMIEpdHOdbCRF2lTDsOMBc
+[sheetsee-basics]: http://jlord.us/sheetsee.js/docs/basics.html
