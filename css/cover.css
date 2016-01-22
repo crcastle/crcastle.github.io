@@ -103,6 +103,7 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-weight: 400;
 }
 
 .masthead-nav > li {
