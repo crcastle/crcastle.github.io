@@ -284,12 +284,12 @@ pre {
   color: #e8e8e8;
   text-align: right;
   float: right;
-  font-weight: bold;
   margin-top: 0.3em; }
 
 .post-link {
   font-size: 18px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300; }
 
 /**
  * Posts
