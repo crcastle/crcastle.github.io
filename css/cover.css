@@ -282,6 +282,46 @@ iframe {
   height: 1em;
 }
 
+.highlight-card {
+  text-align: left;
+  background-color: rgba(75, 75, 75, 0.7);
+  box-shadow: 10px 10px 20px rgba(75, 75, 75, 0.6);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.highlight-card-quote {
+  font-family: 'Libre Baskerville', serif;
+  color: #222;
+  text-shadow: none;
+}
+
+.highlight-card-quote a,
+.highlight-card-quote a:hover,
+.highlight-card-quote a:focus,
+.highlight-card-quote a:visited {
+  text-decoration: none;
+  color: #222;
+}
+
+
+.highlight-card-quote p span {
+  background-color: rgba(255, 255, 60, 0.5);
+  padding: 1px 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.highlight-card-quote hr {
+  border-width: 2px;
+  border-color: #888;
+  margin: 20px 70px;
+}
+
+.highlight-card-meta {
+  color: #aaa;
+}
+
 /*
  * Footer
  */
