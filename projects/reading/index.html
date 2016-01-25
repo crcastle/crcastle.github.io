@@ -120,46 +120,18 @@
 
           <div class="inner cover container-fluid">
 
-              <h2>Excerpts from things I've read recently</h2>
-              <div id="grid" data-columns>
-                  <div class="highlight-card">
-                      <div class="highlight-card-quote">
-                        <a href="https://medium.com/posts/3c07b307732d#2375"><p><span>…the unexotic underclass can help address one of the biggest inefficiencies plaguing the startup scene right now: the flood of (ostensibly) smart, ambitious young people desperate to be entrepreneurs; and the embarrassingly idea-starved landscape where too many smart people are chasing too many dumb ideas…. The unexotic underclass has big problems, maybe not the Big Problems — capital B, capital P — that get ‘discussed’ at Davos. But they have problems nonetheless…</span></p></a>
-                        <hr>
-                      </div>
-                      <div class="highlight-card-meta">
-                        <p><span class="quote-title"><a href="https://medium.com/posts/3c07b307732d">The Reductive Seduction of Other People’s Problems</a></span> by <span class="quote-author"><a href="https://medium.com/@courtwrites">Courtney Martin</a></span></p>
-                      </div>
-                  </div>
-                  <div class="highlight-card">
-                      <div class="highlight-card-quote">
-                        <a href="https://medium.com/posts/3c07b307732d#b1df"><p><span>While thousands of the country’s best and brightest flock to far-flung places to ease unfamiliar suffering and tackle foreign dysfunction, we’ve got plenty of domestic need.</span></p></a>
-                        <hr>
-                      </div>
-                      <div class="highlight-card-meta">
-                        <p><span class="quote-title"><a href="https://medium.com/posts/3c07b307732d">The Reductive Seduction of Other People’s Problems</a></span> by <span class="quote-author"><a href="https://medium.com/@courtwrites">Courtney Martin</a></span></p>
-                      </div>
-                  </div>
-                  <div class="highlight-card">
-                      <div class="highlight-card-quote">
-                        <a href="https://medium.com/posts/1770fdb01dc4#9981"><p><span>sick and tired of corporate media vomiting out clickbait listicles and shitpieces about spooning while the rest of the fucking planet IS ON FIRE.</span></p></a>
-                        <hr>
-                      </div>
-                      <div class="highlight-card-meta">
-                        <p><span class="quote-title"><a href="https://medium.com/posts/1770fdb01dc4">Skullfuck You Very Much: Cultural Authority and the Dispossessed</a></span> by <span class="quote-author"><a href="https://medium.com/@girlziplocked">Holly Wood</a></span></p>
-                      </div>
-                  </div>
-                  <div class="highlight-card">
-                      <div class="highlight-card-quote">
-                        <a href="https://medium.com/posts/a3cf779a5b6b#17c6"><p><span>America was fighting an ideological pissing contest with the Soviets and basically welcomed in any Cuban family who could get here as a big ol’ Fuck You to Communism as a gratuitous spectacle of public relations. No one cared if they took jobs away from anyone because they were a marketing ploy for Red, White and Blue Capitalism.</span></p></a>
-                        <hr>
-                      </div>
-                      <div class="highlight-card-meta">
-                        <p><span class="quote-title"><a href="https://medium.com/posts/a3cf779a5b6b">Why is It Ok for Marco Rubio’s Parents to Leave Cuba to get Rich but a Campaign Issue when Honduran…</a></span> by <span class="quote-author"><a href="https://medium.com/@girlziplocked">Holly Wood</a></span></p>
-                      </div>
-                  </div>
-                  <!-- repeat the panel as many times as you'd like -->
-                </div>
+            <h2>Excerpts from things I've read recently</h2>
+            <div id="grid" data-columns><div id="loading"><br><br><h3><i>Loading...</i></h3></div></div>
+
+            <script id="grid-template" type="text/x-handlebars-template">
+              <div class="highlight-card-quote">
+                <a href="{{quotelink}}"><p><span>{{quotetext}}</span></p></a>
+                <hr>
+              </div>
+              <div class="highlight-card-meta">
+                <p><span class="quote-title"><a href="{{postlink}}">{{posttitle}}</a></span> by <span class="quote-author"><a href="{{postauthorlink}}">{{postauthor}}</a></span></p>
+              </div>
+            </script>
 
           </div>
 
@@ -180,6 +152,39 @@
           <script>window.jQuery || document.write('<script src="/js/jquery-1.11.3.min.js"><\/script>')</script>
           <script src="/js/bootstrap.min.js"></script>
           <script src="/js/salvattore.min.js"></script>
+          <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+              var URL = '1VCkPCinhG-HiZJuvWPYq1wMIEpdHOdbCRF2lTDsOMBc';
+              Tabletop.init({
+                key: URL,
+                callback: renderHighlights,
+                simpleSheet: true,
+                parseNumbers: true,
+                orderby: 'unixtimeutc',
+                reverse: true,
+                prettyColumnNames: false
+              });
+            });
+
+            function renderHighlights(data, tabletop) {
+              var source = $("#grid-template").html();
+              var template = Handlebars.compile(source);
+
+              var newItems = [];
+              $.each( tabletop.sheets("Sheet1").all(), function(i, highlight) {
+                var html = template(highlight);
+                var item = document.createElement('div');
+                item.innerHTML = html;
+                item.setAttribute('class', 'highlight-card');
+                newItems.push(item);
+              })
+
+              $("#loading").detach();
+              salvattore.appendElements(document.getElementById('grid'), newItems);
+            }
+          </script>
+          <script type="text/javascript" src="/js/tabletop.js"></script>
+          <script type="text/javascript" src='/js/handlebars.js'></script>
           <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
           <script src="/js/ie10-viewport-bug-workaround.js"></script>
           <script>
