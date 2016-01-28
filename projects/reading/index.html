@@ -116,11 +116,29 @@
 
             <script id="grid-template" type="text/x-handlebars-template">
               <div class="highlight-card-quote">
-                <a href="{{quotelink}}"><p><span>{{quotetext}}</span></p></a>
+                {{#if quotelink}}<a href="{{quotelink}}">{{/if}}
+                  <p>
+                    <span>{{quotetext}}</span>
+                  </p>
+                {{#if quotelink}}</a>{{/if}}
                 <hr>
               </div>
               <div class="highlight-card-meta">
-                <p><span class="quote-title"><a href="{{postlink}}">{{posttitle}}</a></span> by <span class="quote-author"><a href="{{postauthorlink}}">{{postauthor}}</a></span></p>
+                <p>
+                  <span class="quote-title">
+                    {{#if postlink}}<a href="{{postlink}}">{{/if}}
+                      {{posttitle}}
+                    {{#if postlink}}</a>{{/if}}
+                  </span>
+                  {{#if postauthor}}
+                   by
+                  <span class="quote-author">
+                    {{#if postauthorlink}}<a href="{{postauthorlink}}">{{/if}}
+                      {{postauthor}}
+                    {{#if postauthorlink}}</a>{{/if}}
+                  </span>
+                  {{/if}}
+                </p>
               </div>
             </script>
 
