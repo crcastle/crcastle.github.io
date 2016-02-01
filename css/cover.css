@@ -266,13 +266,13 @@ ul.oss-contribs {
   line-height: 1.4em;
 }
 
-iframe {
+iframe#kegio-talk {
   width: 280px;
   height: 158px;
 }
 
 @media (min-width: 768px) {
-  iframe {
+  iframe#kegio-talk {
     width: 560px;
     height: 315px;
   }
