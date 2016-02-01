@@ -25,15 +25,16 @@ I'm currently working on a set of simple [AWS Lambda][aws-lambda] functions to a
 
 Here's a simple diagram of how all the pieces fit together.
 
-Check back for Part 2, where I'll share more details about this and what I'm using it for!
+Check out [Part 2][part2], where I share more details about how I built this and what I'm using it for!
 
 
-[news]: https://news.google.com
-[twitter]: https://twitter.com
-[hackernews]: https://news.ycombinator.com
-[medium]: https://medium.com
 [amazon]: http://www.amazon.com/Kindle-eBooks
-[medium-highlights]: https://medium.com/the-story/is-it-ok-to-highlight-your-own-stuff-fd3768dace9a#.djpp8o5z3
 [aws-lambda]: https://aws.amazon.com/lambda/
+[hackernews]: https://news.ycombinator.com
 [highlights-spreadsheet]: https://docs.google.com/spreadsheets/d/1VCkPCinhG-HiZJuvWPYq1wMIEpdHOdbCRF2lTDsOMBc
+[medium]: https://medium.com
+[medium-highlights]: https://medium.com/the-story/is-it-ok-to-highlight-your-own-stuff-fd3768dace9a#.djpp8o5z3
+[news]: https://news.google.com
+[part2]: /blog/2016/01/highlighting-the-internet-part-2/
 [sheetsee-basics]: http://jlord.us/sheetsee.js/docs/basics.html
+[twitter]: https://twitter.com

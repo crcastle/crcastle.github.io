@@ -5,8 +5,8 @@
     <description></description>
     <link>https://crc.io/blog/</link>
     <atom:link href="https://crc.io/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 31 Jan 2016 17:50:43 -0800</pubDate>
-    <lastBuildDate>Sun, 31 Jan 2016 17:50:43 -0800</lastBuildDate>
+    <pubDate>Sun, 31 Jan 2016 17:57:39 -0800</pubDate>
+    <lastBuildDate>Sun, 31 Jan 2016 17:57:39 -0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -113,7 +113,7 @@
 
 &lt;p&gt;Here’s a simple diagram of how all the pieces fit together.&lt;/p&gt;
 
-&lt;p&gt;Check back for Part 2, where I’ll share more details about this and what I’m using it for!&lt;/p&gt;
+&lt;p&gt;Check out &lt;a href=&quot;/blog/2016/01/highlighting-the-internet-part-2/&quot;&gt;Part 2&lt;/a&gt;, where I share more details about how I built this and what I’m using it for!&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 13 Jan 2016 21:31:02 -0800</pubDate>
