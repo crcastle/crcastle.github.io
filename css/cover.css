@@ -161,6 +161,10 @@ p.lead {
   font-weight: 300;
 }
 
+p.lead a {
+  text-decoration: underline;
+}
+
 img.author {
   width: 100px; height: 100px;
   margin-bottom: -100px;
