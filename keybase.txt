@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/crcastle
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://crc.io
+  * I am crcastle (https://keybase.io/crcastle) on keybase.
+  * I have a public key ASBzm-wQB04564WCLGi23GOaccsLZ9qHkWIlrqKJrjET7wo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120739bec10074e39eb85822c68b6dc639a71cb0b67da87916225aea289ae3113ef0a",
+            "host": "keybase.io",
+            "kid": "0120739bec10074e39eb85822c68b6dc639a71cb0b67da87916225aea289ae3113ef0a",
+            "uid": "1e8cbf44f34bcc7f68cf277962194619",
+            "username": "crcastle"
+        },
+        "service": {
+            "hostname": "crc.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.13"
+    },
+    "ctime": 1455915279,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1455914929,
+        "hash": "ddc35e8eb94b64fb60e958b22b42f67ca54836b5c3710f71673e7aa9d0e8084aa6ec18316d0d0327a98be2d28015799eea32cdbda80e1346b5f17cd99c876e66",
+        "seqno": 390092
+    },
+    "prev": "9cd16b16bb8064eed8bee765257615b090c0944e1e3721272b712c372f4bc990",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgc5vsEAdOOeuFgixottxjmnHLC2fah5FiJa6iia4xE+8Kp3BheWxvYWTFAu57ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwNzM5YmVjMTAwNzRlMzllYjg1ODIyYzY4YjZkYzYzOWE3MWNiMGI2N2RhODc5MTYyMjVhZWEyODlhZTMxMTNlZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNzM5YmVjMTAwNzRlMzllYjg1ODIyYzY4YjZkYzYzOWE3MWNiMGI2N2RhODc5MTYyMjVhZWEyODlhZTMxMTNlZjBhIiwidWlkIjoiMWU4Y2JmNDRmMzRiY2M3ZjY4Y2YyNzc5NjIxOTQ2MTkiLCJ1c2VybmFtZSI6ImNyY2FzdGxlIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJjcmMuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xMyJ9LCJjdGltZSI6MTQ1NTkxNTI3OSwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDU1OTE0OTI5LCJoYXNoIjoiZGRjMzVlOGViOTRiNjRmYjYwZTk1OGIyMmI0MmY2N2NhNTQ4MzZiNWMzNzEwZjcxNjczZTdhYTlkMGU4MDg0YWE2ZWMxODMxNmQwZDAzMjdhOThiZTJkMjgwMTU3OTllZWEzMmNkYmRhODBlMTM0NmI1ZjE3Y2Q5OWM4NzZlNjYiLCJzZXFubyI6MzkwMDkyfSwicHJldiI6IjljZDE2YjE2YmI4MDY0ZWVkOGJlZTc2NTI1NzYxNWIwOTBjMDk0NGUxZTM3MjEyNzJiNzEyYzM3MmY0YmM5OTAiLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxECSO4GPSklGWgJPL1wTvaDrk9Uaf3Mi9QWiKTE3D5BGqt1AamIrirKoB3u4/roIiKbqn+t0+UabBVrQEoKwpvgBqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/crcastle
+
+==================================================================
