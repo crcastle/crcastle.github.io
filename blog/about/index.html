@@ -15,8 +15,8 @@
   <link rel="alternate" type="application/rss+xml" title="Chris Castle" href="https://crc.io/blog/feed.xml">
 
   <!-- Beauty -->
-  <!-- <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:100|Open+Sans:300' rel='stylesheet' type='text/css'> -->
-  <link href='/css/google-fonts.css' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville|Josefin+Slab:100|Open+Sans:300,600,700,300italic' rel='stylesheet' type='text/css'>
+  <!-- <link href='/css/google-fonts.css' rel='stylesheet' type='text/css'> -->
 
   <!-- Bootstrap core CSS -->
   <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -43,26 +43,26 @@
 
   <!-- Begin Jaco code -->
   <script type="text/javascript">
-  // (function(e, t) {
-  //   var n = "JacoRecorder";
-  //   (function(e, t, r, i) {
-  //     if (!r.__VERSION) {
-  //       function s(e, t) {
-  //         e[t] = function() {
-  //           e.q.push([ t ].concat(Array.prototype.slice.call(arguments, 0)));
-  //         };
-  //       }
-  //       e[n] = r, r.q = [];
-  //       var o = [ "init", "identify", "startRecording", "stopRecording", "removeUserTracking", "setUserInfo", "exec" ];
-  //       for (var u = 0; u < o.length; u++) s(r, o[u]);
-  //       r.__VERSION = .9, r.__INIT_TIME = 1 * new Date;
-  //       var a = t.createElement("script");
-  //       a.async = !0, a.setAttribute("crossorigin", "anonymous"), a.src = i;
-  //       var f = t.getElementsByTagName("head")[0];
-  //       f.appendChild(a);
-  //     }
-  //   })(e, t, e[n] || [], "//bo.getjaco.com/build/recorder.js");
-  // })(window, document), JacoRecorder.init("4a94c410-40af-4cd2-a05f-7ae432505992", {});
+  (function(e, t) {
+    var n = "JacoRecorder";
+    (function(e, t, r, i) {
+      if (!r.__VERSION) {
+        function s(e, t) {
+          e[t] = function() {
+            e.q.push([ t ].concat(Array.prototype.slice.call(arguments, 0)));
+          };
+        }
+        e[n] = r, r.q = [];
+        var o = [ "init", "identify", "startRecording", "stopRecording", "removeUserTracking", "setUserInfo", "exec" ];
+        for (var u = 0; u < o.length; u++) s(r, o[u]);
+        r.__VERSION = .9, r.__INIT_TIME = 1 * new Date;
+        var a = t.createElement("script");
+        a.async = !0, a.setAttribute("crossorigin", "anonymous"), a.src = i;
+        var f = t.getElementsByTagName("head")[0];
+        f.appendChild(a);
+      }
+    })(e, t, e[n] || [], "//bo.getjaco.com/build/recorder.js");
+  })(window, document), JacoRecorder.init("4a94c410-40af-4cd2-a05f-7ae432505992", {});
   </script>
   <!-- End Jaco code -->
 
@@ -89,10 +89,10 @@
     <nav>
       <ul class="nav masthead-nav">
         <li><a href="/">Home</a></li>
-        <li class="active"><a href="/blog">Posts</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/speaking">Speaking</a></li>
-        <li><a href="/resume">Resume</a></li>
+        <li class="active"><a href="/blog/">Posts</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/speaking/">Speaking</a></li>
+        <li><a href="/resume/">Resume</a></li>
       </ul>
     </nav>
   </div>
@@ -145,6 +145,18 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/jquery-1.11.3.min.js"><\/script>')</script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="/js/readingTime.min.js"></script>
+<script>
+  var article = $('article.post');
+  if (article) {
+    article.readingTime({
+      lessThanAMinuteString: 'Less than a minute',
+      readingTimeTarget: '#read-time',
+      wordCountTarget: '#word-count',
+      wordsPerMinute: 150
+    });
+  }
+</script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="/js/ie10-viewport-bug-workaround.js"></script>
 <script>

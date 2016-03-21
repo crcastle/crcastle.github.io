@@ -14,6 +14,7 @@ twitter_username: crc
 github_username:  crcastle
 
 # Build settings
+encoding: utf-8
 markdown: kramdown
 destination: ../blog
 permalink: /:year/:month/:title/
