@@ -13,7 +13,15 @@ Emphasis on the simple here.  My aim wasn't to create a full-blown interview wor
 
 <h3 style="text-align: center;"><em>"I just wanted a simple way to code with someone remotely and interact with them like a human."</em></h3><br>
 
-As I talked to others about this, I realized it could be used for more than a technical interview: remote pair programming, helping a coworker debug a problem over the phone, tutoring a beginner programmer remotely...  [What else](https://twitter.com/intent/tweet?text=I want to use a collaborative code editor for... (@crc))?
+As I talked to others about this, I realized it could be used for more than a technical interview:
+
+<ul>
+<li style="list-style: circle;"><a href="https://pragprog.com/book/jkrp/remote-pairing">remote pair programming</a>,</li>
+<li style="list-style: circle;">helping a coworker debug a problem over the phone,</li>
+<li style="list-style: circle;">tutoring a beginner programmer remotely...</li>
+</ul>
+
+[What else](https://twitter.com/intent/tweet?text=I want to use a collaborative code editor for... (@crc))?
 
 #### Something like this doesn't exist already?
 Surprisingly, no!  At least I didn't find anything free or nearly free that provides a video conference and a shared code editor and is open source[^2].  Know of something?  Let me know ({% include icon-twitter.html username="crc" %})!
