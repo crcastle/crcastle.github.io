@@ -2,167 +2,378 @@
 <html lang="en">
 
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-     <meta name="author" content="Chris Castle">
-     <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Chris Castle">
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
 
-     <title>Chris Castle Résumé</title>
+  <title>Chris Castle Résumé</title>
 
-     <style type="text/css">
-        * { margin: 0; padding: 0; }
-        body { font-size: 17px; font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif; line-height: 24px; background: url(images/noise.jpg); -webkit-font-smoothing: subpixel-antialiased; }
-        .clear { clear: both; height: 0px; background-color: #7EA9DE; margin: 5px 0 0 0; border: 5px solid #7EA9DE; }
-        #page-wrap { width: 90%; margin: 20px auto 0px; }
-        #pic { float: right; margin: -20px 0 0 0; }
-        h1 { margin: 0 0 2px -2px; padding: 0 0 5px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; display: inline; } /* Franklin Gotic Book 22pt */
-        h2 { font-weight: bold; font-size: 32px; margin-bottom: 20px; text-align: center; text-transform: uppercase; line-height: 0.95em;  } /* Franklin Gotic Medium 14pt */
-        h3 { font-size: 20px; margin: 0 0 3px 0; position: relative; }
-        h3 span.job-properties { position: absolute; bottom: 0; right: 0; } /* Franklin Gotic Medium 11pt */
-        a { color: #000; text-decoration: none; border-bottom: 1px dotted #999; }
-        a:hover { border-bottom-style: solid; color: black; }
-        ul { margin: 0 0 24px 25px; }
-        section { margin: 15px 0 0 0; }
-        /*section.first { margin: 10px 0 0 0; }*/
-        abbr { border-bottom: 1px dashed #ccc; }
-        #person { margin-top: 0;}
-        #other-profiles { display: inline; }
-        #other-profiles li { display: inline; }
-        #other-profiles a { text-decoration: none; border-bottom: 0; }
-        #facebook-icon { margin: 0 0 -2px; } /* fix icon alignment issue */
-        #twitter-icon { margin: 0 0 -2px; } /* fix icon alignment issue */
-        #contact-info { margin: 0 0 10px 0; }
-        #contact-info li { display: inline; padding: 0 16px 0 0; font-style: italic; font-size: 16px; color: #999; font-weight: normal; } /* Franklin Gotic Book 8.5pt */
-        #contact-info li + li:before { content: '—'; position: relative; left: -8px; }
-        #contact-info a { color: #999; }
-        #contact-info a:hover { color: #000; }
-        #summary { width: 90%; position: relative; left: 0; top: 0; overflow: hidden; margin-top: 0; }
-        #summary p { font-size: 16px; font-style: italic; color: #666; margin: 0 0 16px 0; }
-        #summary .read-more, #summary .read-less {
-            position: absolute;
-            bottom: 0; left: 25%;
-            width: 100%;
-            text-align: center;
-            margin: 0; padding: 0;
-            font-size: 14px;
-            font-style: normal;
-        }
-        #summary .read-more {
-          animation-name: pulse;
-          animation-delay: 3s;
-          animation-duration: 1s;
-          animation-iteration-count: 2;
-        }
-        @keyframes pulse {
-          from { transform: scale3d(1, 1, 1); }
-          50% { color: red; transform: scale3d(1.2, 1.2, 1.2); }
-          to { transform: scale3d(1, 1, 1); }
-        }
-        #summary a:hover { color: #000; }
-        .comma-list { margin: 0; padding: 0; }
-        .comma-list li { display: inline; }
-        .comma-list li:after { content: ', '; }
-        .comma-list li:last-child:after { content: ""; }
-        footer { margin: 10px 0 2px 0; border-top: 1px solid #ccc; text-align: center; font-size: 10px; color: #999; }
-        #doc-info { float: left; }
-        #last-updated { float: right; color: #ccc; }
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-        p.no-print { display: none; }
-        .read-more.no-print, img.no-print { display: block; }
-        @media print {
-            .no-print, .no-print * { display: none !important; }
-            #summary { height: 70px !important; }
-            #page-wrap { width: 1100px; }
-        }
-        @media only screen and (max-width: 1210px) {
-          h3 span.job-properties {
-            position: relative;
-            display: block;
-            color: #999;
-            font-weight: normal;
-            font-size: 18px;
-          }
-          h3 span.job-properties a { color: #999; }
-          #doc-info { float: none; }
-          #last-updated { float: none; }
-        }
-     </style>
-     <!--[if lt IE 9]>
+    body {
+      font-size: 17px;
+      font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+      line-height: 24px;
+      background: url(images/noise.jpg);
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    .clear {
+      clear: both;
+      height: 0px;
+      background-color: #7EA9DE;
+      margin: 5px 0 0 0;
+      border: 5px solid #7EA9DE;
+    }
+
+    #page-wrap {
+      width: 90%;
+      margin: 20px auto 0px;
+    }
+
+    #pic {
+      float: right;
+      margin: -20px 0 0 0;
+    }
+
+    h1 {
+      margin: 0 0 2px -2px;
+      padding: 0 0 5px 0;
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: -2px;
+      display: inline;
+    }
+
+    /* Franklin Gotic Book 22pt */
+    h2 {
+      font-weight: bold;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 0.95em;
+    }
+
+    /* Franklin Gotic Medium 14pt */
+    h3 {
+      font-size: 20px;
+      margin: 0 0 3px 0;
+      position: relative;
+    }
+
+    h3 span.job-properties {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    /* Franklin Gotic Medium 11pt */
+    a {
+      color: #000;
+      text-decoration: none;
+      border-bottom: 1px dotted #999;
+    }
+
+    a:hover {
+      border-bottom-style: solid;
+      color: black;
+    }
+
+    ul {
+      margin: 0 0 24px 25px;
+    }
+
+    section {
+      margin: 15px 0 0 0;
+    }
+
+    /*section.first { margin: 10px 0 0 0; }*/
+    abbr {
+      border-bottom: 1px dashed #ccc;
+    }
+
+    #person {
+      margin-top: 0;
+    }
+
+    #other-profiles {
+      display: inline;
+    }
+
+    #other-profiles li {
+      display: inline;
+    }
+
+    #other-profiles a {
+      text-decoration: none;
+      border-bottom: 0;
+    }
+
+    #facebook-icon {
+      margin: 0 0 -2px;
+    }
+
+    /* fix icon alignment issue */
+    #twitter-icon-crc {
+      margin: 0 0 -2px;
+    }
+
+    /* fix icon alignment issue */
+    #contact-info {
+      margin: 0 0 10px 0;
+    }
+
+    #contact-info li {
+      display: inline;
+      padding: 0 16px 0 0;
+      font-style: italic;
+      font-size: 16px;
+      color: #999;
+      font-weight: normal;
+    }
+
+    /* Franklin Gotic Book 8.5pt */
+    #contact-info li+li:before {
+      content: '—';
+      position: relative;
+      left: -8px;
+    }
+
+    #contact-info a {
+      color: #999;
+    }
+
+    #contact-info a:hover {
+      color: #000;
+    }
+
+    #summary {
+      width: 90%;
+      position: relative;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+    #summary p {
+      font-size: 16px;
+      font-style: italic;
+      color: #666;
+      margin: 0 0 16px 0;
+    }
+
+    #summary .read-more,
+    #summary .read-less {
+      position: absolute;
+      bottom: 0;
+      left: 25%;
+      width: 100%;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      font-style: normal;
+    }
+
+    #summary .read-more {
+      animation-name: pulse;
+      animation-delay: 3s;
+      animation-duration: 1s;
+      animation-iteration-count: 2;
+    }
+
+    @keyframes pulse {
+      from {
+        transform: scale3d(1, 1, 1);
+      }
+
+      50% {
+        color: red;
+        transform: scale3d(1.2, 1.2, 1.2);
+      }
+
+      to {
+        transform: scale3d(1, 1, 1);
+      }
+    }
+
+    #summary a:hover {
+      color: #000;
+    }
+
+    .comma-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .comma-list li {
+      display: inline;
+    }
+
+    .comma-list li:after {
+      content: ', ';
+    }
+
+    .comma-list li:last-child:after {
+      content: "";
+    }
+
+    footer {
+      margin: 10px 0 2px 0;
+      border-top: 1px solid #ccc;
+      text-align: center;
+      font-size: 10px;
+      color: #999;
+    }
+
+    #doc-info {
+      float: left;
+    }
+
+    #last-updated {
+      float: right;
+      color: #ccc;
+    }
+
+    p.no-print {
+      display: none;
+    }
+
+    .read-more.no-print,
+    img.no-print {
+      display: block;
+    }
+
+    @media print {
+
+      .no-print,
+      .no-print * {
+        display: none !important;
+      }
+
+      #summary {
+        height: 85px !important;
+      }
+
+      #page-wrap {
+        width: 1100px;
+      }
+    }
+
+    @media only screen and (max-width: 1210px) {
+      h3 span.job-properties {
+        position: relative;
+        display: block;
+        color: #999;
+        font-weight: normal;
+        font-size: 18px;
+      }
+
+      h3 span.job-properties a {
+        color: #999;
+      }
+
+      #doc-info {
+        float: none;
+      }
+
+      #last-updated {
+        float: none;
+      }
+    }
+  </style>
+  <!--[if lt IE 9]>
      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
 
-     <!-- Begin Inspectlet Embed Code -->
-     <script type="text/javascript" id="inspectletjs">
-        window.__insp = window.__insp || [];
-        __insp.push(['wid', 742101973]);
-        (function() {
-            function __ldinsp(){var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
-            if (window.attachEvent){
-                window.attachEvent('onload', __ldinsp);
-            }else{
-                window.addEventListener('load', __ldinsp, false);
-            }
-        })();
-     </script>
-     <!-- End Inspectlet Embed Code -->
+  <!-- Begin Inspectlet Embed Code -->
+  <!-- <script type="text/javascript" id="inspectletjs">
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 742101973]);
+    (function () {
+      function __ldinsp() { var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); }
+      if (window.attachEvent) {
+        window.attachEvent('onload', __ldinsp);
+      } else {
+        window.addEventListener('load', __ldinsp, false);
+      }
+    })();
+  </script> -->
+  <!-- End Inspectlet Embed Code -->
 
-     <!-- Begin Jaco code -->
-     <script type="text/javascript">
-     (function(e, t) {
-         var n = "JacoRecorder";
-         (function(e, t, r, i) {
-             if (!r.__VERSION) {
-                 function s(e, t) {
-                     e[t] = function() {
-                         e.q.push([ t ].concat(Array.prototype.slice.call(arguments, 0)));
-                     };
-                 }
-                 e[n] = r, r.q = [];
-                 var o = [ "init", "identify", "startRecording", "stopRecording", "removeUserTracking", "setUserInfo", "exec" ];
-                 for (var u = 0; u < o.length; u++) s(r, o[u]);
-                 r.__VERSION = .9, r.__INIT_TIME = 1 * new Date;
-                 var a = t.createElement("script");
-                 a.async = !0, a.setAttribute("crossorigin", "anonymous"), a.src = i;
-                 var f = t.getElementsByTagName("head")[0];
-                 f.appendChild(a);
-             }
-         })(e, t, e[n] || [], "//bo.getjaco.com/build/recorder.js");
-     })(window, document), JacoRecorder.init("4a94c410-40af-4cd2-a05f-7ae432505992", {});
-     </script>
-     <!-- End Jaco code -->
+  <!-- Begin Jaco code -->
+  <!-- <script type="text/javascript">
+    (function (e, t) {
+      var n = "JacoRecorder";
+      (function (e, t, r, i) {
+        if (!r.__VERSION) {
+          function s(e, t) {
+            e[t] = function () {
+              e.q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
+            };
+          }
+          e[n] = r, r.q = [];
+          var o = ["init", "identify", "startRecording", "stopRecording", "removeUserTracking", "setUserInfo", "exec"];
+          for (var u = 0; u < o.length; u++) s(r, o[u]);
+          r.__VERSION = .9, r.__INIT_TIME = 1 * new Date;
+          var a = t.createElement("script");
+          a.async = !0, a.setAttribute("crossorigin", "anonymous"), a.src = i;
+          var f = t.getElementsByTagName("head")[0];
+          f.appendChild(a);
+        }
+      })(e, t, e[n] || [], "//bo.getjaco.com/build/recorder.js");
+    })(window, document), JacoRecorder.init("4a94c410-40af-4cd2-a05f-7ae432505992", {});
+  </script> -->
+  <!-- End Jaco code -->
 
-     <meta name="google-site-verification" content="n-YT2M9jU-Jqkb4R4lgjZsJ3rmTeR1bMGYo-wsmzPLc" />
+  <meta name="google-site-verification" content="n-YT2M9jU-Jqkb4R4lgjZsJ3rmTeR1bMGYo-wsmzPLc" />
 </head>
 
 <body>
-    <div id="page-wrap">
+  <div id="page-wrap">
 
-        <section id="person" itemscope itemtype="http://schema.org/Person" itemref="summary sm-org ctrl-org vivaki-org kcsar-org tnt-org rf-org ms-org colby-org">
+    <section id="person" itemscope itemtype="http://schema.org/Person"
+      itemref="summary sm-org ctrl-org vivaki-org kcsar-org tnt-org rf-org ms-org colby-org">
 
-          <!-- Microdata! -->
+      <!-- Microdata! -->
 
-          <img itemprop="image" src="images/crcastle.png" alt="Chris Castle" id="pic" class="no-print" style="height: 125px;"/>
+      <img itemprop="image" src="images/crcastle2.png" alt="Chris Castle" id="pic" class="no-print"
+        style="height: 125px;" />
 
-          <h1 itemprop="name">Chris Castle</h1>
+      <h1 itemprop="name">Chris Castle</h1>
 
-            <ul id="other-profiles">
-                <li><a rel="me" itemprop="url" href="Chris%20Castle%20Resume.pdf" title="PDF"><img src="images/pdficon.png" width="16" height="16" alt="PDF" /></a></li>
-                <!-- <li><a rel="me" itemprop="url" href="Chris%20Castle%20Resume.docx" title="Word"><img src="images/word-icon.png" width="16" height="16" alt="DOC" /></a></li> -->
-                <li><img src="images/separator.png" width="16" height="16" alt="separator" /></li>
-                <li><a rel="me" itemprop="url" href="https://www.linkedin.com/in/crcastle" title="LinkedIn"><img src="images/linkedin-6-32.png" width="16" height="16" alt="LinkedIn" /></a></li>
-                <li><a rel="me" itemprop="url" href="https://github.com/crcastle" title="GitHub"><img src="images/github-11-32.png" width="16" height="16" alt="GitHub" /></a></li>
-                <li><a rel="me" itemprop="url" href="https://twitter.com/crc" title="Twitter"><img id="twitter-icon" src="images/twitter-3-64.png" width="19" height="19" alt="Twitter" /></a></li>
-                <li><a rel="me" itemprop="url" href="https://www.facebook.com/crcastle" title="Facebook"><img id="facebook-icon" src="images/facebook-3-64.png" width="19" height="19" alt="Facebook" /></a></li>
-            </ul>
+      <ul id="other-profiles">
+        <li><a rel="me" itemprop="url" href="Chris%20Castle%20Resume.pdf" title="PDF"><img src="images/pdficon.png"
+              width="16" height="16" alt="PDF" /></a></li>
+        <!-- <li><a rel="me" itemprop="url" href="Chris%20Castle%20Resume.docx" title="Word"><img src="images/word-icon.png" width="16" height="16" alt="DOC" /></a></li> -->
+        <li><img src="images/separator.png" width="16" height="16" alt="separator" /></li>
+        <li><a rel="me" itemprop="url" href="https://www.linkedin.com/in/crcastle" title="LinkedIn"><img
+              src="images/linkedin-6-32.png" width="16" height="16" alt="LinkedIn" /></a></li>
+        <li><a rel="me" itemprop="url" href="https://github.com/crcastle" title="GitHub"><img
+              src="images/github-11-32.png" width="16" height="16" alt="GitHub" /></a></li>
+        <li><a rel="me" itemprop="url" href="https://twitter.com/crc" title="Twitter"><img id="twitter-icon-crc"
+              src="images/twitter-3-64.png" width="19" height="19" alt="Twitter" /></a></li>
+        <!-- <li><a rel="me" itemprop="url" href="https://www.facebook.com/crcastle" title="Facebook"><img id="facebook-icon"
+              src="images/facebook-3-64.png" width="19" height="19" alt="Facebook" /></a></li> -->
+      </ul>
 
-          <ul id="contact-info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-              <li><span itemprop="streetAddress">109b 19th Avenue</span>, <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span> <span itemprop="postalCode">98122</span></li>
-              <li><a itemprop="telephone" href="tel:+12064444344">+1 206.444.4344</a></li>
-              <li><a itemprop="email" href="mailto:chris@crc.io">chris@crc.io</a></li>
-          </ul>
-        </section>
+      <ul id="contact-info" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <li><span itemprop="streetAddress">109b 19th Avenue</span>, <span itemprop="addressLocality">Seattle</span>,
+          <span itemprop="addressRegion">WA</span> <span itemprop="postalCode">98122</span>
+        </li>
+        <li><a itemprop="telephone" href="tel:+12064444344">+1 206.444.4344</a></li>
+        <li><a itemprop="email" href="mailto:chris@crc.io">chris@crc.io</a></li>
+      </ul>
+    </section>
 
-        <div id="summary" itemprop="description">
-            <!-- <p>
+    <div id="summary" itemprop="description">
+      <!-- <p>
                 I conceptualize, design, manage, and build digital products.
                 I like to solve challenges previously thought impossible and
                 help my team grow along the way. I'll do whatever necessary
@@ -171,121 +382,193 @@
                 communicate an inspiring product vision.
             </p> -->
 
-            <p>
-                 I thrive on enabling others. I've helped teams conceptualize,
-                 design, and build numerous digital products through writing code,
-                 prototyping hardware, coaching employees, defining an inspiring
-                 product vision, and managing development schedules. Check out my
-                 <a href="https://github.com/crcastle">GitHub profile</a> or
-                 <a href="https://crc.io/projects/">projects</a> page to see
-                 what I've built. I've also worked as an Instructor of Avalanche
-                 Safety and the Head Coach for a cycling team.
-            </p>
+      <p>
+        I thrive on enabling others—whether that means helping
+        my team shine while producing their best work, helping developers grow
+        and learn, or helping my colleagues in marketing, product, and
+        engineering stay true to the needs of developers.
 
-            <p class="read-more no-print"><a href="javascript:void(0);" class="button">☟ More</a></p>
+      <p>
+        Want more? Here's a <a href="https://crc.io/job-2021">blog post</a>
+        with more detail and nuance than can be conveyed through a resume.
+      </p>
+      <!-- I've helped teams conceptualize,
+        design, and build numerous digital products through writing code,
+        prototyping hardware, coaching employees, defining an inspiring
+        product vision, and managing development schedules. Check out my
+        <a href="https://github.com/crcastle">GitHub profile</a> or
+        <a href="https://crc.io/projects/">projects</a> page to see
+        what I've built. I've also worked as an Instructor of Avalanche
+        Safety and the Head Coach of a cycling team. -->
+      </p>
 
-            <p class="no-print">
-              I've focused my career around analytics, data visualization, and
-              internal tool development — from the delightful UI to the deep details
-              of data processing and storage — but I have tons of other experience and
-              thrive on learning.  I've worked on embedded hardware development
-              (both hardware and firmware), open source software project
-              contributions, linux system administration, econometric modeling,
-              complex SQL query development, and user training.  I've
-              even created a C Corp and drafted company bylaws.
-            </p>
+      <!-- <p class="read-more no-print"><a href="javascript:void(0);" class="button">☟ More</a></p> -->
 
-            <p class="no-print">
-                Outside of work I take on coding projects (<a href="https://github.com/dcarney/keg.io/tree/develop">keg.io</a>), ride my bike, and ski as much as I can.
-            </p>
+      <!-- <p class="no-print">
+        I've focused my career around analytics, data visualization, and
+        internal tool development — from the delightful UI to the deep details
+        of data processing and storage — but I have tons of other experience and
+        thrive on learning. I've worked on embedded hardware development
+        (both hardware and firmware), open source software project
+        contributions, linux system administration, econometric modeling,
+        complex SQL query development, and user training. I've
+        even created a C Corp and drafted company bylaws.
+      </p> -->
 
-            <p class="no-print">
-                I live in Seattle and love it, but, for the right opportunity, I'm willing to relocate or work remotely.
-            </p>
+      <!-- <p class="no-print">
+        Outside of work I take on coding projects (<a href="https://github.com/dcarney/keg.io/tree/develop">keg.io</a>),
+        ride my bike, and ski as much as I can.
+      </p> -->
 
-            <p class="no-print">
-                Also I've been told I'm like this guy — <a href="http://youtu.be/nrLxySqQn6E">http://youtu.be/nrLxySqQn6E</a>
-            </p>
+      <!-- <p class="no-print">
+        I live in Seattle and love it, but, for the right opportunity, I'm willing to relocate or work remotely.
+      </p> -->
 
-            <p class="read-less no-print"><a href="javascript:void(0);" class="button">☝ Less</a></p>
-        </div>
+      <!-- <p class="no-print">
+        Also I've been told I'm like this guy — <a href="http://youtu.be/nrLxySqQn6E">http://youtu.be/nrLxySqQn6E</a>
+      </p> -->
 
-        <div class="clear"></div>
+      <!-- <p class="read-less no-print"><a href="javascript:void(0);" class="button">☝ Less</a></p> -->
+    </div>
 
-        <section class="first">
-            <h2>Experience</h2>
-                <div>
-                    <h3>
-                      <span id="ctrl-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="ctrl-dates ctrl-descriptions">
-                        <span itemprop="roleName">Founder</span>, <span itemprop="roleName">Software and Hardware Engineer</span>
-                      </span>
-                      <span class="job-properties">
-                        <span id="ctrl-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Organization" itemref="ctrl-role">
-                          <a href="http://ctrl.industries/" itemprop="name">ctrl industries</a> -
-                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
-                          </span>
-                        </span> -
-                        <span id="ctrl-dates">
-                          <span itemprop="startDate" content="2015-03-01">March 2015</span> to <span itemprop="endDate" content="2015-10-15">present</span>
-                        </span>
-                      </span>
-                    </h3>
-                    <ul id="ctrl-descriptions">
-                        <li itemprop="description">Founded B2B Internet of Things Hardware+SaaS business focused on bringing better technology to "<abbr title="Agriculture, Forestry, Fishing, Construction, Trucking, Manufacturing, Oil and Gas, etc.">analog</abbr>" industries</li>
-                        <li itemprop="description">Conducted primary and secondary research to understand market needs and formulate product vision</li>
-                        <li itemprop="description">Architected and built <a href="http://ctrl.industries">wireless sensor hardware prototype and SaaS technology platform</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>
-                      <span id="sm-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="sm-dates sm-descriptions">
-                        <span itemprop="roleName">Technical Product Manager</span>
-                      </span>
-                      <span class="job-properties">
-                        <span id="sm-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="sm-role">
-                          <a href="http://simplymeasured.com/" itemprop="name">Simply Measured</a> -
-                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
-                          </span>
-                        </span> -
-                        <span id="sm-dates">
-                          <span itemprop="startDate" content="2012-07-10">July 2012</span> to <span itemprop="endDate" content="2014-08-25">August 2014</span>
-                        </span>
-                      </span>
-                    </h3>
-                    <ul id="sm-descriptions">
-                        <li itemprop="description">Developed, planned, and directed launch of report management product for Simply Measured's analysts, making report creation process faster and more powerful while reducing defect rate; grew and managed six-person team including engineers and a junior product manager</li>
-                        <li itemprop="description">Managed four-person analyst team responsible for design and implementation of Simply Measured's product, 50+ customer-facing reports</li>
-                        <li itemprop="description">Adapted my role from product management generalist to product owner of Report Builder during substantial company growth (20 to 150 employees)</li>
-                    </ul>
-                </div>
+    <div class="clear"></div>
 
-                <div>
-                    <h3>
-                      <span id="vivaki-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="vivaki-dates vivaki-descriptions">
-                        <span itemprop="roleName">Product Manager, Cloud Technologies</span>
-                      </span>
-                      <span class="job-properties">
-                        <span id="vivaki-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="vivaki-role">
-                          <a href="http://www.vivaki.com/" itemprop="name">VivaKi Nerve Center</a> -
-                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
-                          </span>
-                        </span> -
-                        <span id="vivaki-dates">
-                          <span itemprop="startDate" content="2008-02-01">February 2008</span> to <span itemprop="endDate" content="2012-07-01">July 2012</span>
-                        </span>
-                      </span>
-                    </h3>
-                    <ul id="vivaki-descriptions">
-                        <li itemprop="description">Created product vision, prototyped (Node.js, Ruby), and directed development of multi-agency API to to allow internal development groups to access and use our managed AWS infrastructure</li>
-                        <li itemprop="description">Defined functionality and led development of data processing engine, processing ~1PB/week (Hadoop / AWS Elastic MapReduce)</li>
-                        <li itemprop="description">Collected business requirements from 1,000+ users and defined product spec for centralized marketing data storage and provisioning system</li>
-                    </ul>
-                </div>
+    <section class="first">
+      <h2>Experience</h2>
+      <div>
+        <h3>
+          <span id="heroku-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole"
+            itemref="heroku-dates heroku-descriptions">
+            <span itemprop="roleName">Director</span>, <span itemprop="roleName">Developer Relations</span>
+          </span>
+          <span class="job-properties">
+            <span id="heroku-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"
+              itemref="heroku-role">
+              <a href="https://www.heroku.com" itemprop="name">Heroku (Salesforce)</a> -
+              <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Remote</span>
+              </span>
+            </span> -
+            <span id="heroku-dates">
+              <span itemprop="startDate" content="2016-04-18">April 2016</span> to <span itemprop="endDate"
+                content="present">present</span>
+            </span>
+          </span>
+        </h3>
+        <ul id="heroku-descriptions">
+          <li itemprop="description">Designed, developed, and presented demo applications for product launches,
+            including <a href="https://www.heroku.com/kafka">Apache Kafka on Heroku</a> and <a
+              href="https://devcenter.heroku.com/articles/automated-certificate-management">Automated
+              Certificate Management</a></li>
+          <li itemprop="description">Advocated for developers by collecting and shared customer feedback internally from
+            various sources: in-person,
+            social media, forums, conferences</li>
+          <li itemprop="description">Tested new products and features prior to launch in collaboration with Product and
+            Engineering</li>
+          <li itemprop="description">Represented Heroku at conference talks and sponsor booths both in-person and
+            virtually at developer conferences throughout the U.S. and Europe</li>
+          <li itemprop="description">Shaped Developer Relations strategy, ensured team was executing toward
+            strategic goals, and helped employees stay happy, healthy, and engaged with their work</li>
+          <li itemprop="description">Promoted frequently throughout four years from Individual Contributor to Lead to
+            Director</li>
+        </ul>
+      </div>
 
-                <div>
+
+
+      <div>
+        <h3>
+          <span id="ctrl-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole"
+            itemref="ctrl-dates ctrl-descriptions">
+            <span itemprop="roleName">Founder</span>, <span itemprop="roleName">Software and Hardware Engineer</span>
+          </span>
+          <span class="job-properties">
+            <span id="ctrl-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"
+              itemref="ctrl-role">
+              <a href="https://ctrl.industries/" itemprop="name">ctrl industries</a> -
+              <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
+              </span>
+            </span> -
+            <span id="ctrl-dates">
+              <span itemprop="startDate" content="2015-03-01">March 2015</span> to <span itemprop="endDate"
+                content="2016-04-01">April 2016</span>
+            </span>
+          </span>
+        </h3>
+        <ul id="ctrl-descriptions">
+          <li itemprop="description">Founded B2B Internet of Things Hardware+SaaS business focused on bringing better
+            technology to "<abbr
+              title="Agriculture, Forestry, Fishing, Construction, Trucking, Manufacturing, Oil and Gas, etc.">analog</abbr>"
+            industries</li>
+          <!-- <li itemprop="description">Conducted primary and secondary research to understand market needs and formulate
+            product vision</li> -->
+          <li itemprop="description">Architected and built <a href="http://ctrl.industries">wireless sensor hardware
+              prototype and SaaS technology platform</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>
+          <span id="sm-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole"
+            itemref="sm-dates sm-descriptions">
+            <span itemprop="roleName">Technical Product Manager</span>
+          </span>
+          <span class="job-properties">
+            <span id="sm-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="sm-role">
+              <a href="http://simplymeasured.com/" itemprop="name">Simply Measured</a> -
+              <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
+              </span>
+            </span> -
+            <span id="sm-dates">
+              <span itemprop="startDate" content="2012-07-10">July 2012</span> to <span itemprop="endDate"
+                content="2014-08-25">August 2014</span>
+            </span>
+          </span>
+        </h3>
+        <ul id="sm-descriptions">
+          <li itemprop="description">Developed, planned, and directed launch of report management product for Simply
+            Measured's analysts, making report creation process faster and more powerful while reducing defect rate;
+            grew and managed six-person team including engineers and a junior product manager</li>
+          <li itemprop="description">Managed four-person analyst team responsible for design and implementation of
+            Simply Measured's product, 50+ customer-facing reports</li>
+          <!-- <li itemprop="description">Adapted my role from product management generalist to product owner of Report
+            Builder during substantial company growth (20 to 150 employees)</li> -->
+        </ul>
+      </div>
+
+      <div>
+        <h3>
+          <span id="vivaki-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole"
+            itemref="vivaki-dates vivaki-descriptions">
+            <span itemprop="roleName">Product Manager, Cloud Technologies</span>
+          </span>
+          <span class="job-properties">
+            <span id="vivaki-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation"
+              itemref="vivaki-role">
+              <a href="https://www.vivaki.com/" itemprop="name">VivaKi Nerve Center</a> -
+              <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
+              </span>
+            </span> -
+            <span id="vivaki-dates">
+              <span itemprop="startDate" content="2008-02-01">February 2008</span> to <span itemprop="endDate"
+                content="2012-07-01">July 2012</span>
+            </span>
+          </span>
+        </h3>
+        <ul id="vivaki-descriptions">
+          <li itemprop="description">Created product vision, prototyped (Node.js, Ruby), and directed development of
+            multi-agency API to to allow internal development groups to access and use our managed AWS infrastructure
+          </li>
+          <li itemprop="description">Defined functionality and led development of data processing engine, processing
+            ~1PB/week (Hadoop / AWS Elastic MapReduce)</li>
+          <li itemprop="description">Collected business requirements from 1,000+ users and defined product spec for
+            centralized marketing data storage and provisioning system</li>
+        </ul>
+      </div>
+
+      <!-- <div>
                      <h3>
                           <span id="kcsar-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="kcsar-dates kcsar-descriptions">
                                <span itemprop="roleName">Avalanche Safety and Snow Science Instructor</span>
@@ -328,59 +611,67 @@
                      <ul id="tnt-descriptions">
                           <li itemprop="description">Coached cyclists of all levels for 100-mile century rides in Moab, UT and Bellingham, WA</li>
                      </ul>
-                </div>
-                <div>
-                    <h3 id="rf-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="rf-dates rf-descriptions">
-                      <span itemprop="roleName">Media Technology Specialist</span><br/>
-                      <span itemprop="roleName">Client Service Engineer</span>
-                    </h3>
-                    <h3>
-                      <span class="job-properties">
-                        <span id="rf-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="rf-role">
-                          <a href="http://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> -
-                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
-                          </span>
-                        </span> -
-                        <span id="rf-dates">
-                          <span itemprop="startDate" content="2005-10-01">October 2005</span> to <span itemprop="endDate" content="2008-02-01">February 2008</span>
-                        </span>
-                      </span>
-                    </h3>
-                    <ul id="rf-descriptions">
-                        <li itemprop="description">Managed feature development of online messaging, tracking, and reporting products</li>
-                        <li itemprop="description">Guided development of in-house web analytics tool using the Atlas ad-serving system and other web technologies</li>
-                        <!-- <li itemprop="description">Acted as Atlas ad serving technical subject matter expert</li> -->
-                        <!-- <li itemprop="description">Planned and managed ad operations for online advertising campaigns</li> -->
-                        <!-- <li itemprop="description">Implemented pixel tracking tags on client websites</li> -->
-                    </ul>
-                </div>
+                </div> -->
+      <div>
+        <h3 id="rf-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole"
+          itemref="rf-dates rf-descriptions">
+          <span itemprop="roleName">Media Technology Specialist</span><br />
+          <span itemprop="roleName">Client Service Engineer</span>
+        </h3>
+        <h3>
+          <span class="job-properties">
+            <span id="rf-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="rf-role">
+              <a href="https://www.razorfish.com/" itemprop="name">Avenue A | Razorfish</a> -
+              <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Seattle</span>, <span itemprop="addressRegion">WA</span>
+              </span>
+            </span> -
+            <span id="rf-dates">
+              <span itemprop="startDate" content="2005-10-01">October 2005</span> to <span itemprop="endDate"
+                content="2008-02-01">February 2008</span>
+            </span>
+          </span>
+        </h3>
+        <ul id="rf-descriptions">
+          <li itemprop="description">Managed feature development of online messaging, tracking, and reporting products
+          </li>
+          <!-- <li itemprop="description">Guided development of in-house web analytics tool using the Atlas ad-serving system
+            and other web technologies</li> -->
+          <!-- <li itemprop="description">Acted as Atlas ad serving technical subject matter expert</li> -->
+          <!-- <li itemprop="description">Planned and managed ad operations for online advertising campaigns</li> -->
+          <!-- <li itemprop="description">Implemented pixel tracking tags on client websites</li> -->
+        </ul>
+      </div>
 
-                <div>
-                    <h3>
-                      <span id="ms-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="ms-dates ms-descriptions">
-                        <span itemprop="roleName">Strategy Analyst</span>
-                      </span>
-                      <span class="job-properties">
-                        <span id="ms-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="ms-role">
-                          <a href="http://www.microsoft.com/" itemprop="name">Microsoft</a> -
-                          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                            <span itemprop="addressLocality">Redmond</span>, <span itemprop="addressRegion">WA</span>
-                          </span>
-                        </span> -
-                        <span id="ms-dates">
-                          <span itemprop="startDate" content="2004-03-01">March 2004</span> to <span itemprop="endDate" content="2005-03-01">March 2005</span>
-                        </span>
-                      </span>
-                    </h3>
-                    <ul id="ms-descriptions">
-                        <li itemprop="description">Assessed advertising and technology markets in 30 countries to determine the potential viability of MSN’s business in those markets</li>
-                        <li itemprop="description">Supported strategy creation for MSN's worldwide sales and marketing organization</li>
-                    </ul>
-                </div>
+      <div>
+        <h3>
+          <span id="ms-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole"
+            itemref="ms-dates ms-descriptions">
+            <span itemprop="roleName">Strategy and Data Analyst</span>
+          </span>
+          <span class="job-properties">
+            <span id="ms-org" itemprop="worksFor" itemscope itemtype="http://schema.org/Corporation" itemref="ms-role">
+              <a href="https://www.microsoft.com/" itemprop="name">Microsoft</a> -
+              <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="addressLocality">Redmond</span>, <span itemprop="addressRegion">WA</span>
+              </span>
+            </span> -
+            <span id="ms-dates">
+              <span itemprop="startDate" content="2004-03-01">March 2004</span> to <span itemprop="endDate"
+                content="2005-03-01">March 2005</span>
+            </span>
+          </span>
+        </h3>
+        <ul id="ms-descriptions">
+          <li itemprop="description">Assessed advertising and technology markets in 30 countries to determine the
+            potential viability of MSN’s business in those markets</li>
+          <!-- <li itemprop="description">Supported strategy creation for MSN's worldwide sales and marketing organization
+          </li> -->
+        </ul>
+      </div>
 
 
-                <!-- <div>
+      <!-- <div>
                     <h3>
                       <span id="brattle-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="brattle-dates brattle-descriptions">
                         <span itemprop="roleName">Research Analyst</span>
@@ -402,164 +693,174 @@
                         <li itemprop="description">Taught in-house SAS (statistical analysis package) classes</li>
                     </ul>
                 </div> -->
-        </section>
+    </section>
 
-        <div class="clear"></div>
+    <div class="clear"></div>
 
-        <section>
-            <h2>Education, Skills, and Expertise</h2>
-                <div>
-                    <h3>
-                      <span id="colby-org" itemprop="memberOf" itemscope itemtype="http://schema.org/CollegeOrUniversity" itemref="colby-role">
-                        <span itemprop="name">Colby College</span>
-                        <span class="job-properties" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                          <span itemprop="addressLocality">Waterville</span>, <span itemprop="addressRegion">ME</span> -
-                          <span id="colby-dates">
-                            <span>August 1998</span> to <span>May 2002</span>
-                          </span>
-                        </span>
-                      </span>
-                    </h3>
-                    <p id="colby-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole" itemref="colby-dates">
-                      <span itemprop="roleName">B.A., Economics and Mathematical Sciences with Computer Science concentration</span><br/>
-                      <span itemprop="description">Senior Paper: Economic Consequences of Increased Internet Usage on Music Industry Sales</span>
-                    </p>
-                </div>
-        </section>
+    <section>
+      <h2>Education, Skills, and Expertise</h2>
+      <div>
+        <h3>
+          <span id="colby-org" itemprop="memberOf" itemscope itemtype="http://schema.org/CollegeOrUniversity"
+            itemref="colby-role">
+            <span itemprop="name">Colby College</span>
+            <span class="job-properties" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <span itemprop="addressLocality">Waterville</span>, <span itemprop="addressRegion">ME</span> -
+              <span id="colby-dates">
+                <span>August 1998</span> to <span>May 2002</span>
+              </span>
+            </span>
+          </span>
+        </h3>
+        <p id="colby-role" itemprop="memberOf" itemscope itemtype="http://schema.org/OrganizationRole"
+          itemref="colby-dates">
+          <span itemprop="roleName">B.A., Economics and Mathematical Sciences with Computer Science
+            concentration</span><br />
+          <span itemprop="description">Senior Paper: Economic Consequences of Increased Internet Usage on Music Industry
+            Sales</span>
+        </p>
+      </div>
+    </section>
 
-        <section itemscope itemtype="http://schema.org/ItemList">
-            <meta itemprop="itemListOrder" content="http://schema.org/ItemListOrderDescending" />
-            <ul class="comma-list">
-                <li itemprop="itemListElement">Product Management</li>
-                <li itemprop="itemListElement">Software Development</li>
-                <li itemprop="itemListElement">Hardware Development</li>
-                <li itemprop="itemListElement">UX Design</li>
-                <li itemprop="itemListElement">Web Analytics</li>
-                <li itemprop="itemListElement">Data Visualization</li>
-                <li itemprop="itemListElement">ETL</li>
-                <li itemprop="itemListElement">Analytics</li>
-                <!-- <li itemprop="itemListElement">Digital Marketing</li> -->
-                <!-- <li itemprop="itemListElement">Online Ad Serving Technologies</li> -->
-                <!-- <li itemprop="itemListElement">Site Personalization and Measurement</li> -->
-            </ul>
-            <br />
-            <ul class="comma-list">
-                <li itemprop="itemListElement">Ruby</li>
-                <li itemprop="itemListElement">Node.js</li>
-                <!-- <li itemprop="itemListElement">Bash</li> -->
-                <li itemprop="itemListElement">HTML/CSS/JavaScript</li>
-                <li itemprop="itemListElement">Linux/Unix system administration</li>
-                <li itemprop="itemListElement">SQL</li>
-                <li itemprop="itemListElement">Git</li>
-                <li itemprop="itemListElement">Python</li>
-                <li itemprop="itemListElement">Amazon Web Services</li>
-                <li itemprop="itemListElement">Hadoop</li>
-                <li itemprop="itemListElement">MapReduce</li>
-            </ul>
-            <br />
-            <ul class="comma-list">
-              <li itemprop="itemListElement">Coaching</li>
-              <li itemprop="itemListElement">Avalanche and Snow Science Education</li>
-              <li itemprop="itemListElement">Mountain Biking</li>
-              <li itemprop="itemListElement">Skiing</li>
-              <li itemprop="itemListElement">Motorcycles</li>
-              <li itemprop="itemListElement">Road Cycling</li>
-              <li itemprop="itemListElement">Running</li>
-              <li itemprop="itemListElement">Yoga</li>
-            </ul>
-        </section>
+    <section itemscope itemtype="http://schema.org/ItemList">
+      <meta itemprop="itemListOrder" content="http://schema.org/ItemListOrderDescending" />
+      <ul class="comma-list">
+        <li itemprop="itemListElement">Developer Relations</li>
+        <li itemprop="itemListElement">Software Development</li>
+        <li itemprop="itemListElement">Product Management</li>
+        <li itemprop="itemListElement">Hardware Development</li>
+        <li itemprop="itemListElement">UX Design</li>
+        <li itemprop="itemListElement">Web Analytics</li>
+        <li itemprop="itemListElement">Data Visualization</li>
+        <li itemprop="itemListElement">ETL</li>
+        <li itemprop="itemListElement">Analytics</li>
+        <!-- <li itemprop="itemListElement">Digital Marketing</li> -->
+        <!-- <li itemprop="itemListElement">Online Ad Serving Technologies</li> -->
+        <!-- <li itemprop="itemListElement">Site Personalization and Measurement</li> -->
+      </ul>
+      <br />
+      <ul class="comma-list">
+        <li itemprop="itemListElement">Node.js</li>
+        <li itemprop="itemListElement">Ruby</li>
+        <!-- <li itemprop="itemListElement">Bash</li> -->
+        <li itemprop="itemListElement">HTML/CSS/JavaScript</li>
+        <li itemprop="itemListElement">Linux/Unix system administration</li>
+        <li itemprop="itemListElement">SQL</li>
+        <li itemprop="itemListElement">Git</li>
+        <li itemprop="itemListElement">Python</li>
+        <li itemprop="itemListElement">Amazon Web Services</li>
+      </ul>
+      <br />
+      <ul class="comma-list">
+        <li itemprop="itemListElement">Cycle Coaching</li>
+        <li itemprop="itemListElement">Avalanche and Snow Science Education</li>
+        <li itemprop="itemListElement">Mountain Biking</li>
+        <li itemprop="itemListElement">Skiing</li>
+        <li itemprop="itemListElement">Motorcycles</li>
+        <li itemprop="itemListElement">Road Cycling</li>
+        <li itemprop="itemListElement">Running</li>
+        <li itemprop="itemListElement">Yoga</li>
+      </ul>
+    </section>
 
-        <footer class="no-print">
-          <div id="doc-info">
-            <a href="https://developers.google.com/structured-data/testing-tool?url=https%253A%252F%252Fcrc.io%252Fresume%252F">Google Structured Data</a>&nbsp;|&nbsp;
-            <a href="http://tools.seomoves.org/microdata/?url=crc.io/resume">Microdata</a>&nbsp;|&nbsp;
-            <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fcrc.io%2Fresume&amp;charset=%28detect+automatically%29&amp;fbc=1&amp;doctype=Inline&amp;fbd=1&amp;group=0">Valid HTML5</a>
-          </div>
-          <div id="last-updated"><a href="https://github.com/crcastle/crcastle.github.io/commits/master">Last updated 9 February 2016</a></div>
-        </footer>
+    <footer class="no-print">
+      <div id="doc-info">
+        <!-- <a
+          href="https://developers.google.com/structured-data/testing-tool?url=https%253A%252F%252Fcrc.io%252Fresume%252F">Google
+          Structured Data</a>&nbsp;|&nbsp; -->
+        <!-- <a href="http://tools.seomoves.org/microdata/?url=crc.io/resume">Microdata</a>&nbsp;|&nbsp; -->
+        <!-- <a
+          href="http://validator.w3.org/check?uri=http%3A%2F%2Fcrc.io%2Fresume&amp;charset=%28detect+automatically%29&amp;fbc=1&amp;doctype=Inline&amp;fbd=1&amp;group=0">Valid
+          HTML5</a> -->
+      </div>
+      <div id="last-updated"><a href="https://github.com/crcastle/crcastle.github.io/commits/master">Last updated 11
+          May 2021</a></div>
+    </footer>
 
-    </div>
+  </div>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript">
-       var $el, $ps, $section, totalHeight;
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+  <script type="text/javascript">
+    var $el, $ps, $section, totalHeight;
 
-       $("#summary p.read-more .button").click(function(event) {
-           event.preventDefault();
+    // $("#summary p.read-more .button").click(function (event) {
+    //   event.preventDefault();
 
-           totalHeight = 0
+    //   totalHeight = 0
 
-           $el = $(this);
-           $p  = $el.parent();
-           $section = $p.parent();
-           $ps = $section.find("p:not('.read-more')");
+    //   $el = $(this);
+    //   $p = $el.parent();
+    //   $section = $p.parent();
+    //   $ps = $section.find("p:not('.read-more')");
 
-           // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-           $ps.each(function(idx, element) {
-               totalHeight += $(this).outerHeight(true);
-           });
+    //   // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+    //   $ps.each(function (idx, element) {
+    //     totalHeight += $(this).outerHeight(true);
+    //   });
 
-           // animate height to totalHeight and show text
-           $section.animate({ "height": totalHeight });
-           $ps.each(function(idx, element) {
-             $(element).fadeIn();
-           });
+    //   // animate height to totalHeight and show text
+    //   $section.animate({ "height": totalHeight });
+    //   $ps.each(function (idx, element) {
+    //     $(element).fadeIn();
+    //   });
 
-           // fade out read-more link
-           $p.fadeOut();
+    //   // fade out read-more link
+    //   $p.fadeOut();
 
-           // track "more" click with GA
-           ga('send', 'event', 'More', 'click', '999to333-3s');
+    //   // track "more" click with GA
+    //   ga('send', 'event', 'More', 'click', '999to333-3s');
 
-           // prevent jump-down
-           return false;
+    //   // prevent jump-down
+    //   return false;
 
-       });
-       $("#summary .read-less .button").click(function(event) {
-         event.preventDefault();
+    // });
+    // $("#summary .read-less .button").click(function (event) {
+    //   event.preventDefault();
 
-         var el = $(this);
-         var p = el.parent();
-         var section = p.parent();
-         var ps = section.find("p:not(:first-child)");
+    //   var el = $(this);
+    //   var p = el.parent();
+    //   var section = p.parent();
+    //   var ps = section.find("p:not(:first-child)");
 
-         // determine new height and animate to it
-         var firstP = $('#summary p:first-child');
-         var collapsedHeight = $(firstP).outerHeight(true);
-         $section.animate({ "height": collapsedHeight });
+    //   // determine new height and animate to it
+    //   var firstP = $('#summary p:first-child');
+    //   var collapsedHeight = $(firstP).outerHeight(true);
+    //   $section.animate({ "height": collapsedHeight });
 
-         // fade out text
-         ps.each(function(idx, element) {
-           $(element).fadeOut();
-         });
+    //   // fade out text
+    //   ps.each(function (idx, element) {
+    //     $(element).fadeOut();
+    //   });
 
-         // fade in read more link
-         $("#summary .read-more").fadeIn();
+    //   // fade in read more link
+    //   $("#summary .read-more").fadeIn();
 
-         // track "less" click with GA
-         ga('send', 'event', 'Less', 'click', '999to333-3s');
+    //   // track "less" click with GA
+    //   ga('send', 'event', 'Less', 'click', '999to333-3s');
 
-         // prevent jump down
-         return false;
-       });
-    </script>
-    <script>
-      // only run google analytics when served from crc.io domain
-      if (! /crc\.io/.test(window.location.hostname) ) {
-        window['ga-disable-UA-54700563-1'] = true;
-        console.log('Google Analytics disabled');
-      }
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    //   // prevent jump down
+    //   return false;
+    });
+  </script>
+  <script>
+    // only run google analytics when served from crc.io domain
+    // if (! /crc\.io/.test(window.location.hostname)) {
+    //   window['ga-disable-UA-54700563-1'] = true;
+    //   console.log('Google Analytics disabled');
+    // }
+    // (function (i, s, o, g, r, a, m) {
+    //   i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+    //     (i[r].q = i[r].q || []).push(arguments)
+    //   }, i[r].l = 1 * new Date(); a = s.createElement(o),
+    //     m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    // })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-54700563-1', 'auto');
-      ga('require', 'linkid', 'linkid.js');
-      ga('require', 'displayfeatures');
-      ga('send', 'pageview');
+    // ga('create', 'UA-54700563-1', 'auto');
+    // ga('require', 'linkid', 'linkid.js');
+    // ga('require', 'displayfeatures');
+    // ga('send', 'pageview');
 
-    </script>
+  </script>
 
 </body>
 
